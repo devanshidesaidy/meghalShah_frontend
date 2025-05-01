@@ -1,5 +1,4 @@
 #root {
-  /* max-width: 1280px; */
   margin: 0 !important;
   padding: 0 !important;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -9,6 +8,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 a {
@@ -19,4 +20,28 @@ a {
 
 .bannerImg {
   background-image: url("./assets/images/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
 }
+
+.font {
+  color: #178582; 
+  background-image: linear-gradient(45deg, #178582 ,#189e94,#FFFFFF,  #B0DBDD , #E3F7F6 ); 
+  background-clip: text; 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+}
+/** Text Gradient Example */ 
+.text-gradient {
+  color: #178582; 
+  background-image: linear-gradient(45deg, #178582 , #4AA3A1 , #7DBFBF , #B0DBDD , #E3F7F6 ); 
+  background-clip: text; 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+ }
