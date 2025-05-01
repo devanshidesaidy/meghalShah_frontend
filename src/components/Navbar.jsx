@@ -37,7 +37,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" sx={{ px: 5,background:"none",boxShadow:"none" }}>
+    <AppBar position="static" sx={{ px: 5,backgroundColor:"black",boxShadow:"none" }}>
       <Toolbar disableGutters sx={{ justifyContent: "space-around" }}>
         <Typography
           variant="h6"
