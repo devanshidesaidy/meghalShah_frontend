@@ -2,6 +2,7 @@
   /* max-width: 1280px; */
   margin: 0 !important;
   padding: 0 !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 html,
 body {
@@ -14,4 +15,8 @@ a {
   text-decoration: none;
   color: #ffffff;
   font-size: large;
+}
+
+.bannerImg {
+  background-image: url("./assets/images/banner.jpg");
 }

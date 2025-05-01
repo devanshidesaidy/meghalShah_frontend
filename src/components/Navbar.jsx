@@ -13,6 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
+import { Grid } from "@mui/material";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -36,9 +37,8 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" sx={{ px: 5 }}>
-      <Toolbar disableGutters>
-        <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+    <AppBar position="static" sx={{ px: 5,background:"none",boxShadow:"none" }}>
+      <Toolbar disableGutters sx={{ justifyContent: "space-around" }}>
         <Typography
           variant="h6"
           noWrap
@@ -116,20 +116,17 @@ function Navbar() {
         >
           LOGO
         </Typography>
-        <Box
-          sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, gap: "1rem" }}
+        <Grid
+          sx={{
+            display: { xs: "none", md: "flex" },
+            gap: "4rem",
+            justifyContent: "end",
+          }}
         >
           <Link>Home</Link>
-          <Link>Home</Link>
-          <Link>Home</Link>
-          <Link>Home</Link>
-          <Link>Home</Link>
-        </Box>
-        <Box sx={{ flexGrow: 0 }}>
-          <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-            <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-          </IconButton>
-        </Box>
+          <Link>About</Link>
+          <Link>Contact</Link>
+        </Grid>
       </Toolbar>
     </AppBar>
   );
