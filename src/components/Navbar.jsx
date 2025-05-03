@@ -9,7 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { Link, useLocation } from "react-router-dom";
 import { Grid } from "@mui/material";
-import { color } from "../constant";
+import { color, path } from "../constant";
 
 
 function Navbar() {
@@ -124,10 +124,10 @@ function Navbar() {
             justifyContent: "end",
           }}
         >
-          <Link>Home</Link>
-          <Link>About Me</Link>
-          <Link>Business</Link>
-          <Link>Contact Me</Link>
+          <Link to={path.home}>Home</Link>
+          <Link to={path.about}>About Me</Link>
+          <Link to={path.business}>Business</Link>
+          <Link to={path.contact}>Contact Me</Link>
         </Grid>
       </Toolbar>
     </AppBar>

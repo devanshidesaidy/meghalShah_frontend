@@ -7,5 +7,8 @@ pureblack:"#000205"
 }
 
 export const path ={
-    home:"/"
+    home:"/",
+    about:"/about",
+    business:"/business",
+    contact:"/contact"
 }
