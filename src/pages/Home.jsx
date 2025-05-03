@@ -3,6 +3,8 @@ import React from "react";
 import Banner from "../containers/homeContainer/Banner";
 import Service from "../containers/homeContainer/Service";
 import Introduction from "../containers/homeContainer/Introduction";
+import Client from "../containers/homeContainer/Client";
+import CallSection from "../containers/homeContainer/CallSection";
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
       <Banner />
       <Introduction />
       <Service />
+      <Client />
+      <CallSection />
     </Grid>
   );
 }
