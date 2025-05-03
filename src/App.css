@@ -3,6 +3,7 @@
   padding: 0 !important;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 html,
 body {
   margin: 0;
@@ -19,29 +20,79 @@ a {
 }
 
 .bannerImg {
-  background-image: url("./assets/images/banner.jpg");
+  background-image: url("./assets/images/banner.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   z-index: -1;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
 }
 
 .font {
-  color: #178582; 
-  background-image: linear-gradient(45deg, #178582 ,#189e94,#FFFFFF,  #B0DBDD , #E3F7F6 ); 
-  background-clip: text; 
-  -webkit-background-clip: text; 
-  -webkit-text-fill-color: transparent; 
+  color: #178582;
+  background-image: linear-gradient(
+    90deg,
+    #08d665 0%,
+    #2fe88b 25%,
+    #ffffff 50%,
+    #a4f1e6 75%,
+    #08d665 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-/** Text Gradient Example */ 
-.text-gradient {
-  color: #178582; 
-  background-image: linear-gradient(45deg, #178582 , #4AA3A1 , #7DBFBF , #B0DBDD , #E3F7F6 ); 
-  background-clip: text; 
-  -webkit-background-clip: text; 
-  -webkit-text-fill-color: transparent; 
- }
+
+.servicebg {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://www.shutterstock.com/image-photo/investment-technology-financial-return-on-600nw-2132576525.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.custom-swiper {
+  position: relative;
+  padding-bottom: 50px; /* space for arrows at bottom */
+}
+
+.custom-swiper .swiper-button-prev,
+.custom-swiper .swiper-button-next {
+  color: #08d665;
+  width: 10px;
+  height: 10px;
+  font-size: 20px;
+  bottom: 10px;
+  transform: translateY(0);
+  z-index: 10;
+}
+
+.custom-swiper .swiper-button-prev {
+  top: 90%;
+  left: 47%;
+}
+
+.custom-swiper .swiper-button-next {
+  top: 90%;
+  right: 47%;
+}
+
+/* Optional: Adjust arrow size and position on smaller screens */
+@media (max-width: 768px) {
+  .custom-swiper .swiper-button-prev,
+  .custom-swiper .swiper-button-next {
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+  }
+
+  .custom-swiper .swiper-button-prev {
+    left: 35%;
+  }
+
+  .custom-swiper .swiper-button-next {
+    right: 35%;
+  }
+}
+
+

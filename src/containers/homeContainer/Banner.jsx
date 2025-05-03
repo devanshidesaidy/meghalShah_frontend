@@ -12,6 +12,7 @@ export default function Banner() {
         alignItems: "center",
         justifyContent: { xs: "center", lg: "normal" },
         height: { xs: "auto", lg: "100vh" },
+        marginTop:-8
       }}
     >
       <Grid
