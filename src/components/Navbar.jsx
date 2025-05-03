@@ -6,39 +6,41 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Grid } from "@mui/material";
+import { color } from "../constant";
 
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar() {
+  const location = useLocation();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   return (
-    <AppBar position="static" sx={{ px: 5,backgroundColor:"black",boxShadow:"none" }}>
-      <Toolbar disableGutters sx={{ justifyContent: "space-around" }}>
+    <AppBar
+      position="static"
+      sx={{
+        px: 3,
+        background: location.pathname == "/" ? "none" : "black",
+        boxShadow: "none",
+      }}
+    >
+      <Toolbar
+        disableGutters
+        sx={{
+          justifyContent: { xs: "space-between", md: "space-around" },
+          color: color.greenFont,
+        }}
+      >
         <Typography
           variant="h6"
           noWrap
@@ -56,8 +58,25 @@ function Navbar() {
         >
           LOGO
         </Typography>
+        <Typography
+          variant="h5"
+          noWrap
+          component="a"
+          href="#app-bar-with-responsive-menu"
+          sx={{
+            display: { xs: "flex", md: "none" },
+            flexGrow: 1,
+            fontFamily: "monospace",
+            fontWeight: 700,
+            letterSpacing: ".3rem",
+            color: "inherit",
+            textDecoration: "none",
+          }}
+        >
+          LOGO
+        </Typography>
 
-        <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+        <Box sx={{ display: { xs: "flex", md: "none" } }}>
           <IconButton
             size="large"
             aria-label="account of current user"
@@ -98,24 +117,6 @@ function Navbar() {
             </MenuItem>
           </Menu>
         </Box>
-        <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-        <Typography
-          variant="h5"
-          noWrap
-          component="a"
-          href="#app-bar-with-responsive-menu"
-          sx={{
-            display: { xs: "flex", md: "none" },
-            flexGrow: 1,
-            fontFamily: "monospace",
-            fontWeight: 700,
-            letterSpacing: ".3rem",
-            color: "inherit",
-            textDecoration: "none",
-          }}
-        >
-          LOGO
-        </Typography>
         <Grid
           sx={{
             display: { xs: "none", md: "flex" },
@@ -124,8 +125,9 @@ function Navbar() {
           }}
         >
           <Link>Home</Link>
-          <Link>About</Link>
-          <Link>Contact</Link>
+          <Link>About Me</Link>
+          <Link>Business</Link>
+          <Link>Contact Me</Link>
         </Grid>
       </Toolbar>
     </AppBar>
