@@ -13,7 +13,7 @@ import { color } from "../../constant";
 
 export default function Client() {
   return (
-    <Grid sx={{ backgroundColor: color.pureblack, color: "white", pt: "6rem" }}>
+    <Grid sx={{ backgroundColor: color.pureblack, color: "white", py: "6rem" }}>
       <Container sx={{ backgroundColor: color.mateblack, pb: "2%" }}>
         <Typography
           sx={{
@@ -24,7 +24,7 @@ export default function Client() {
             pt: "3rem",
           }}
         >
-          Testimonials
+          Client Testimonials
         </Typography>
 
         <Swiper
@@ -44,7 +44,7 @@ export default function Client() {
                 sx={{
                   display: "flex",
                   justifyContent: "center",
-
+                  alignItems: "center",
                   gap: "1rem",
                   mt: { xs: 3, md: 7 },
                 }}
@@ -54,13 +54,19 @@ export default function Client() {
                   // src="/static/images/avatar/1.jpg"
                   sx={{ width: 50, height: 50 }}
                 />
-                <Stack sx={{ fontSize: "2rem" }}>Client 1</Stack>
+                <Stack sx={{ fontSize: "2rem" }}>
+                  John Doe
+                  <Stack sx={{ fontSize: "1rem" }}>
+                    CEO of ABC Tech Solutions{" "}
+                  </Stack>{" "}
+                </Stack>
               </Typography>
               <Typography
                 sx={{ fontSize: "1.2rem", mt: 4, textAlign: "center" }}
               >
-                “ CA Meghal Shah’s advisory was pivotal in helping us
-                restructure our debt and improve profitability.”
+                "CA Meghal Shah's expertise was crucial in securing our funding
+                and streamlining our financial operations. A true game-changer
+                for our business."
               </Typography>
             </Grid>
           </SwiperSlide>
@@ -85,13 +91,18 @@ export default function Client() {
                   // src="/static/images/avatar/1.jpg"
                   sx={{ width: 50, height: 50 }}
                 />
-                <Stack sx={{ fontSize: "2rem" }}>Client 2</Stack>
+                <Stack sx={{ fontSize: "2rem" }}>
+                  Rajesh Kumar
+                  <Stack sx={{ fontSize: "1rem" }}>
+                    Founder of XYZ Manufacturing
+                  </Stack>{" "}
+                </Stack>
               </Typography>
               <Typography
                 sx={{ fontSize: "1.2rem", mt: 4, textAlign: "center" }}
               >
-                “ Thanks to Meghal's guidance, we raised the capital we needed
-                to scale our startup rapidly.”
+                “His advice on debt restructuring and cash flow management
+                transformed our financial health. Highly recommend!”
               </Typography>
             </Grid>
           </SwiperSlide>
