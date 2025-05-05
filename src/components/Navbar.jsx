@@ -7,15 +7,14 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Grid } from "@mui/material";
-import { color } from "../constant";
-
+import { color, path } from "../constant";
 
 function Navbar() {
   const location = useLocation();
+  const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -30,7 +29,8 @@ function Navbar() {
       position="static"
       sx={{
         px: 3,
-        background: location.pathname == "/" ? "none" : "black",
+        // background: location.pathname == "/" ? "none" : "black",
+        background: "none",
         boxShadow: "none",
       }}
     >
@@ -103,16 +103,36 @@ function Navbar() {
             onClose={handleCloseNavMenu}
             sx={{ display: { xs: "block", md: "none" } }}
           >
-            <MenuItem onClick={handleCloseNavMenu}>
+            <MenuItem
+              onClick={() => {
+                handleCloseNavMenu();
+                navigate(path.home);
+              }}
+            >
               <Typography sx={{ textAlign: "center" }}>Home</Typography>
             </MenuItem>
-            <MenuItem onClick={handleCloseNavMenu}>
+            <MenuItem
+              onClick={() => {
+                handleCloseNavMenu();
+                navigate(path.about);
+              }}
+            >
               <Typography sx={{ textAlign: "center" }}>About</Typography>
             </MenuItem>
-            <MenuItem onClick={handleCloseNavMenu}>
+            <MenuItem
+              onClick={() => {
+                handleCloseNavMenu();
+                navigate(path.business);
+              }}
+            >
               <Typography sx={{ textAlign: "center" }}>Business</Typography>
             </MenuItem>
-            <MenuItem onClick={handleCloseNavMenu}>
+            <MenuItem
+              onClick={() => {
+                handleCloseNavMenu();
+                navigate(path.contact);
+              }}
+            >
               <Typography sx={{ textAlign: "center" }}>Contact</Typography>
             </MenuItem>
           </Menu>
@@ -124,10 +144,10 @@ function Navbar() {
             justifyContent: "end",
           }}
         >
-          <Link>Home</Link>
-          <Link>About Me</Link>
-          <Link>Business</Link>
-          <Link>Contact Me</Link>
+          <Link to={path.home}>Home</Link>
+          <Link to={path.about}>About Me</Link>
+          <Link to={path.business}>Business</Link>
+          <Link to={path.contact}>Contact Me</Link>
         </Grid>
       </Toolbar>
     </AppBar>
