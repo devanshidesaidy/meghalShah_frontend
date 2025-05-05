@@ -10,6 +10,7 @@ mateblack:"#333"
 export const path ={
     home:"/",
     about:"/about",
-    business:"/business",
+    business:"/msaca",
+    business2:"/credorbit",
     contact:"/contact"
 }

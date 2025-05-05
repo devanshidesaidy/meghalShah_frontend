@@ -72,7 +72,10 @@ export default function Approach() {
               can thrive in an ever-evolving financial landscape.
             </Typography>
           </Grid>
-          <Grid size={{ xs: 12, md: 5.8 }} sx={{ mt: { xs: 5, md: 0 } }}>
+          <Grid
+            size={{ xs: 12, md: 5.8 }}
+            sx={{  mt: {xs:5,md:0} }}
+          >
             <Grid sx={{ display: "flex", justifyContent: "center" }}>
               <img
                 style={{
