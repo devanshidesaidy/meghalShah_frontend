@@ -95,3 +95,15 @@ a {
     right: 35%;
   }
 }
+
+
+/* Change default bullet color */
+.swiper-pagination-bullet {
+  background-color: #ccc; /* default dot color */
+  opacity: 1; /* ensure visibility */
+}
+
+/* Change active bullet color */
+.swiper-pagination-bullet-active {
+  background-color: #08d665; /* your preferred color */
+}
