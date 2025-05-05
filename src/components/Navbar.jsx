@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import Popover from "@mui/material/Popover";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Grid } from "@mui/material";
 import { color, path } from "../constant";
@@ -23,6 +24,18 @@ function Navbar() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handlePopoverOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handlePopoverClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
 
   return (
     <AppBar
@@ -125,7 +138,14 @@ function Navbar() {
                 navigate(path.business);
               }}
             >
-              <Typography sx={{ textAlign: "center" }}>Business</Typography>
+              <Typography
+                aria-owns={open ? "mouse-over-popover" : undefined}
+                aria-haspopup="true"
+                onMouseEnter={handlePopoverOpen}
+                onMouseLeave={handlePopoverClose}
+              >
+                Business
+              </Typography>
             </MenuItem>
             <MenuItem
               onClick={() => {
@@ -138,16 +158,87 @@ function Navbar() {
           </Menu>
         </Box>
         <Grid
+          className="li"
           sx={{
             display: { xs: "none", md: "flex" },
             gap: "4rem",
             justifyContent: "end",
           }}
         >
-          <Link to={path.home}>Home</Link>
-          <Link to={path.about}>About Me</Link>
-          <Link to={path.business}>Business</Link>
-          <Link to={path.contact}>Contact Me</Link>
+          <Link className={path.home === location.pathname ? "active-nav":""} to={path.home}>
+            Home
+          </Link>
+          <Link className="links" to={path.about}>
+            About Me
+          </Link>
+          <Box
+            onMouseEnter={handlePopoverOpen}
+            onMouseLeave={handlePopoverClose}
+            sx={{ position: "relative", cursor: "pointer" }}
+          >
+            <Typography
+              sx={{
+                color: color.white,
+                fontSize: "18px",
+              }}
+            >
+              Business
+            </Typography>
+            <Grid width={"50%"} position={"relative"} overflow={"hidden"}>
+              <Popover
+                id="mouse-over-popover"
+                open={open}
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "center", // Center relative to the anchor
+                }}
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "center", // Popover aligns its center to anchor center
+                }}
+                onClose={handlePopoverClose}
+                disableRestoreFocus
+                PaperProps={{
+                  sx: {
+                    mt: 1,
+                    px: 2,
+                    py: 1,
+                    backgroundColor: "#fff",
+                    color: "#000",
+                    boxShadow: 3,
+                    background: "#2E3D44",
+                    width: "fit-content",
+                  },
+                }}
+              >
+                <Grid
+                  className="li"
+                  sx={{ display: "flex", flexDirection: "column" }}
+                >
+                  <Link
+                    className="links"
+                    to={path.business}
+                    style={{ margin: 10 }}
+                    onClick={() => navigate("/msaca")}
+                  >
+                    MSACA Bizzsolve LLP
+                  </Link>
+                  <Link
+                    className="links"
+                    to={path.business2}
+                    style={{ margin: 10 }}
+                    onClick={() => navigate("/credorbit")}
+                  >
+                    Credorbit Technologies
+                  </Link>
+                </Grid>
+              </Popover>
+            </Grid>
+          </Box>
+          <Link className="links" to={path.contact}>
+            Contact Me
+          </Link>
         </Grid>
       </Toolbar>
     </AppBar>
