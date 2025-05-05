@@ -5,10 +5,22 @@ import advisor from "../../assets/svg/advisor.svg";
 import funding from "../../assets/svg/funding.svg";
 import loan from "../../assets/svg/loan.svg";
 import tax from "../../assets/svg/tax.svg";
+import servicebg from "../../assets/images/servicebg.png";
 export default function Service() {
   return (
     <Grid container justifyContent={"center"}>
-      <Grid className="servicebg" sx={{ py: { xs: 5, md: 0 } }}>
+      <Grid
+        // className="servicebg"
+        sx={{
+          py: { xs: 5, md: 0 },
+          background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${servicebg})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "left",
+          zIndex: -1,
+          width: "100%",
+        }}
+      >
         <Grid
           sx={{
             fontSize: { xs: "2.5rem", md: "3.5rem" },
@@ -16,12 +28,16 @@ export default function Service() {
             pt: "5%",
             px: 3,
             textAlign: "center",
-            fontWeight:"bold"
+            fontWeight: "bold",
           }}
         >
           Services I Offer
         </Grid>
         <Grid container m={"5%"}>
+          <Grid size={{ xs: 12, md: 4.5 }} sx={{ mt: { xs: 5, md: 0 } }}>
+            <Grid></Grid>
+          </Grid>
+
           <Grid
             container
             size={{ xs: 12, md: 7 }}
@@ -191,12 +207,6 @@ export default function Service() {
                 </Grid>
               </Grid>
             </Grid>
-          </Grid>
-          <Grid size={{ xs: 12, md: 4.5 }} sx={{ mt: { xs: 5, md: 0 } }}>
-            <img
-              src="https://earnstar.co.ke/wp-content/uploads/2022/03/financial-advisor-kenya-1024x682.webp"
-              style={{ height: "100%", width: "100%", objectFit: "cover" }}
-            />
           </Grid>
         </Grid>
       </Grid>

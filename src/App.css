@@ -44,11 +44,12 @@ a {
 
 .servicebg {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("https://www.shutterstock.com/image-photo/investment-technology-financial-return-on-600nw-2132576525.jpg");
+    url("./assets/images/servicebg.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  /* background-position: left; */
   z-index: -1;
+  width: 100%;
 }
 
 .custom-swiper {
@@ -94,5 +95,3 @@ a {
     right: 35%;
   }
 }
-
-

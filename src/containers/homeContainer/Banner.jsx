@@ -1,18 +1,19 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import { color } from "../../constant";
-import img from "../../assets/images/dummy.png";
+import img from "../../assets/images/bannerSelf.png";
 
 export default function Banner() {
   return (
     <Grid
       container
-      className="bannerImg"
+      // className="bannerImg"
       sx={{
         alignItems: "center",
         justifyContent: { xs: "center", lg: "normal" },
         height: { xs: "auto", lg: "100vh" },
-        marginTop:-8
+        marginTop:-8,
+        backgroundColor:color.bgblack
       }}
     >
       <Grid
@@ -64,7 +65,7 @@ export default function Banner() {
         size={{ xs: 12, md: 6 }}
         sx={{
           height: { xs: "auto", sm: "auto", md: "35rem", lg: "47rem" },
-          backgroundColor: { xs: "black", md: "transparent" },
+          // backgroundColor: { xs: "black", md: "transparent" },
           mt: 5,
         }}
       >
