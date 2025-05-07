@@ -8,12 +8,13 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Popover from "@mui/material/Popover";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Grid } from "@mui/material";
 import { color, path } from "../constant";
 
 function Navbar() {
   const location = useLocation();
+
   const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
@@ -165,10 +166,20 @@ function Navbar() {
             justifyContent: "end",
           }}
         >
-          <Link className={path.home === location.pathname ? "active-nav":""} to={path.home}>
+          <Link
+            className={`nav-link ${
+              location.pathname === path.home ? "active" : ""
+            }`}
+            to={path.home}
+          >
             Home
           </Link>
-          <Link className="links" to={path.about}>
+          <Link
+            className={`nav-link ${
+              location.pathname === path.about ? "active" : ""
+            }`}
+            to={path.about}
+          >
             About Me
           </Link>
           <Box
@@ -184,7 +195,7 @@ function Navbar() {
             >
               Business
             </Typography>
-            <Grid width={"50%"} position={"relative"} overflow={"hidden"}>
+            <Grid position={"relative"} overflow={"hidden"}>
               <Popover
                 id="mouse-over-popover"
                 open={open}
@@ -208,35 +219,43 @@ function Navbar() {
                     color: "#000",
                     boxShadow: 3,
                     background: "#2E3D44",
-                    width: "fit-content",
+                    maxWidth: "90vw",
                   },
                 }}
               >
-                <Grid
-                  className="li"
-                  sx={{ display: "flex", flexDirection: "column" }}
-                >
+                <Grid sx={{ display: "flex", flexDirection: "column" }}>
                   <Link
-                    className="links"
+                    className={`nav-link ${
+                      location.pathname === path.business ? "active" : ""
+                    }`}
                     to={path.business}
-                    style={{ margin: 10 }}
                     onClick={() => navigate("/msaca")}
+                    style={{ textDecoration: "none" }}
                   >
-                    MSACA Bizzsolve LLP
+                    <Typography sx={{ my: 0.5 }}>MSACA Bizzsolve LLP</Typography>
                   </Link>
                   <Link
-                    className="links"
+                    className={`nav-link ${
+                      location.pathname === path.business2 ? "active" : ""
+                    }`}
                     to={path.business2}
-                    style={{ margin: 10 }}
                     onClick={() => navigate("/credorbit")}
+                    style={{ textDecoration: "none" }}
                   >
-                    Credorbit Technologies
+                    <Typography sx={{ mb: 0.5,mt:2 }}>
+                      Credorbit Technologies
+                    </Typography>
                   </Link>
                 </Grid>
               </Popover>
             </Grid>
           </Box>
-          <Link className="links" to={path.contact}>
+          <Link
+            className={`nav-link ${
+              location.pathname === path.contact ? "active" : ""
+            }`}
+            to={path.contact}
+          >
             Contact Me
           </Link>
         </Grid>

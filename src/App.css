@@ -6,8 +6,8 @@
 
 html,
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
   box-sizing: border-box;
   max-width: 100vw;
   overflow-x: hidden;
@@ -17,6 +17,7 @@ a {
   text-decoration: none;
   color: #ffffff;
   font-size: large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .bannerImg {
@@ -107,35 +108,29 @@ a {
   background-color: #08d665; /* your preferred color */
 }
 
-li {
-  list-style-type: none;
-  display: inline-block;
-  margin: 5px 10px;
-}
 
-.li > a {
-  /* color: #333; */
-  text-decoration: none;
+.nav-link {
   display: inline-block;
   position: relative;
+  color: white;
+  text-decoration: none;
 }
 
-.li > a::after {
+.nav-link::after {
   content: "";
-  display: block;
-  margin: auto;
-  height: 3px;
-  width: 0;
-  top: 5px;
-  background: transparent;
-  transition: all 0.3s;
-}
-
-.li > a:hover::after,
-li > a.active-nav::after {
+  position: absolute;
   width: 100%;
-  background: #08d665;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #08d665;
+  transition: transform 0.25s ease-out;
+  transform-origin: bottom right;
 }
 
-.links {
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

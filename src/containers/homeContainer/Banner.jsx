@@ -7,13 +7,13 @@ export default function Banner() {
   return (
     <Grid
       container
-      // className="bannerImg"
+      className="bannerImg"
       sx={{
         alignItems: "center",
         justifyContent: { xs: "center", lg: "normal" },
         height: { xs: "auto", lg: "100vh" },
-        marginTop:-8,
-        backgroundColor:color.bgblack
+        marginTop: -8,
+        backgroundColor: color.bgblack,
       }}
     >
       <Grid
