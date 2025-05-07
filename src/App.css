@@ -95,7 +95,18 @@ a {
     right: 35%;
   }
 }
-
+/* contact */
+.contactBackground {
+  background-image: url("../src/assets/images/ContactBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* IntroductionBackground */
+.IntroductionBackground {
+  background-image: url("../src/assets/images/IntroductionBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 /* Change default bullet color */
 .swiper-pagination-bullet {
   background-color: #ccc; /* default dot color */
