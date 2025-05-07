@@ -4,19 +4,26 @@ import { color } from "../../constant";
 import Brightness1RoundedIcon from "@mui/icons-material/Brightness1Rounded";
 const Introduction = () => {
   return (
-    <Grid sx={{ backgroundColor: color.black }}>
-      <Container sx={{ paddingX: "2%" }}>
+    <Grid
+      className="IntroductionBackground"
+      // sx={{ backgroundColor: color.black }}
+    >
+      <Container sx={{ paddingTop: "2%", paddingBottom: "5%" }}>
         <Grid container>
           <Grid
             sx={{
               width: "100%",
               display: "flex",
               justifyContent: "center",
-              my: 5,
             }}
           >
             <Typography
-              sx={{ fontSize: "2rem", color: color.white, fontWeight: "bold" }}
+              sx={{
+                fontSize: { xs: "2.5rem", md: "3.5rem" },
+                color: color.greenFont,
+                fontWeight: "bold",
+                marginBottom: 5,
+              }}
             >
               Your Trusted Financial Strategist
             </Typography>
@@ -39,15 +46,16 @@ const Introduction = () => {
                 //   borderRight: "2px solid black",
               },
               borderLeft: {
-                xs: "4px solid black",
+                xs: "4px solid white",
                 sm: "none",
               },
               borderBottom: {
-                xs: "4px solid black",
+                xs: "4px solid white",
                 sm: "none",
               },
               paddingBottom: { xs: "5%", sm: "none" },
-              backgroundColor: color.greenFont,
+              // backgroundColor: color.greenFont,
+              color: color.white,
             }}
           >
             <Typography
@@ -55,9 +63,10 @@ const Introduction = () => {
                 fontSize: "2rem",
                 my: 1,
                 p: 1.5,
-                borderBottom: { xs: "none", sm: "4px solid black" },
+                borderBottom: { xs: "none", sm: "4px solid white" },
                 marginLeft: { xs: "0%", sm: "5%" },
                 lineHeight: "2.2rem",
+                color: color.greenFont,
               }}
             >
               Expert Financial Advisory
@@ -65,13 +74,14 @@ const Introduction = () => {
             <Brightness1RoundedIcon
               sx={{
                 fontSize: "2.5rem",
+                color: color.white,
                 marginTop: "-5%",
                 marginLeft: "-1%",
                 display: { xs: "none", sm: "block" },
               }}
             />
             <Typography
-              sx={{ fontSize: "1rem", textAlign: "justify", padding: 1 }}
+              sx={{ fontSize: "1rem", textAlign: "justify", padding: 3 }}
             >
               With over 20 years of experience, CA Meghal Shah brings a wealth
               of knowledge in guiding businesses to achieve their financial
@@ -84,15 +94,17 @@ const Introduction = () => {
           <Grid
             size={{ xs: 10, sm: 5.7 }}
             sx={{
-              borderLeft: "4px solid black",
-              backgroundColor: color.greenFont,
+              borderLeft: "4px solid white",
+              // backgroundColor: color.greenFont,
+              color: color.white,
             }}
           >
             <Brightness1RoundedIcon
               sx={{
-                marginLeft: "-15px",
-                marginTop: "-3px",
-                fontSize: "2.3rem",
+                marginLeft: "-20px",
+                marginTop: "-4px",
+                color: color.white,
+                fontSize: "2.5rem",
                 display: { xs: "none", sm: "block" },
                 //   marginTop: { xs: "-20%" },
               }}
@@ -101,12 +113,13 @@ const Introduction = () => {
               sx={{
                 fontSize: "2rem",
                 my: 1,
-                p: 1,
-                marginTop: "10%",
+                p: 2,
+                marginTop: "5%",
                 borderBottom: {
                   xs: "none",
-                  sm: "4px solid black",
+                  sm: "4px solid white",
                 },
+                color: color.greenFont,
                 lineHeight: "2.2rem",
               }}
             >
@@ -115,6 +128,7 @@ const Introduction = () => {
             <Brightness1RoundedIcon
               sx={{
                 fontSize: "2.5rem",
+                color: color.white,
                 marginTop: "-6%",
                 marginLeft: "95%",
                 display: { xs: "none", sm: "block" },
@@ -124,7 +138,7 @@ const Introduction = () => {
               sx={{
                 fontSize: "1rem",
                 textAlign: "justify",
-                padding: 1,
+                padding: 3,
               }}
             >
               We understand that every business is unique. Whether it’s an MSME
