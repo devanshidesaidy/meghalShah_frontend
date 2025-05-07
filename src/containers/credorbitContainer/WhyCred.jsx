@@ -94,7 +94,7 @@ export default function WhyCred() {
                 fontWeight: "bold",
               }}
             >
-              Convenience:
+              Convenience
             </Typography>
             <Typography
               sx={{
