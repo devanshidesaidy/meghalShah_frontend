@@ -13,6 +13,7 @@ export default function CoreService() {
           px: 3,
           textAlign: "center",
           fontWeight: "bold",
+          fontFamily:"JosefinSans"
         }}
       >
         My Core Services
@@ -47,6 +48,7 @@ export default function CoreService() {
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
+                fontFamily:"MiriamLibre-Regular"
               }}
             >
               Business Loans & Project Funding
@@ -58,7 +60,7 @@ export default function CoreService() {
                 pt: "2%",
                 px: 3,
                  textAlign: {xs:"center",md:"justify"},
-                // fontWeight: "bold",
+                fontFamily:"Palanquin"
               }}
             >
               Customized financing solutions including working capital loans,
@@ -93,6 +95,7 @@ export default function CoreService() {
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
+                 fontFamily:"MiriamLibre-Regular"
               }}
             >
               Debt Restructuring & Consolidation
@@ -104,7 +107,7 @@ export default function CoreService() {
                 pt: "2%",
                 px: 3,
                  textAlign: {xs:"center",md:"justify"},
-                // fontWeight: "bold",
+                fontFamily:"Palanquin"
               }}
             >
               Strengthen your financial foundation with expert debt management
@@ -140,6 +143,7 @@ export default function CoreService() {
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
+                 fontFamily:"MiriamLibre-Regular"
               }}
             >
               Project Finance & Financial Analysis
@@ -151,7 +155,7 @@ export default function CoreService() {
                 pt: "2%",
                 px: 3,
                  textAlign: {xs:"center",md:"justify"},
-                // fontWeight: "bold",
+                fontFamily:"Palanquin"
               }}
             >
               Deep insights into the financial viability of projects, cost
@@ -187,6 +191,7 @@ export default function CoreService() {
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
+                 fontFamily:"MiriamLibre-Regular"
               }}
             >
               Financial Advisory & Taxation Services
@@ -198,7 +203,7 @@ export default function CoreService() {
                 pt: "2%",
                 px: 3,
                  textAlign: {xs:"center",md:"justify"},
-                // fontWeight: "bold",
+                fontFamily:"Palanquin"
               }}
             >
               Comprehensive financial planning, tax advisory, compliance, and

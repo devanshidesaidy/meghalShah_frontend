@@ -25,7 +25,7 @@ const ContactForm = () => {
         }}
       >
         <Grid container justifyContent={"space-between"}>
-          <Grid size={{ xs: 12, md: 5.8 }} >
+          <Grid size={{ xs: 12, md: 5.8 }}>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d918.0983526103512!2d72.50646223784848!3d23.00932307663021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b278e0476f7%3A0x96e3d49fa6c53c37!2sSafal%20Profitaire!5e0!3m2!1sen!2sin!4v1746523785055!5m2!1sen!2sin"
               width="100%"
@@ -47,7 +47,7 @@ const ContactForm = () => {
               mt: { xs: 5, md: 0 },
             }}
           >
-            <Grid container >
+            <Grid container>
               <Grid>
                 <TextField
                   fullWidth
@@ -58,7 +58,6 @@ const ContactForm = () => {
                     style: {
                       backgroundColor: "#333",
                       color: color.white,
-                    
                     },
                   }}
                   InputLabelProps={{
@@ -71,12 +70,11 @@ const ContactForm = () => {
                   label="Email"
                   variant="filled"
                   required
-                  sx={{mt:3}}
+                  sx={{ mt: 3 }}
                   InputProps={{
                     style: {
                       backgroundColor: "#333",
                       color: color.white,
-                    
                     },
                   }}
                   InputLabelProps={{
@@ -88,13 +86,12 @@ const ContactForm = () => {
                   fullWidth
                   label="Subject "
                   required
-                  sx={{mt:3}}
+                  sx={{ mt: 3 }}
                   variant="filled"
                   InputProps={{
                     style: {
                       backgroundColor: "#333",
                       color: color.white,
-                    
                     },
                   }}
                   InputLabelProps={{
@@ -107,14 +104,13 @@ const ContactForm = () => {
                   label="Message"
                   variant="filled"
                   required
-                  sx={{mt:3}}
+                  sx={{ mt: 3 }}
                   multiline
                   rows={4}
                   InputProps={{
                     style: {
                       backgroundColor: "#333",
                       color: color.white,
-                    
                     },
                   }}
                   InputLabelProps={{
@@ -129,6 +125,7 @@ const ContactForm = () => {
                     color: color.white,
                     marginTop: "3%",
                     border: `1px solid ${color.greenFont}`,
+                    fontFamily: "JosefinSans",
                     "&:hover": {
                       backgroundColor: "transparent",
                     },

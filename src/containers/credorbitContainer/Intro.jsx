@@ -31,6 +31,7 @@ export default function Intro() {
                     my: { xs: 3, md: 0 },
                     textAlign: { xs: "center", md: "left" },
                     color: color.greenFont,
+                    fontFamily:"JosefinSans"
                   }}
                 >
                   Credorbit Technologies
@@ -48,6 +49,7 @@ export default function Intro() {
                     my: { xs: 3, md: 0 },
                     textAlign: "center",
                     color: color.white,
+                     fontFamily:"MiriamLibre-Regular"
                   }}
                 >
                   Revolutionizing {""}
@@ -70,6 +72,7 @@ export default function Intro() {
                   color: color.white,
                   textAlign: { xs: "left", md: "justify" },
                   textTransform: "capitalize",
+                  fontFamily:"Palanquin"
                 }}
               >
                 Welcome to Credorbit Technologies — the future of instant,
@@ -85,9 +88,12 @@ export default function Intro() {
                   color: color.white,
                   textAlign: { xs: "left", md: "justify" },
                   textTransform: "capitalize",
+                    fontFamily:"Palanquin"
                 }}
               >
-                At Credorbit, we eliminate paperwork, manual processes, and delays with a 100% self-service model that is fast, intelligent, and efficient.
+                At Credorbit, we eliminate paperwork, manual processes, and
+                delays with a 100% self-service model that is fast, intelligent,
+                and efficient.
               </Typography>
             </Grid>
           </Grid>

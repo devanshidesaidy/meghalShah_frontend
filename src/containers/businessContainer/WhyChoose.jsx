@@ -15,6 +15,7 @@ export default function WhyChoose() {
           px: 3,
           textAlign: "center",
           fontWeight: "bold",
+          fontFamily: "JosefinSans",
         }}
       >
         Why Choose MSACA Bizzsolve LLP?
@@ -27,6 +28,7 @@ export default function WhyChoose() {
           textAlign: "center",
           fontWeight: "bold",
           letterSpacing: "0.1rem",
+          fontFamily:"MiriamLibre-Regular"
         }}
       >
         ❝ At MSACA Bizzsolve LLP, we don't just offer financial services — we
@@ -56,6 +58,7 @@ export default function WhyChoose() {
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
+                fontFamily:"JosefinSans"
               }}
             >
               Seasoned Expertise
@@ -67,7 +70,7 @@ export default function WhyChoose() {
                 pt: "2%",
                 px: 3,
                 textAlign: "center",
-                // fontWeight: "bold",
+                fontFamily: "Palanquin",
               }}
             >
               A team of finance professionals with rich, hands-on experience
@@ -95,6 +98,7 @@ export default function WhyChoose() {
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
+                fontFamily:"JosefinSans"
               }}
             >
               Custom-Built Solutions
@@ -106,7 +110,7 @@ export default function WhyChoose() {
                 pt: "2%",
                 px: 3,
                 textAlign: "center",
-                // fontWeight: "bold",
+                fontFamily: "Palanquin",
               }}
             >
               Financial strategies designed to align perfectly with your
@@ -134,6 +138,7 @@ export default function WhyChoose() {
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
+                fontFamily:"JosefinSans"
               }}
             >
               Powerful Network
@@ -145,7 +150,7 @@ export default function WhyChoose() {
                 pt: "2%",
                 px: 3,
                 textAlign: "center",
-                // fontWeight: "bold",
+                fontFamily: "Palanquin",
               }}
             >
               Direct access to top banks, financial institutions, and private
@@ -173,6 +178,7 @@ export default function WhyChoose() {
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
+                fontFamily:"JosefinSans"
               }}
             >
               360° Support
@@ -184,7 +190,7 @@ export default function WhyChoose() {
                 pt: "2%",
                 px: 3,
                 textAlign: "center",
-                // fontWeight: "bold",
+                fontFamily: "Palanquin",
               }}
             >
               From the first consultation to the final execution, we walk with

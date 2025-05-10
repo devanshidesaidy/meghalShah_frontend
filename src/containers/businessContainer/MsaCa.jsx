@@ -31,6 +31,9 @@ export default function MsaCa() {
                     my: { xs: 3, md: 0 },
                     textAlign: { xs: "center", md: "left" },
                     color: color.greenFont,
+                    fontFamily:"JosefinSans",
+                    letterSpacing:"0.1rem",
+                    mr:0.5  
                   }}
                 >
                   MSACA Bizzsolve LLP
@@ -48,6 +51,8 @@ export default function MsaCa() {
                     my: { xs: 3, md: 0 },
                     textAlign: "center",
                     color: color.white,
+                   fontFamily:"MiriamLibre-Regular"
+
                   }}
                 >
                   Driving {""}
@@ -70,6 +75,7 @@ export default function MsaCa() {
                   color: color.white,
                  textAlign: {xs:"left",md:"justify"},
                   textTransform: "capitalize",
+                  fontFamily:"Palanquin"
                 }}
               >
                 At MSACA Bizzsolve LLP, we are committed to empowering
@@ -83,6 +89,7 @@ export default function MsaCa() {
                   color: color.white,
                  textAlign: {xs:"left",md:"justify"},
                   textTransform: "capitalize",
+                  fontFamily:"Palanquin"
                 }}
               >
                 Based in Ahmedabad, we specialize in helping companies secure

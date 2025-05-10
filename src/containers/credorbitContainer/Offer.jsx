@@ -13,9 +13,10 @@ export default function Offer() {
           px: 3,
           textAlign: "center",
           fontWeight: "bold",
+          fontFamily: "JosefinSans",
         }}
       >
-      What I Offer
+        What I Offer
       </Grid>
       <Container sx={{ py: "5%" }}>
         <Grid container sx={{ justifyContent: "space-between", gap: "2rem" }}>
@@ -47,9 +48,10 @@ export default function Offer() {
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
+                fontFamily: "MiriamLibre-Regular",
               }}
             >
-             Instant Loan Eligibility Checks
+              Instant Loan Eligibility Checks
             </Typography>
             <Typography
               sx={{
@@ -57,11 +59,12 @@ export default function Offer() {
                 color: color.white,
                 pt: "2%",
                 px: 3,
-                 textAlign: {xs:"center",md:"justify"},
-                // fontWeight: "bold",
+                textAlign: { xs: "center", md: "justify" },
+                fontFamily: "Palanquin",
               }}
             >
-              Get real-time loan eligibility results in less than 2 minutes without any manual intervention.
+              Get real-time loan eligibility results in less than 2 minutes
+              without any manual intervention.
             </Typography>
           </Grid>
           <Grid
@@ -92,6 +95,7 @@ export default function Offer() {
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
+                fontFamily: "MiriamLibre-Regular",
               }}
             >
               Automated Document Management
@@ -102,11 +106,12 @@ export default function Offer() {
                 color: color.white,
                 pt: "2%",
                 px: 3,
-                 textAlign: {xs:"center",md:"justify"},
-                // fontWeight: "bold",
+                textAlign: { xs: "center", md: "justify" },
+                fontFamily: "Palanquin",
               }}
             >
-       AI-powered document validation, smart uploads, and seamless tracking—no paperwork, no bottlenecks.
+              AI-powered document validation, smart uploads, and seamless
+              tracking—no paperwork, no bottlenecks.
             </Typography>
           </Grid>
           <Grid
@@ -137,6 +142,7 @@ export default function Offer() {
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
+                fontFamily: "MiriamLibre-Regular",
               }}
             >
               Multi-Bank Loan Options
@@ -147,11 +153,12 @@ export default function Offer() {
                 color: color.white,
                 pt: "2%",
                 px: 3,
-                 textAlign: {xs:"center",md:"justify"},
-                // fontWeight: "bold",
+                textAlign: { xs: "center", md: "justify" },
+                fontFamily: "Palanquin",
               }}
             >
-              Explore, compare, and apply to multiple banks from a single platform—giving borrowers and partners the ultimate flexibility.
+              Explore, compare, and apply to multiple banks from a single
+              platform—giving borrowers and partners the ultimate flexibility.
             </Typography>
           </Grid>
           <Grid
@@ -182,6 +189,7 @@ export default function Offer() {
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
+                fontFamily: "MiriamLibre-Regular",
               }}
             >
               Self-Service, No Sales Reps Needed
@@ -192,11 +200,13 @@ export default function Offer() {
                 color: color.white,
                 pt: "2%",
                 px: 3,
-                 textAlign: {xs:"center",md:"justify"},
-                // fontWeight: "bold",
+                textAlign: { xs: "center", md: "justify" },
+                fontFamily: "Palanquin",
               }}
             >
-              The complete loan journey, from eligibility to approval, is managed independently by users with intuitive dashboards and real-time updates.
+              The complete loan journey, from eligibility to approval, is
+              managed independently by users with intuitive dashboards and
+              real-time updates.
             </Typography>
           </Grid>
         </Grid>

@@ -10,9 +10,9 @@ export default function Tagline() {
         <Typography
           sx={{
             color: color.white,
-            fontSize: { xs: "1.4rem", md: "2.85rem" },
+            fontSize: { xs: "1.4rem", md: "2.7rem" },
             // fontWeight: "bold",
-            fontFamily: "fantasy",
+            fontFamily: "MiriamLibre-Regular",
             letterSpacing: "0.1rem",
             textAlign:{xs:"center",md:"left"}
           }}

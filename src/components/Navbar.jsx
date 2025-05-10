@@ -136,7 +136,7 @@ function Navbar() {
                 sx={{
                   textAlign: "center",
                   width: "100%",
-                  fontFamily: "JosefinSans",
+                  fontFamily: "MiriamLibre-Regular",
                 }}
               >
                 Home
@@ -206,6 +206,7 @@ function Navbar() {
             display: { xs: "none", md: "flex" },
             gap: "4rem",
             justifyContent: "end",
+            fontFamily: "MiriamLibre-Regular",
           }}
         >
           <Link
@@ -261,7 +262,7 @@ function Navbar() {
                   onClick={() => navigate("/msaca")}
                   style={{ textDecoration: "none" }}
                 >
-                  <Typography sx={{ my: 0.5 }}>MSACA Bizzsolve LLP</Typography>
+                  <Typography sx={{ my: 0.5 ,fontFamily:"MiriamLibre-Regular"}}>MSACA Bizzsolve LLP</Typography>
                 </Link>
                 <Link
                   className={`nav-link ${
@@ -271,7 +272,7 @@ function Navbar() {
                   onClick={() => navigate("/credorbit")}
                   style={{ textDecoration: "none" }}
                 >
-                  <Typography sx={{ mb: 0.5, mt: 2 }}>
+                  <Typography sx={{ mb: 0.5, mt: 2,fontFamily:"MiriamLibre-Regular" }}>
                     Credorbit Technologies
                   </Typography>
                 </Link>

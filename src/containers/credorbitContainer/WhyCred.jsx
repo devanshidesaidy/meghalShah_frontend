@@ -15,9 +15,10 @@ export default function WhyCred() {
           px: 3,
           textAlign: "center",
           fontWeight: "bold",
+          fontFamily: "JosefinSans",
         }}
       >
-        Why Choose MSACA Bizzsolve LLP?
+        Why Credorbit?
       </Grid>
       <Grid
         sx={{
@@ -27,9 +28,11 @@ export default function WhyCred() {
           textAlign: "center",
           fontWeight: "bold",
           letterSpacing: "0.1rem",
+          fontFamily: "MiriamLibre-Regular",
         }}
       >
-        ❝ At Credorbit, our mission is simple—make business <br/>financing faster, smarter, and frictionless. ❞
+        ❝ At Credorbit, our mission is simple—make business <br />
+        financing faster, smarter, and frictionless. ❞
       </Grid>
       <Container sx={{ py: "5%" }}>
         <Grid container sx={{ justifyContent: "space-between" }}>
@@ -54,9 +57,10 @@ export default function WhyCred() {
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
+                fontFamily:"JosefinSans"
               }}
             >
-             Speed
+              Speed
             </Typography>
             <Typography
               sx={{
@@ -65,10 +69,11 @@ export default function WhyCred() {
                 pt: "2%",
                 px: 3,
                 textAlign: "center",
-                // fontWeight: "bold",
+                fontFamily:"Palanquin",
+                letterSpacing:"0.1rem"
               }}
             >
-             Instant processing with real-time approvals
+              Instant processing with real-time approvals
             </Typography>
           </Grid>
           <Grid
@@ -92,6 +97,7 @@ export default function WhyCred() {
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
+                fontFamily:"JosefinSans"
               }}
             >
               Convenience
@@ -103,7 +109,8 @@ export default function WhyCred() {
                 pt: "2%",
                 px: 3,
                 textAlign: "center",
-                // fontWeight: "bold",
+               fontFamily:"Palanquin",
+               letterSpacing:"0.1rem"
               }}
             >
               100% paperless, self-driven process.
@@ -130,9 +137,10 @@ export default function WhyCred() {
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
+                fontFamily:"JosefinSans"
               }}
             >
-             Transparency
+              Transparency
             </Typography>
             <Typography
               sx={{
@@ -141,7 +149,8 @@ export default function WhyCred() {
                 pt: "2%",
                 px: 3,
                 textAlign: "center",
-                // fontWeight: "bold",
+               fontFamily:"Palanquin",
+               letterSpacing:"0.1rem"
               }}
             >
               Clear eligibility, multiple bank options, and real-time tracking.
@@ -168,6 +177,7 @@ export default function WhyCred() {
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
+                fontFamily:"JosefinSans"
               }}
             >
               Empowerment
@@ -179,10 +189,12 @@ export default function WhyCred() {
                 pt: "2%",
                 px: 3,
                 textAlign: "center",
-                // fontWeight: "bold",
+                fontFamily:"Palanquin",
+                letterSpacing:"0.1rem"
               }}
             >
-              Whether you're a borrower, a DSA, a CA, or a bank partner, Credorbit gives you the tools to succeed.
+              Whether you're a borrower, a DSA, a CA, or a bank partner,
+              Credorbit gives you the tools to succeed.
             </Typography>
           </Grid>
         </Grid>
