@@ -1,7 +1,29 @@
+@font-face {
+  font-family: "JosefinSans";
+  src: url("./fonts/Josefin_Sans _Title/static/JosefinSans-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MiriamLibre-Regular";
+  src: url("./fonts/Miriam_Libre_Sub Title/MiriamLibre-Regular.ttf")
+    format("truetype");
+  font-weight: Bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Palanquin";
+  src: url("./fonts/Palanquin-Regular.ttf") format("truetype");
+  font-weight: Bold;
+  font-style: normal;
+}
+
 #root {
   margin: 0 !important;
   padding: 0 !important;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 html,
@@ -17,7 +39,6 @@ a {
   text-decoration: none;
   color: #ffffff;
   font-size: large;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .bannerImg {
@@ -107,6 +128,7 @@ a {
   background-image: url("../src/assets/images/IntroductionBackground.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 /* Change default bullet color */
 .swiper-pagination-bullet {
@@ -118,7 +140,6 @@ a {
 .swiper-pagination-bullet-active {
   background-color: #08d665; /* your preferred color */
 }
-
 
 .nav-link {
   display: inline-block;

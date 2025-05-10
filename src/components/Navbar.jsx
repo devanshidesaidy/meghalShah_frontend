@@ -29,7 +29,6 @@ function Navbar() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-    
   }, []);
 
   const handleOpenNavMenu = (event) => {
@@ -133,7 +132,15 @@ function Navbar() {
                 navigate(path.home);
               }}
             >
-              <Typography sx={{textAlign:"center",width:"100%"}}>Home</Typography>
+              <Typography
+                sx={{
+                  textAlign: "center",
+                  width: "100%",
+                  fontFamily: "JosefinSans",
+                }}
+              >
+                Home
+              </Typography>
             </MenuItem>
             <MenuItem
               onClick={() => {
@@ -141,13 +148,15 @@ function Navbar() {
                 navigate(path.about);
               }}
             >
-              <Typography sx={{textAlign:"center",width:"100%"}}>About</Typography>
+              <Typography sx={{ textAlign: "center", width: "100%" }}>
+                About
+              </Typography>
             </MenuItem>
 
             {/* Business with Submenu */}
             <MenuItem
               onClick={() => setMobileBusinessOpen(!mobileBusinessOpen)}
-              sx={{justifyContent:"center",ml:5}}
+              sx={{ justifyContent: "center", ml: 5 }}
             >
               <Typography sx={{ display: "flex", alignItems: "center" }}>
                 Business{" "}
@@ -157,7 +166,7 @@ function Navbar() {
             {mobileBusinessOpen && (
               <>
                 <MenuItem
-                  sx={{ pl: 4,justifyContent:"center" }}
+                  sx={{ pl: 4, justifyContent: "center" }}
                   onClick={() => {
                     handleCloseNavMenu();
                     navigate("/msaca");
@@ -166,7 +175,7 @@ function Navbar() {
                   MSACA Bizzsolve LLP
                 </MenuItem>
                 <MenuItem
-                  sx={{ pl: 4,justifyContent:"center" }}
+                  sx={{ pl: 4, justifyContent: "center" }}
                   onClick={() => {
                     handleCloseNavMenu();
                     navigate("/credorbit");
@@ -183,7 +192,9 @@ function Navbar() {
                 navigate(path.contact);
               }}
             >
-              <Typography sx={{textAlign:"center",width:"100%"}}>Contact</Typography>
+              <Typography sx={{ textAlign: "center", width: "100%" }}>
+                Contact
+              </Typography>
             </MenuItem>
           </Menu>
         </Box>

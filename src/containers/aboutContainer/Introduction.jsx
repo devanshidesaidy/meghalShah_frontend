@@ -8,7 +8,7 @@ export default function Introduction() {
       sx={{ backgroundColor: color.mateblack, pt: { xs: "10%", md: "none" } }}
     >
       <Container>
-        <Grid container sx={{gap:{xs:"none",md:"3rem",lg:"4rem"}}}>
+        <Grid container sx={{ gap: { xs: "none", md: "3rem", lg: "4rem" } }}>
           <Grid
             size={{
               xs: 12,
@@ -16,7 +16,7 @@ export default function Introduction() {
             }}
             sx={{
               boxShadow: "rgb(255, 255, 255) 0px 7px 29px 0px",
-              borderRadius:"20px",
+              borderRadius: "20px",
             }}
           >
             <img src={img} />
@@ -26,13 +26,14 @@ export default function Introduction() {
             container
             sx={{ alignItems: "center" }}
           >
-            <Grid sx={{mt:{xs:5,md:0}}}>
+            <Grid sx={{ mt: { xs: 5, md: 0 } }}>
               <Typography
                 sx={{
                   fontSize: "1.2rem",
                   color: color.white,
                   textAlign: "justify",
                   textTransform: "capitalize",
+                  fontFamily: "Palanquin",
                 }}
               >
                 I am CA Meghal Shah, a seasoned Chartered Accountant with over
@@ -51,6 +52,7 @@ export default function Introduction() {
                   color: color.white,
                   textAlign: "justify",
                   textTransform: "capitalize",
+                  fontFamily: "Palanquin",
                 }}
               >
                 Having worked with startups, small-medium enterprises (SMEs),
@@ -64,9 +66,10 @@ export default function Introduction() {
           </Grid>
         </Grid>
 
-
-        <Grid container sx={{gap:{xs:"none",md:"3rem",lg:"4rem"},mt:10}}>
-          
+        <Grid
+          container
+          sx={{ gap: { xs: "none", md: "3rem", lg: "4rem" }, mt: 10 }}
+        >
           <Grid
             size={{ xs: 12, md: 5.8 }}
             container
@@ -79,9 +82,15 @@ export default function Introduction() {
                   color: color.white,
                   textAlign: "justify",
                   textTransform: "capitalize",
+                  fontFamily: "Palanquin",
                 }}
               >
-               My philosophy is rooted in personalized service—I believe that every business is unique and deserves a solution that is crafted specifically for its needs. Over the years, I've built strong relationships with my clients, earning their trust by consistently delivering effective financial strategies and solutions.
+                My philosophy is rooted in personalized service—I believe that
+                every business is unique and deserves a solution that is crafted
+                specifically for its needs. Over the years, I've built strong
+                relationships with my clients, earning their trust by
+                consistently delivering effective financial strategies and
+                solutions.
               </Typography>
               <Typography
                 sx={{
@@ -90,9 +99,13 @@ export default function Introduction() {
                   color: color.white,
                   textAlign: "justify",
                   textTransform: "capitalize",
+                  fontFamily: "Palanquin",
                 }}
               >
-                As I continue to help businesses navigate the complexities of the financial world, my goal remains clear: to empower businesses to achieve financial independence, stability, and growth that lasts.
+                As I continue to help businesses navigate the complexities of
+                the financial world, my goal remains clear: to empower
+                businesses to achieve financial independence, stability, and
+                growth that lasts.
               </Typography>
             </Grid>
           </Grid>
@@ -104,8 +117,8 @@ export default function Introduction() {
             }}
             sx={{
               boxShadow: "rgb(255, 255, 255) 0px 7px 29px 0px",
-              borderRadius:"20px",
-              my:{xs:5,md:0}
+              borderRadius: "20px",
+              my: { xs: 5, md: 0 },
             }}
           >
             <img src={img} />

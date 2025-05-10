@@ -4,7 +4,7 @@ import { color, path } from "../../constant";
 import PermPhoneMsgIcon from "@mui/icons-material/PermPhoneMsg";
 import { useNavigate } from "react-router-dom";
 export default function CallSection() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <Grid
       sx={{
@@ -25,8 +25,10 @@ export default function CallSection() {
             sx={{
               fontSize: { xs: "0.9rem", md: "1.5rem", lg: "1.7rem" },
               fontWeight: "bold",
+              fontFamily: "JosefinSans",
               my: { xs: 3, md: 0 },
               textAlign: { xs: "center", md: "left" },
+              letterSpacing: "0.1rem",
             }}
           >
             " Get Started with Expert Financial Advisory "
@@ -44,6 +46,7 @@ export default function CallSection() {
               fontSize: { xs: "1rem", md: "1.2rem", lg: "1.4rem" },
               my: { xs: 3, md: 0 },
               textAlign: "center",
+              fontFamily: "MiriamLibre-Regular",
             }}
           >
             Schedule a consultation with{" "}
@@ -60,7 +63,7 @@ export default function CallSection() {
           </Grid>
           <Grid sx={{ display: "flex", justifyContent: "center" }}>
             <Button
-            onClick={()=>navigate(path.contact)}
+              onClick={() => navigate(path.contact)}
               sx={{
                 display: "flex",
                 alignItems: "center",
@@ -70,12 +73,12 @@ export default function CallSection() {
                 color: color.white,
                 fontWeight: "bold",
                 width: { xs: "30%", md: "auto" },
-                transition:"0.7s",
+                transition: "0.7s",
                 "&:hover": {
                   backgroundColor: "transparent",
                   border: "1px solid #ffffff",
                 },
-                ml:{xs:0,md:3}
+                ml: { xs: 0, md: 3 },
               }}
             >
               <PermPhoneMsgIcon sx={{ fontSize: 40 }} />

@@ -1,7 +1,8 @@
 import { Container, Divider, Grid, Typography } from "@mui/material";
 import React from "react";
 import { color } from "../../constant";
-
+import mission from "../../assets/svg/mission.png";
+import vission from "../../assets/svg/vision.png";
 export default function Mission() {
   return (
     <Grid sx={{ backgroundColor: color.bgblack }}>
@@ -13,24 +14,34 @@ export default function Mission() {
           px: 3,
           textAlign: "center",
           fontWeight: "bold",
+          fontFamily: "JosefinSans",
         }}
       >
         Mission, Vision & Core Values
       </Grid>
       <Container sx={{ py: "5%" }}>
-        <Grid container sx={{ backgroundColor: color.greenFont }}>
+        <Grid container sx={{ backgroundColor: color.greenFont, py: "2%" }}>
           <Grid
             size={{ xs: 12, md: 5.5 }}
             // sx={{ backgroundColor: color.mateblack }}
           >
+            <Grid sx={{ display: "flex", justifyContent: "center" }}>
+              <img
+                style={{
+                  filter: "brightness(0) invert(1)",
+                }}
+                src={mission}
+              />
+            </Grid>
             <Typography
               sx={{
                 fontSize: { xs: "2.5rem", md: "3rem" },
                 color: color.white,
-                pt: "5%",
+                pt: "2%",
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
+                fontFamily: "MiriamLibre-Regular",
               }}
             >
               Mission
@@ -41,8 +52,8 @@ export default function Mission() {
                 color: color.bgblack,
                 pt: "2%",
                 px: 3,
-                textAlign: "justify",
-                // fontWeight: "bold",
+                textAlign: "center",
+                fontFamily: "Palanquin",
               }}
             >
               My mission is to empower businesses with strategic financial
@@ -68,6 +79,14 @@ export default function Mission() {
             size={{ xs: 12, md: 5.5 }}
             // sx={{ backgroundColor: color.mateblack }}
           >
+            <Grid sx={{ display: "flex", justifyContent: "center" }}>
+              <img
+                style={{
+                 filter: "brightness(0) invert(1)"
+                }}
+                src={vission}
+              />
+            </Grid>
             <Typography
               sx={{
                 fontSize: { xs: "2.5rem", md: "3rem" },
@@ -76,6 +95,7 @@ export default function Mission() {
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
+                fontFamily: "MiriamLibre-Regular",
               }}
             >
               Vision
@@ -86,8 +106,8 @@ export default function Mission() {
                 color: color.bgblack,
                 pt: "2%",
                 px: 3,
-                textAlign: "justify",
-                // fontWeight: "bold",
+                textAlign: "center",
+                fontFamily: "Palanquin",
               }}
             >
               To be a trusted advisor and financial partner for businesses

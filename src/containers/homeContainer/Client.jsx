@@ -17,11 +17,12 @@ export default function Client() {
       <Container sx={{ backgroundColor: color.mateblack, pb: "2%" }}>
         <Typography
           sx={{
-            fontSize: "3rem",
+            fontSize: "4rem",
             textAlign: "center",
             fontWeight: "bold",
             color: color.greenFont,
             pt: "3rem",
+            fontFamily: "JosefinSans",
           }}
         >
           Testimonials
@@ -54,10 +55,19 @@ export default function Client() {
                   // src="/static/images/avatar/1.jpg"
                   sx={{ width: 50, height: 50 }}
                 />
-                <Stack sx={{ fontSize: "2rem" }}>Client 1</Stack>
+                <Stack
+                  sx={{ fontSize: "2rem", fontFamily: "MiriamLibre-Regular" }}
+                >
+                  Client 1
+                </Stack>
               </Typography>
               <Typography
-                sx={{ fontSize: "1.2rem", mt: 4, textAlign: "center" }}
+                sx={{
+                  fontSize: "1.2rem",
+                  mt: 4,
+                  textAlign: "center",
+                  fontFamily: "Palanquin",
+                }}
               >
                 “ CA Meghal Shah’s advisory was pivotal in helping us
                 restructure our debt and improve profitability.”
@@ -85,10 +95,19 @@ export default function Client() {
                   // src="/static/images/avatar/1.jpg"
                   sx={{ width: 50, height: 50 }}
                 />
-                <Stack sx={{ fontSize: "2rem" }}>Client 2</Stack>
+                <Stack
+                  sx={{ fontSize: "2rem", fontFamily: "MiriamLibre-Regular" }}
+                >
+                  Client 2
+                </Stack>
               </Typography>
               <Typography
-                sx={{ fontSize: "1.2rem", mt: 4, textAlign: "center" }}
+                sx={{
+                  fontSize: "1.2rem",
+                  mt: 4,
+                  textAlign: "center",
+                  fontFamily: "Palanquin",
+                }}
               >
                 “ Thanks to Meghal's guidance, we raised the capital we needed
                 to scale our startup rapidly.”

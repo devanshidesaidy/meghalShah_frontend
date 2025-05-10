@@ -13,13 +13,13 @@ import { color } from "../../constant";
 
 export default function Awards() {
   return (
-    <Grid sx={{ backgroundColor: color.bgblack,py:{xs:"5%",md:"none"} }} >
+    <Grid sx={{ backgroundColor: color.bgblack, py: { xs: "5%", md: "none" } }}>
       <Grid
         sx={{
           fontSize: { xs: "2.5rem", md: "3.5rem" },
           color: color.greenFont,
           pb: "4%",
-          //   px: 3,
+          fontFamily: "JosefinSans",
           textAlign: "center",
           fontWeight: "bold",
         }}

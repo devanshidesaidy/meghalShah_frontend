@@ -23,12 +23,13 @@ export default function Service() {
       >
         <Grid
           sx={{
-            fontSize: { xs: "2.5rem", md: "3.5rem" },
+            fontSize: { xs: "2.5rem", md: "4rem" },
             color: color.greenFont,
             pt: "5%",
             px: 3,
             textAlign: "center",
             fontWeight: "bold",
+            fontFamily:"JosefinSans"
           }}
         >
           Services I Offer
@@ -71,6 +72,7 @@ export default function Service() {
                       color: color.white,
                       fontWeight: 600,
                       fontSize: { xs: "1.3rem", md: "1.6rem" },
+                      fontFamily:"MiriamLibre-Regular"
                     }}
                   >
                     Corporate Finance & Advisory
@@ -78,8 +80,9 @@ export default function Service() {
                   <Typography
                     sx={{
                       color: color.white,
-                      fontSize: "1.1rem",
+                      fontSize: "1.2rem",
                       mt: 1,
+                      fontFamily:"Palanquin"
                     }}
                   >
                     Strategic finance planning and project financing to ensure
@@ -109,6 +112,7 @@ export default function Service() {
                       color: color.white,
                       fontWeight: 600,
                       fontSize: { xs: "1.3rem", md: "1.6rem" },
+                      fontFamily:"MiriamLibre-Regular"
                     }}
                   >
                     MSME Loans
@@ -116,8 +120,9 @@ export default function Service() {
                   <Typography
                     sx={{
                       color: color.white,
-                      fontSize: "1.1rem",
+                      fontSize: "1.2rem",
                       mt: 1,
+                      fontFamily:"Palanquin"
                     }}
                   >
                     Access to loans with minimal hassle, tailored to your needs.
@@ -152,6 +157,7 @@ export default function Service() {
                       fontWeight: 600,
                       fontSize: { xs: "1.3rem", md: "1.6rem" },
                       lineHeight: "1.7rem",
+                      fontFamily:"MiriamLibre-Regular"
                     }}
                   >
                     Startup Funding & Angel Investment
@@ -159,8 +165,9 @@ export default function Service() {
                   <Typography
                     sx={{
                       color: color.white,
-                      fontSize: "1.1rem",
+                      fontSize: "1.2rem",
                       mt: 2,
+                      fontFamily:"Palanquin"
                     }}
                   >
                     Helping startups secure funding and scale effectively.
@@ -191,6 +198,7 @@ export default function Service() {
                       fontWeight: 600,
                       fontSize: { xs: "1.3rem", md: "1.6rem" },
                       lineHeight: "1.8rem",
+                      fontFamily:"MiriamLibre-Regular"
                     }}
                   >
                     Tax Advisory & Financial Structuring
@@ -198,8 +206,9 @@ export default function Service() {
                   <Typography
                     sx={{
                       color: color.white,
-                      fontSize: "1.1rem",
+                      fontSize: "1.2rem",
                       mt: 2,
+                      fontFamily:"Palanquin"
                     }}
                   >
                     Optimize your taxes and financial setup for efficiency.

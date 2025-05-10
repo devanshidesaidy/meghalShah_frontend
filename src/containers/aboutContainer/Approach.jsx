@@ -10,8 +10,8 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { Avatar, Container, Grid, Stack, Typography } from "@mui/material";
 import { color } from "../../constant";
-import mission from "../../assets/svg/mission.png";
-import vission from "../../assets/svg/vision.png";
+import approach from "../../assets/svg/approach.png";
+import philosophy from "../../assets/svg/thought.png";
 
 export default function Approach() {
   return (
@@ -21,7 +21,7 @@ export default function Approach() {
           fontSize: { xs: "2.5rem", md: "3.5rem" },
           color: color.greenFont,
           py: "4%",
-          //   px: 3,
+          fontFamily: "JosefinSans",
           textAlign: "center",
           fontWeight: "bold",
         }}
@@ -39,8 +39,10 @@ export default function Approach() {
                 style={{
                   filter:
                     "invert(65%) sepia(91%) saturate(502%) hue-rotate(90deg)",
+                    height:"95px",
+                    width:"95px"
                 }}
-                src={mission}
+                src={approach}
               />
             </Grid>
             <Typography
@@ -51,9 +53,10 @@ export default function Approach() {
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
+                fontFamily: "JosefinSans",
               }}
             >
-              Mission
+              Approach
             </Typography>
             <Typography
               sx={{
@@ -62,27 +65,33 @@ export default function Approach() {
                 pt: "2%",
                 px: 3,
                 textAlign: "justify",
-                // fontWeight: "bold",
+                fontFamily:"Palanquin",
+                // letterSpacing:"0.1rem"
               }}
             >
-              My mission is to empower businesses with strategic financial
-              advice that maximizes growth, optimizes performance, and builds
-              lasting financial stability. I strive to provide solutions that
-              are not only effective but sustainable, ensuring that businesses
-              can thrive in an ever-evolving financial landscape.
+              I adopt a{" "}
+              <span style={{ color: color.greenFont, fontWeight: "bold" }}>
+                holistic approach
+              </span>{" "}
+              to financial advisory, which means I look at every aspect of a
+              business's financial health—from day-to-day operations to
+              long-term growth plans. My goal is to provide practical,
+              sustainable solutions that drive efficiency, reduce costs, and
+              ensure financial stability. Through regular assessments and
+              strategic planning, I work closely with clients to ensure their
+              financial strategies align with their overall business objectives.
             </Typography>
           </Grid>
-          <Grid
-            size={{ xs: 12, md: 5.8 }}
-            sx={{  mt: {xs:5,md:0} }}
-          >
+          <Grid size={{ xs: 12, md: 5.8 }} sx={{ mt: { xs: 5, md: 0 } }}>
             <Grid sx={{ display: "flex", justifyContent: "center" }}>
               <img
                 style={{
                   filter:
                     "invert(65%) sepia(91%) saturate(502%) hue-rotate(90deg)",
+                    height:"95px",
+                    width:"95px"
                 }}
-                src={vission}
+                src={philosophy}
               />
             </Grid>
             <Typography
@@ -93,9 +102,10 @@ export default function Approach() {
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
+                fontFamily: "JosefinSans",
               }}
             >
-              Vision
+              Philosophy
             </Typography>
             <Typography
               sx={{
@@ -104,14 +114,32 @@ export default function Approach() {
                 pt: "2%",
                 px: 3,
                 textAlign: "justify",
-                // fontWeight: "bold",
+               fontFamily:"Palanquin",
+              //  letterSpacing:"0.1rem"
               }}
             >
-              To be a trusted advisor and financial partner for businesses
-              across industries, helping them unlock their full potential and
-              achieve financial independence and success. I aim to deliver
-              high-quality, tailor-made financial solutions that exceed
-              expectations and drive measurable results.
+              At the heart of my work is a deep commitment to{" "}
+              <span style={{ color: color.greenFont, fontWeight: "bold" }}>
+                {" "}
+                personalized service.
+              </span>{" "}
+              I believe in building strong, long-term relationships with my
+              clients based on trust and mutual respect. My philosophy revolves
+              around{" "}
+              <span style={{ color: color.greenFont, fontWeight: "bold" }}>
+                {" "}
+                making finance simple and accessible
+              </span>{" "}
+              for businesses, regardless of size or complexity. I take pride in
+              providing clear, actionable insights that empower my clients to
+              make informed decisions for sustained success. Above all, my focus
+              is always on{" "}
+              <span style={{ color: color.greenFont, fontWeight: "bold" }}>
+                {" "}
+                delivering value{" "}
+              </span>
+              —ensuring that every financial strategy contributes directly to
+              the growth and success of the business.
             </Typography>
           </Grid>
         </Grid>

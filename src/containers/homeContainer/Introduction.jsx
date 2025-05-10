@@ -23,6 +23,7 @@ const Introduction = () => {
                 color: color.greenFont,
                 fontWeight: "bold",
                 marginBottom: 5,
+                fontFamily:"JosefinSans"
               }}
             >
               Your Trusted Financial Strategist
@@ -67,6 +68,8 @@ const Introduction = () => {
                 marginLeft: { xs: "0%", sm: "5%" },
                 lineHeight: "2.2rem",
                 color: color.greenFont,
+                fontFamily:"MiriamLibre-Regular",
+                fontWeight:"bold"
               }}
             >
               Expert Financial Advisory
@@ -81,7 +84,7 @@ const Introduction = () => {
               }}
             />
             <Typography
-              sx={{ fontSize: "1rem", textAlign: "justify", padding: 3 }}
+              sx={{ fontSize: "1.1rem", textAlign: "justify", padding: 3 ,fontFamily:"Palanquin"}}
             >
               With over 20 years of experience, CA Meghal Shah brings a wealth
               of knowledge in guiding businesses to achieve their financial
@@ -121,6 +124,8 @@ const Introduction = () => {
                 },
                 color: color.greenFont,
                 lineHeight: "2.2rem",
+                fontWeight:"bold",
+                fontFamily:"MiriamLibre-Regular"
               }}
             >
               Customized Growth Strategies
@@ -136,9 +141,10 @@ const Introduction = () => {
             />
             <Typography
               sx={{
-                fontSize: "1rem",
+                fontSize: "1.1rem",
                 textAlign: "justify",
                 padding: 3,
+                fontFamily:"Palanquin"
               }}
             >
               We understand that every business is unique. Whether it’s an MSME

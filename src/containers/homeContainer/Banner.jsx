@@ -31,6 +31,7 @@ export default function Banner() {
               fontSize: { xs: "3.5rem", md: "3rem", lg: "6rem" },
               fontWeight: "bold",
               textAlign: { xs: "center", md: "left" },
+              fontFamily:"JosefinSans"
             }}
           >
             Meghal Shah
@@ -38,9 +39,11 @@ export default function Banner() {
           <Grid
             sx={{
               color: color.white,
-              fontSize: "2rem",
+              fontSize: "1.5rem",
               textAlign: { xs: "center", md: "left" },
               mt: 4,
+              fontFamily:"MiriamLibre-Regular",
+              letterSpacing:"0.1rem"
             }}
           >
             Strategic Financial Solutions for Sustainable Business Growth

@@ -49,7 +49,7 @@ export default function CoreValues() {
             fontSize: { xs: "2.5rem", md: "3.5rem" },
             color: color.greenFont,
             pt: "4%",
-            //   px: 3,
+            fontFamily:"JosefinSans",
             textAlign: "center",
             fontWeight: "bold",
           }}
@@ -93,6 +93,7 @@ export default function CoreValues() {
                     fontWeight: "bold",
                     textAlign: "center",
                     fontSize: "1.5rem",
+                    fontFamily:"MiriamLibre-Regular"
                   }}
                 >
                   {item.name}
@@ -103,6 +104,7 @@ export default function CoreValues() {
                     textAlign: "center",
                     marginTop: "0.5rem",
                     fontSize: "1.2rem",
+                    fontFamily:"Palanquin"
                   }}
                 >
                   {item.desc}

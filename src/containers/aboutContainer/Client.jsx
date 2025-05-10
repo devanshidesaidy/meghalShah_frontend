@@ -17,11 +17,12 @@ export default function Client() {
       <Container sx={{ backgroundColor: color.mateblack, pb: "2%" }}>
         <Typography
           sx={{
-            fontSize: "3rem",
+            fontSize: "4rem",
             textAlign: "center",
             fontWeight: "bold",
             color: color.greenFont,
             pt: "3rem",
+            fontFamily: "JosefinSans",
           }}
         >
           Client Testimonials
@@ -54,7 +55,9 @@ export default function Client() {
                   // src="/static/images/avatar/1.jpg"
                   sx={{ width: 50, height: 50 }}
                 />
-                <Stack sx={{ fontSize: "2rem" }}>
+                <Stack
+                  sx={{ fontSize: "2rem", fontFamily: "MiriamLibre-Regular" }}
+                >
                   John Doe
                   <Stack sx={{ fontSize: "1rem" }}>
                     CEO of ABC Tech Solutions{" "}
@@ -62,7 +65,12 @@ export default function Client() {
                 </Stack>
               </Typography>
               <Typography
-                sx={{ fontSize: "1.2rem", mt: 4, textAlign: "center" }}
+                sx={{
+                  fontSize: "1.2rem",
+                  mt: 4,
+                  textAlign: "center",
+                  fontFamily: "Palanquin",
+                }}
               >
                 "CA Meghal Shah's expertise was crucial in securing our funding
                 and streamlining our financial operations. A true game-changer
@@ -91,7 +99,9 @@ export default function Client() {
                   // src="/static/images/avatar/1.jpg"
                   sx={{ width: 50, height: 50 }}
                 />
-                <Stack sx={{ fontSize: "2rem" }}>
+                <Stack
+                  sx={{ fontSize: "2rem", fontFamily: "MiriamLibre-Regular" }}
+                >
                   Rajesh Kumar
                   <Stack sx={{ fontSize: "1rem" }}>
                     Founder of XYZ Manufacturing
@@ -99,7 +109,12 @@ export default function Client() {
                 </Stack>
               </Typography>
               <Typography
-                sx={{ fontSize: "1.2rem", mt: 4, textAlign: "center" }}
+                sx={{
+                  fontSize: "1.2rem",
+                  mt: 4,
+                  textAlign: "center",
+                  fontFamily: "Palanquin",
+                }}
               >
                 “His advice on debt restructuring and cash flow management
                 transformed our financial health. Highly recommend!”
