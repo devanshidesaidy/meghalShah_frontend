@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import AboutBanner from "../containers/aboutContainer/AboutBanner";
-import Introduction from "../containers/aboutContainer/introduction";
+import Introduction from "../containers/aboutContainer/Introduction";
 import Mission from "../containers/aboutContainer/Mission";
 import CoreValues from "../containers/aboutContainer/CoreValues";
 import Awards from "../containers/aboutContainer/Awards";
