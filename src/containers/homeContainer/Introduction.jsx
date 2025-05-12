@@ -8,7 +8,7 @@ const Introduction = () => {
       className="IntroductionBackground"
       // sx={{ backgroundColor: color.black }}
     >
-      <Container sx={{ paddingTop: "2%", paddingBottom: "5%" }}>
+      <Container sx={{ paddingTop: "5%", paddingBottom: "7%" }}>
         <Grid container>
           <Grid
             sx={{
@@ -18,6 +18,7 @@ const Introduction = () => {
             }}
           >
             <Typography
+            className="font1"
               sx={{
                 fontSize: { xs: "2.5rem", md: "3.5rem" },
                 color: color.greenFont,

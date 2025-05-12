@@ -20,7 +20,7 @@ export default function Mission() {
         Mission, Vision & Core Values
       </Grid>
       <Container sx={{ py: "5%" }}>
-        <Grid container sx={{ backgroundColor: color.greenFont, py: "2%" }}>
+        <Grid container sx={{ backgroundColor: color.mateblack, py: "2%" }}>
           <Grid
             size={{ xs: 12, md: 5.5 }}
             // sx={{ backgroundColor: color.mateblack }}
@@ -36,7 +36,7 @@ export default function Mission() {
             <Typography
               sx={{
                 fontSize: { xs: "2.5rem", md: "3rem" },
-                color: color.white,
+                color: color.greenFont,
                 pt: "2%",
                 px: 3,
                 textAlign: "center",
@@ -49,7 +49,7 @@ export default function Mission() {
             <Typography
               sx={{
                 fontSize: { xs: "1rem", md: "1.2rem" },
-                color: color.bgblack,
+                color: color.white,
                 pt: "2%",
                 px: 3,
                 textAlign: "center",
@@ -71,7 +71,7 @@ export default function Mission() {
               borderRadius: "10px",
               mx: "2%",
               my: "3%",
-              height: "16rem",
+              height: "18rem",
               display: { xs: "none", md: "block" },
             }}
           />
@@ -90,7 +90,7 @@ export default function Mission() {
             <Typography
               sx={{
                 fontSize: { xs: "2.5rem", md: "3rem" },
-                color: color.white,
+                color: color.greenFont,
                 pt: "5%",
                 px: 3,
                 textAlign: "center",
@@ -103,7 +103,7 @@ export default function Mission() {
             <Typography
               sx={{
                 fontSize: { xs: "1rem", md: "1.2rem" },
-                color: color.bgblack,
+                color: color.white,
                 pt: "2%",
                 px: 3,
                 textAlign: "center",

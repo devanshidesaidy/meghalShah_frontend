@@ -5,40 +5,27 @@ import advisor from "../../assets/svg/advisor.svg";
 import funding from "../../assets/svg/funding.svg";
 import loan from "../../assets/svg/loan.svg";
 import tax from "../../assets/svg/tax.svg";
-import servicebg from "../../assets/images/servicebg.png";
+import servicebg from "../../assets/images/service.png";
 export default function Service() {
   return (
     <Grid container justifyContent={"center"}>
       <Grid
         // className="servicebg"
         sx={{
-          py: { xs: 5, md: 0 },
-          background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${servicebg})`,
+          py: { xs: 5, md: 5 },
+          background: {
+            xs: color.pureblack,
+            lg: ` url(${servicebg})`,
+          },
+          // backgroundColor:color.pureblack,
           backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "left",
+          // backgroundSize: "cover",
+          backgroundPosition: "center",
           zIndex: -1,
           width: "100%",
         }}
       >
-        <Grid
-          sx={{
-            fontSize: { xs: "2.5rem", md: "4rem" },
-            color: color.greenFont,
-            pt: "5%",
-            px: 3,
-            textAlign: "center",
-            fontWeight: "bold",
-            fontFamily:"JosefinSans"
-          }}
-        >
-          Services I Offer
-        </Grid>
         <Grid container m={"5%"}>
-          <Grid size={{ xs: 12, md: 4.5 }} sx={{ mt: { xs: 5, md: 0 } }}>
-            <Grid></Grid>
-          </Grid>
-
           <Grid
             container
             size={{ xs: 12, md: 7 }}
@@ -48,6 +35,20 @@ export default function Service() {
               alignItems: "center",
             }}
           >
+            <Grid
+              sx={{
+                fontSize: { xs: "2.5rem", md: "3rem", lg: "4rem" },
+                color: color.greenFont,
+                py: "5%",
+                px: 3,
+                textAlign: "center",
+                fontWeight: "bold",
+                fontFamily: "JosefinSans",
+                ml: { xs: 0, md: "15%", lg: "25%" },
+              }}
+            >
+              Services I Offer
+            </Grid>
             <Grid size={{ xs: 12, lg: 5.5 }}>
               <Grid
                 sx={{
@@ -72,7 +73,7 @@ export default function Service() {
                       color: color.white,
                       fontWeight: 600,
                       fontSize: { xs: "1.3rem", md: "1.6rem" },
-                      fontFamily:"MiriamLibre-Regular"
+                      fontFamily: "MiriamLibre-Regular",
                     }}
                   >
                     Corporate Finance & Advisory
@@ -82,7 +83,7 @@ export default function Service() {
                       color: color.white,
                       fontSize: "1.2rem",
                       mt: 1,
-                      fontFamily:"Palanquin"
+                      fontFamily: "Palanquin",
                     }}
                   >
                     Strategic finance planning and project financing to ensure
@@ -112,7 +113,7 @@ export default function Service() {
                       color: color.white,
                       fontWeight: 600,
                       fontSize: { xs: "1.3rem", md: "1.6rem" },
-                      fontFamily:"MiriamLibre-Regular"
+                      fontFamily: "MiriamLibre-Regular",
                     }}
                   >
                     MSME Loans
@@ -122,7 +123,7 @@ export default function Service() {
                       color: color.white,
                       fontSize: "1.2rem",
                       mt: 1,
-                      fontFamily:"Palanquin"
+                      fontFamily: "Palanquin",
                     }}
                   >
                     Access to loans with minimal hassle, tailored to your needs.
@@ -157,7 +158,7 @@ export default function Service() {
                       fontWeight: 600,
                       fontSize: { xs: "1.3rem", md: "1.6rem" },
                       lineHeight: "1.7rem",
-                      fontFamily:"MiriamLibre-Regular"
+                      fontFamily: "MiriamLibre-Regular",
                     }}
                   >
                     Startup Funding & Angel Investment
@@ -167,7 +168,7 @@ export default function Service() {
                       color: color.white,
                       fontSize: "1.2rem",
                       mt: 2,
-                      fontFamily:"Palanquin"
+                      fontFamily: "Palanquin",
                     }}
                   >
                     Helping startups secure funding and scale effectively.
@@ -198,7 +199,7 @@ export default function Service() {
                       fontWeight: 600,
                       fontSize: { xs: "1.3rem", md: "1.6rem" },
                       lineHeight: "1.8rem",
-                      fontFamily:"MiriamLibre-Regular"
+                      fontFamily: "MiriamLibre-Regular",
                     }}
                   >
                     Tax Advisory & Financial Structuring
@@ -208,13 +209,22 @@ export default function Service() {
                       color: color.white,
                       fontSize: "1.2rem",
                       mt: 2,
-                      fontFamily:"Palanquin"
+                      fontFamily: "Palanquin",
                     }}
                   >
                     Optimize your taxes and financial setup for efficiency.
                   </Typography>
                 </Grid>
               </Grid>
+            </Grid>
+          </Grid>
+
+          <Grid size={{ xs: 12, md: 4.5 }} sx={{ mt: { xs: 5, md: 0 } }}>
+            <Grid>
+              {/* <img
+                src={servicebg}
+                style={{ height: "100%", width: "100%", objectFit: "cover" }}
+              /> */}
             </Grid>
           </Grid>
         </Grid>

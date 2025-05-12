@@ -42,7 +42,9 @@ a {
 }
 
 .bannerImg {
-  background-image: url("./assets/images/banner.png");
+  /* background-image: url("./assets/images/banner.png"); */
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  url("./assets/images/servicebg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -63,12 +65,27 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.font1 {
+  color: #178582;
+  background-image: linear-gradient(
+    90deg,
+    #08d665 0%,
+    #9dffc9 25%,
+    #ffffff 50%,
+    #a4f1e6 75%,
+    #08d665 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .servicebg {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("./assets/images/servicebg.png");
+  background:
+   /* linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), */
+    url("./assets/images/service.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   /* background-position: left; */
   z-index: -1;
   width: 100%;
@@ -128,7 +145,7 @@ a {
   background-image: url("../src/assets/images/IntroductionBackground.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
 }
 /* Change default bullet color */
 .swiper-pagination-bullet {

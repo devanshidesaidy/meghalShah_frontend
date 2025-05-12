@@ -7,7 +7,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import React from "react";
+
 import { color } from "../../constant";
 
 export default function CoreValues() {
@@ -49,7 +49,7 @@ export default function CoreValues() {
             fontSize: { xs: "2.5rem", md: "3.5rem" },
             color: color.greenFont,
             pt: "4%",
-            fontFamily:"JosefinSans",
+            fontFamily: "JosefinSans",
             textAlign: "center",
             fontWeight: "bold",
           }}
@@ -76,7 +76,7 @@ export default function CoreValues() {
             >
               <Card
                 sx={{
-                  background: color.greenFont,
+                  background: color.mateblack,
                   position: "relative",
                   overflow: "hidden",
                   height: "300px",
@@ -84,27 +84,28 @@ export default function CoreValues() {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  padding: "0.5rem",
+                  padding: "1rem",
                 }}
               >
                 <Typography
                   sx={{
-                    color: color.white,
+                    color: color.greenFont,
                     fontWeight: "bold",
                     textAlign: "center",
                     fontSize: "1.5rem",
-                    fontFamily:"MiriamLibre-Regular"
+                    fontFamily: "MiriamLibre-Regular",
+                    pt: 1,
                   }}
                 >
                   {item.name}
                 </Typography>
                 <Typography
                   sx={{
-                    color: "black",
+                    color: color.white,
                     textAlign: "center",
                     marginTop: "0.5rem",
                     fontSize: "1.2rem",
-                    fontFamily:"Palanquin"
+                    fontFamily: "Palanquin",
                   }}
                 >
                   {item.desc}

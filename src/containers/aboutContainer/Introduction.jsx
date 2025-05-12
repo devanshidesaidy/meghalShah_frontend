@@ -5,7 +5,7 @@ import { color } from "../../constant";
 export default function Introduction() {
   return (
     <Grid
-      sx={{ backgroundColor: color.mateblack, pt: { xs: "10%", md: "none" } }}
+      sx={{ backgroundColor: color.pureblack, py: { xs: "10%", md: 10 } }}
     >
       <Container>
         <Grid container sx={{ gap: { xs: "none", md: "3rem", lg: "4rem" } }}>
@@ -15,7 +15,8 @@ export default function Introduction() {
               md: 5.5,
             }}
             sx={{
-              boxShadow: "rgb(255, 255, 255) 0px 7px 29px 0px",
+              boxShadow:
+                "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
               borderRadius: "20px",
             }}
           >

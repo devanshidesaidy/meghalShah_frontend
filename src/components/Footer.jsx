@@ -1,5 +1,5 @@
 import { Container, Divider, Grid, Typography } from "@mui/material";
-import React from "react";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { color } from "../constant";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -18,7 +18,7 @@ export default function Footer() {
           pt: { xs: 3, md: 8 },
         }}
       >
-        <Grid width={"87%"}>
+        <Grid sx={{ width: { xs: "100%", lg: "87%" }, px: 5 }}>
           <Grid
             sx={{
               display: "flex",
@@ -28,9 +28,36 @@ export default function Footer() {
               gap: { xs: "1rem", md: "none" },
             }}
           >
-            <Grid sx={{fontFamily:"MiriamLibre-Regular",letterSpacing:"0.1rem"}}>A-5 Fifth Floor, Safal Profitire, Prahladnagar</Grid>
-            <Grid sx={{fontFamily:"MiriamLibre-Regular",letterSpacing:"0.1rem"}}>+91 1234567890</Grid>
-            <Grid sx={{fontFamily:"MiriamLibre-Regular",letterSpacing:"0.1rem"}}>meghlshah@gmail.com</Grid>
+            <Grid
+              sx={{
+                fontFamily: "MiriamLibre-Regular",
+                letterSpacing: "0.1rem",
+                display: "flex",
+                alignItems: { xs: "flex-start", md: "center" },
+                justifyContent: "center",
+                textAlign: "center",
+                width: { xs: "100%", md: "30%" },
+              }}
+            >
+              <LocationOnIcon sx={{ mr: { xs: 0, md: 1 } }} />
+              A-5 Fifth Floor, Safal Profitire, Prahladnagar
+            </Grid>
+            <Grid
+              sx={{
+                fontFamily: "MiriamLibre-Regular",
+                letterSpacing: "0.1rem",
+              }}
+            >
+              +91 1234567890
+            </Grid>
+            <Grid
+              sx={{
+                fontFamily: "MiriamLibre-Regular",
+                letterSpacing: "0.1rem",
+              }}
+            >
+              meghlshah@gmail.com
+            </Grid>
             <Grid sx={{ display: "flex", gap: "1rem", alignItems: "center" }}>
               <FacebookIcon sx={{ fontSize: 28 }} />
               <InstagramIcon sx={{ fontSize: 28 }} />
@@ -48,7 +75,14 @@ export default function Footer() {
           />
         </Grid>
       </Grid>
-      <Typography sx={{ textAlign: "center",fontFamily:"MiriamLibre-Regular",letterSpacing:"0.1rem" }}>
+      <Typography
+        sx={{
+          textAlign: "center",
+          fontFamily: "MiriamLibre-Regular",
+          letterSpacing: "0.1rem",
+          pt: { xs: 8, md: 3 },
+        }}
+      >
         &#169; 2025 Meghal Shah.
       </Typography>
     </Grid>
