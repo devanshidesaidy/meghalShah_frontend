@@ -26,6 +26,7 @@ export default function Tagline() {
             alignItems: "center",
             justifyContent: "center",
             gap: "1rem",
+           
           }}
         >
           Visit :
@@ -35,6 +36,8 @@ export default function Tagline() {
               display: "flex",
               alignItems: "center",
               gap: "0.4rem",
+              color:color.white,
+               cursor:"pointer"
             }}
             href="https://www.msaca.co.in"
             target="_blank"

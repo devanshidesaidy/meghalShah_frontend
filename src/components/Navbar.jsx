@@ -206,7 +206,7 @@ function Navbar() {
             display: { xs: "none", md: "flex" },
             gap: "4rem",
             justifyContent: "end",
-            fontFamily: "MiriamLibre-Regular",
+            fontFamily: "MiriamLibrebold",
           }}
         >
           <Link
@@ -214,6 +214,12 @@ function Navbar() {
               location.pathname === path.home ? "active" : ""
             }`}
             to={path.home}
+            style={{
+              color:
+                scrolled || location.pathname !== path.home
+                  ? color.white
+                  : color.pureblack,
+            }}
           >
             Home
           </Link>
@@ -222,6 +228,12 @@ function Navbar() {
               location.pathname === path.about ? "active" : ""
             }`}
             to={path.about}
+            style={{
+              color:
+                scrolled || location.pathname !== path.home
+                  ? color.white
+                  : color.pureblack,
+            }}
           >
             About Me
           </Link>
@@ -230,7 +242,16 @@ function Navbar() {
             onMouseLeave={handlePopoverClose}
             sx={{ position: "relative", cursor: "pointer" }}
           >
-            <Typography sx={{ color: color.white, fontSize: "18px" }}>
+            <Typography
+              sx={{
+                color:
+                  scrolled || location.pathname !== path.home
+                    ? color.white
+                    : color.pureblack,
+                fontSize: "18px",
+                fontFamily: "MiriamLibrebold",
+              }}
+            >
               Business
             </Typography>
             <Popover
@@ -262,7 +283,15 @@ function Navbar() {
                   onClick={() => navigate("/msaca")}
                   style={{ textDecoration: "none" }}
                 >
-                  <Typography sx={{ my: 0.5 ,fontFamily:"MiriamLibre-Regular"}}>MSACA Bizzsolve LLP</Typography>
+                  <Typography
+                    sx={{
+                      my: 0.5,
+                      fontFamily: "MiriamLibre-Regular",
+                      color: color.white,
+                    }}
+                  >
+                    MSACA Bizzsolve LLP
+                  </Typography>
                 </Link>
                 <Link
                   className={`nav-link ${
@@ -272,7 +301,14 @@ function Navbar() {
                   onClick={() => navigate("/credorbit")}
                   style={{ textDecoration: "none" }}
                 >
-                  <Typography sx={{ mb: 0.5, mt: 2,fontFamily:"MiriamLibre-Regular" }}>
+                  <Typography
+                    sx={{
+                      mb: 0.5,
+                      mt: 2,
+                      fontFamily: "MiriamLibre-Regular",
+                      color: color.white,
+                    }}
+                  >
                     Credorbit Technologies
                   </Typography>
                 </Link>
@@ -284,6 +320,12 @@ function Navbar() {
               location.pathname === path.contact ? "active" : ""
             }`}
             to={path.contact}
+            style={{
+              color:
+                scrolled || location.pathname !== path.home
+                  ? color.white
+                  : color.pureblack,
+            }}
           >
             Contact Me
           </Link>

@@ -58,12 +58,52 @@ export default function Footer() {
             >
               meghlshah@gmail.com
             </Grid>
-            <Grid sx={{ display: "flex", gap: "1rem", alignItems: "center" }}>
-              <FacebookIcon sx={{ fontSize: 28 }} />
-              <InstagramIcon sx={{ fontSize: 28 }} />
-              <YouTubeIcon sx={{ fontSize: 28 }} />
-              <XIcon sx={{ fontSize: 28 }} />
-              <LinkedInIcon sx={{ fontSize: 28 }} />
+            <Grid container spacing={2}>
+              <Grid item>
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FacebookIcon sx={{ fontSize: 28, color: "white" }} />
+                </a>
+              </Grid>
+              <Grid item>
+                <a
+                  href="https://www.instagram.com/meghalshahofficial?igsh=MTd1MXI5ZWVlYmYw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <InstagramIcon sx={{ fontSize: 28, color: "white" }} />
+                </a>
+              </Grid>
+              <Grid item>
+                <a
+                  href="https://youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <YouTubeIcon sx={{ fontSize: 28, color: "white" }} />
+                </a>
+              </Grid>
+              <Grid item>
+                <a
+                  href="https://x.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <XIcon sx={{ fontSize: 28, color: "white" }} />
+                </a>
+              </Grid>
+              <Grid item>
+                <a
+                  href="https://www.linkedin.com/in/ca-meghal-shah-finance-expert/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LinkedInIcon sx={{ fontSize: 28, color: "white" }} />
+                </a>
+              </Grid>
             </Grid>
           </Grid>
           <Divider

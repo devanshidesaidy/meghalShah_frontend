@@ -16,7 +16,14 @@
 
 @font-face {
   font-family: "Palanquin";
-  src: url("./fonts/Palanquin-Regular.ttf") format("truetype");
+  src: url("./fonts/Palanquin_Body/Palanquin-Regular.ttf") format("truetype");
+  font-weight: Bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MiriamLibrebold";
+  src: url("./fonts/Miriam_Libre_Sub Title/MiriamLibre-Bold.ttf")
+    format("truetype");
   font-weight: Bold;
   font-style: normal;
 }
@@ -37,14 +44,13 @@ body {
 
 a {
   text-decoration: none;
-  color: #ffffff;
   font-size: large;
 }
 
 .bannerImg {
   /* background-image: url("./assets/images/banner.png"); */
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-  url("./assets/images/servicebg.png");
+    url("./assets/images/servicebg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -82,8 +88,7 @@ a {
 
 .servicebg {
   background:
-   /* linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), */
-    url("./assets/images/service.png");
+   /* linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), */ url("./assets/images/service.png");
   background-repeat: no-repeat;
   background-size: cover;
   /* background-position: left; */
@@ -161,7 +166,7 @@ a {
 .nav-link {
   display: inline-block;
   position: relative;
-  color: white;
+  /* color: white; */
   text-decoration: none;
 }
 
