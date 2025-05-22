@@ -5,17 +5,18 @@ import mission from "../../assets/svg/mission.png";
 
 export default function WhyChoose() {
   return (
-    <Grid sx={{ backgroundColor: color.bgblack }}>
+    <Grid sx={{ backgroundColor: "#000000" }}>
       <Grid
         sx={{
           fontSize: { xs: "2.5rem", md: "3.5rem" },
-          color: color.greenFont,
+          color: "#FFD700", // Gold/Yellow
           pt: "5%",
           pb: "3%",
           px: 3,
           textAlign: "center",
           fontWeight: "bold",
           fontFamily: "JosefinSans",
+          textShadow: "0 0 10px rgba(255, 215, 0, 0.5)",
         }}
       >
         Why Choose MSACA Bizzsolve LLP?
@@ -23,12 +24,13 @@ export default function WhyChoose() {
       <Grid
         sx={{
           fontSize: { xs: "1rem", md: "1.1rem" },
-          color: color.white,
+          color: "#FFFFFF",
           px: 3,
           textAlign: "center",
           fontWeight: "bold",
           letterSpacing: "0.1rem",
-          fontFamily:"MiriamLibre-Regular"
+          fontFamily: "MiriamLibre-Regular",
+          mb: 4,
         }}
       >
         ❝ At MSACA Bizzsolve LLP, we don't just offer financial services — we
@@ -36,29 +38,32 @@ export default function WhyChoose() {
         and success. ❞
       </Grid>
       <Container sx={{ py: "5%" }}>
-        <Grid container sx={{ justifyContent: "space-between" }}>
+        <Grid container spacing={3} sx={{ justifyContent: "center" }}>
           <Grid
-            size={{ xs: 12, md: 2.8 }}
+            item
+            xs={12}
+            md={2.8}
             sx={{
               py: 3,
-              transition: "transform 0.4s ease",
-              boxShadow: "rgba(63, 63, 63, 63) 1.95px 1.95px 2.6px",
+              transition: "all 0.4s ease",
+              border: "1px solid #FFD700",
+              borderRadius: "8px",
               "&:hover": {
-                backgroundColor: color.mateblack,
+                backgroundColor: "#1A1A1A",
                 transform: "translateY(-10px)",
+                boxShadow: "0 10px 20px rgba(255, 215, 0, 0.3)",
               },
-              //   height: "50%",
             }}
           >
             <Typography
               sx={{
                 fontSize: { xs: "1.5rem", md: "1.4rem" },
-                color: color.greenFont,
+                color: "#FFD700",
                 pt: "5%",
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
-                fontFamily:"JosefinSans"
+                fontFamily: "JosefinSans",
               }}
             >
               Seasoned Expertise
@@ -66,7 +71,7 @@ export default function WhyChoose() {
             <Typography
               sx={{
                 fontSize: { xs: "1rem", md: "1.1rem" },
-                color: color.white,
+                color: "#FFFFFF",
                 pt: "2%",
                 px: 3,
                 textAlign: "center",
@@ -78,27 +83,30 @@ export default function WhyChoose() {
             </Typography>
           </Grid>
           <Grid
-            size={{ xs: 12, md: 2.8 }}
+            item
+            xs={12}
+            md={2.8}
             sx={{
               py: 3,
-              transition: "transform 0.5s ease",
-              boxShadow: "rgba(63, 63, 63, 63) 1.95px 1.95px 2.6px",
+              transition: "all 0.4s ease",
+              border: "1px solid #FFD700",
+              borderRadius: "8px",
               "&:hover": {
-                backgroundColor: color.mateblack,
-                transform: "translateY(-8px)",
+                backgroundColor: "#1A1A1A",
+                transform: "translateY(-10px)",
+                boxShadow: "0 10px 20px rgba(255, 215, 0, 0.3)",
               },
-              //   height: "50%",
             }}
           >
             <Typography
               sx={{
                 fontSize: { xs: "1.5rem", md: "1.4rem" },
-                color: color.greenFont,
+                color: "#FFD700",
                 pt: "5%",
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
-                fontFamily:"JosefinSans"
+                fontFamily: "JosefinSans",
               }}
             >
               Custom-Built Solutions
@@ -106,7 +114,7 @@ export default function WhyChoose() {
             <Typography
               sx={{
                 fontSize: { xs: "1rem", md: "1.1rem" },
-                color: color.white,
+                color: "#FFFFFF",
                 pt: "2%",
                 px: 3,
                 textAlign: "center",
@@ -118,27 +126,30 @@ export default function WhyChoose() {
             </Typography>
           </Grid>
           <Grid
-            size={{ xs: 12, md: 2.8 }}
+            item
+            xs={12}
+            md={2.8}
             sx={{
               py: 3,
-              transition: "transform 0.5s ease",
-              boxShadow: "rgba(63, 63, 63, 63) 1.95px 1.95px 2.6px",
+              transition: "all 0.4s ease",
+              border: "1px solid #FFD700",
+              borderRadius: "8px",
               "&:hover": {
-                backgroundColor: color.mateblack,
-                transform: "translateY(-8px)",
+                backgroundColor: "#1A1A1A",
+                transform: "translateY(-10px)",
+                boxShadow: "0 10px 20px rgba(255, 215, 0, 0.3)",
               },
-              //   height: "50%",
             }}
           >
             <Typography
               sx={{
                 fontSize: { xs: "1.5rem", md: "1.4rem" },
-                color: color.greenFont,
+                color: "#FFD700",
                 pt: "5%",
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
-                fontFamily:"JosefinSans"
+                fontFamily: "JosefinSans",
               }}
             >
               Powerful Network
@@ -146,7 +157,7 @@ export default function WhyChoose() {
             <Typography
               sx={{
                 fontSize: { xs: "1rem", md: "1.1rem" },
-                color: color.white,
+                color: "#FFFFFF",
                 pt: "2%",
                 px: 3,
                 textAlign: "center",
@@ -158,27 +169,30 @@ export default function WhyChoose() {
             </Typography>
           </Grid>
           <Grid
-            size={{ xs: 12, md: 2.8 }}
+            item
+            xs={12}
+            md={2.8}
             sx={{
               py: 3,
-              transition: "transform 0.5s ease",
-              boxShadow: "rgba(63, 63, 63, 63) 1.95px 1.95px 2.6px",
+              transition: "all 0.4s ease",
+              border: "1px solid #FFD700",
+              borderRadius: "8px",
               "&:hover": {
-                backgroundColor: color.mateblack,
-                transform: "translateY(-8px)",
+                backgroundColor: "#1A1A1A",
+                transform: "translateY(-10px)",
+                boxShadow: "0 10px 20px rgba(255, 215, 0, 0.3)",
               },
-              //   height: "fit-content",
             }}
           >
             <Typography
               sx={{
                 fontSize: { xs: "1.5rem", md: "1.4rem" },
-                color: color.greenFont,
+                color: "#FFD700",
                 pt: "5%",
                 px: 3,
                 textAlign: "center",
                 fontWeight: "bold",
-                fontFamily:"JosefinSans"
+                fontFamily: "JosefinSans",
               }}
             >
               360° Support
@@ -186,7 +200,7 @@ export default function WhyChoose() {
             <Typography
               sx={{
                 fontSize: { xs: "1rem", md: "1.1rem" },
-                color: color.white,
+                color: "#FFFFFF",
                 pt: "2%",
                 px: 3,
                 textAlign: "center",

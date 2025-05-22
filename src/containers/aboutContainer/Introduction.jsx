@@ -130,21 +130,27 @@
 //   );
 // }
 
-
-import { Box, Container, Typography, Grid, Paper, useTheme, useMediaQuery } from '@mui/material';
-import { Award, Users, TrendingUp, GraduationCap } from 'lucide-react';
-import { colors } from '../../components/Theme';
-
+import {
+  Box,
+  Container,
+  Typography,
+  Grid,
+  Paper,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
+import { Award, Users, TrendingUp, GraduationCap } from "lucide-react";
+import { colors } from "../../components/Theme";
 
 const Introduction = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
- const aboutInfo = {
-  experience: '20+ years',
-  clientsServed: '250+',
-  successRate: '98%',
-  certifications: 'CA, CFA, MBA Finance',
-};
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const aboutInfo = {
+    experience: "20+ years",
+    clientsServed: "250+",
+    successRate: "98%",
+    certifications: "CA, CFA, MBA Finance",
+  };
   return (
     <Box
       id="about"
@@ -155,39 +161,39 @@ const Introduction = () => {
       className="section-padding"
     >
       <Container maxWidth="lg">
-        <Grid container spacing={4} sx={{gap:5}}>
-          <Grid size={{xs:12, md:5 }}>
-            <Box 
-              sx={{ 
-                position: 'relative',
-                height: { xs: '300px', md: '500px' },
+        <Grid container spacing={4} sx={{ gap: 5 }}>
+          <Grid size={{ xs: 12, md: 5 }}>
+            <Box
+              sx={{
+                position: "relative",
+                height: { xs: "300px", md: "500px" },
                 mb: { xs: 4, md: 0 },
               }}
               className="fade-in"
             >
               <Box
                 component="img"
-                src="\src\assets\images\serviceself.png"
+                src="\src\assets\images\bannerSelf.png"
                 sx={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
                   borderRadius: 3,
-                  boxShadow: '0 16px 40px rgba(0, 0, 0, 0.12)',
+                  boxShadow: "0 16px 40px rgba(0, 0, 0, 0.12)",
                 }}
               />
               <Box
                 sx={{
-                  position: 'absolute',
+                  position: "absolute",
                   bottom: -30,
-                  right: isMobile ? 'auto' : -30,
-                  left: isMobile ? '50%' : 'auto',
-                  transform: isMobile ? 'translateX(-50%)' : 'none',
+                  right: isMobile ? "auto" : -30,
+                  left: isMobile ? "50%" : "auto",
+                  transform: isMobile ? "translateX(-50%)" : "none",
                   backgroundColor: colors.primary.main,
                   borderRadius: 2,
                   p: 3,
-                  width: { xs: '90%', md: '220px' },
-                  boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)',
+                  width: { xs: "90%", md: "220px" },
+                  boxShadow: "0 8px 24px rgba(0, 0, 0, 0.15)",
                 }}
               >
                 <Typography
@@ -211,8 +217,8 @@ const Introduction = () => {
               </Box>
             </Box>
           </Grid>
-          
-          <Grid size={{xs:12, md:6 }}>
+
+          <Grid size={{ xs: 12, md: 6 }}>
             <Box className="slide-up">
               <Typography
                 variant="h6"
@@ -224,58 +230,65 @@ const Introduction = () => {
               >
                 ABOUT ME
               </Typography>
-              
+
               <Typography
                 variant="h2"
                 sx={{
                   color: colors.text.primary,
                   fontWeight: 700,
                   mb: 3,
-                  fontSize: { xs: '2.2rem', md: '2.8rem' },
+                  fontSize: { xs: "2.2rem", md: "2.8rem" },
                 }}
               >
                 Your Trusted Financial Strategist
               </Typography>
-              
+
               <Typography
                 variant="body1"
                 sx={{
                   color: colors.text.secondary,
                   mb: 4,
-                  fontSize: '1.1rem',
+                  fontSize: "1.1rem",
                   lineHeight: 1.7,
                 }}
               >
-                With over two decades of experience, I specialize in creating tailored financial strategies that drive business growth and sustainability. My expertise spans across corporate finance, tax advisory, and investment planning, helping businesses navigate complex financial landscapes with confidence.
+                With over two decades of experience, I specialize in creating
+                tailored financial strategies that drive business growth and
+                sustainability. My expertise spans across corporate finance, tax
+                advisory, and investment planning, helping businesses navigate
+                complex financial landscapes with confidence.
               </Typography>
-              
+
               <Typography
                 variant="body1"
                 sx={{
                   color: colors.text.secondary,
                   mb: 4,
-                  fontSize: '1.1rem',
+                  fontSize: "1.1rem",
                   lineHeight: 1.7,
                 }}
               >
-                My approach combines technical expertise with a deep understanding of business challenges across various sectors. Whether you're a startup seeking funding or an established business looking to optimize financial performance, I provide actionable solutions that deliver measurable results.
+                My approach combines technical expertise with a deep
+                understanding of business challenges across various sectors.
+                Whether you're a startup seeking funding or an established
+                business looking to optimize financial performance, I provide
+                actionable solutions that deliver measurable results.
               </Typography>
-              
+
               <Grid container spacing={3} sx={{ mt: 2 }}>
-                <Grid size={{xs:6, md:3 }}>
+                <Grid size={{ xs: 6, md: 3 }}>
                   <Paper
                     elevation={0}
                     sx={{
                       p: 2,
                       textAlign: 'center',
                       backgroundColor: 'transparent',
-                      height:"128px",
                       border:` 1px solid ${colors.primary.light}`,
                       borderRadius: 2,
-                      transition: 'all 0.3s ease',
-                      '&:hover': {
-                        transform: 'translateY(-5px)',
-                        boxShadow: '0 10px 25px rgba(0, 0, 0, 0.07)',
+                      transition: "all 0.3s ease",
+                      "&:hover": {
+                        transform: "translateY(-5px)",
+                        boxShadow: "0 10px 25px rgba(0, 0, 0, 0.07)",
                         borderColor: colors.primary.main,
                       },
                     }}
@@ -283,7 +296,7 @@ const Introduction = () => {
                     <Award
                       size={32}
                       color={colors.primary.main}
-                      style={{ marginBottom: '8px' }}
+                      style={{ marginBottom: "8px" }}
                     />
                     <Typography variant="h6" sx={{ fontWeight: 600 }}>
                       {aboutInfo.experience}
@@ -291,21 +304,20 @@ const Introduction = () => {
                     <Typography variant="body2">Experience</Typography>
                   </Paper>
                 </Grid>
-                
-                <Grid item size={{xs:6, md:3}}>
+
+                <Grid item size={{ xs: 6, md: 3 }}>
                   <Paper
                     elevation={0}
                     sx={{
                       p: 2,
-                        height:"128px",
                       textAlign: 'center',
                       backgroundColor: 'transparent',
                       border:` 1px solid ${colors.primary.light}`,
                       borderRadius: 2,
-                      transition: 'all 0.3s ease',
-                      '&:hover': {
-                        transform: 'translateY(-5px)',
-                        boxShadow: '0 10px 25px rgba(0, 0, 0, 0.07)',
+                      transition: "all 0.3s ease",
+                      "&:hover": {
+                        transform: "translateY(-5px)",
+                        boxShadow: "0 10px 25px rgba(0, 0, 0, 0.07)",
                         borderColor: colors.primary.main,
                       },
                     }}
@@ -313,7 +325,7 @@ const Introduction = () => {
                     <Users
                       size={32}
                       color={colors.primary.main}
-                      style={{ marginBottom: '8px' }}
+                      style={{ marginBottom: "8px" }}
                     />
                     <Typography variant="h6" sx={{ fontWeight: 600 }}>
                       {aboutInfo.clientsServed}
@@ -321,21 +333,20 @@ const Introduction = () => {
                     <Typography variant="body2">Clients</Typography>
                   </Paper>
                 </Grid>
-                
-                <Grid item size={{xs:6, md:3 }}>
+
+                <Grid item size={{ xs: 6, md: 3 }}>
                   <Paper
                     elevation={0}
                     sx={{
                       p: 2,
                       textAlign: 'center',
-                        height:"128px",
                       backgroundColor: 'transparent',
                       border:` 1px solid ${colors.primary.light}`,
                       borderRadius: 2,
-                      transition: 'all 0.3s ease',
-                      '&:hover': {
-                        transform: 'translateY(-5px)',
-                        boxShadow: '0 10px 25px rgba(0, 0, 0, 0.07)',
+                      transition: "all 0.3s ease",
+                      "&:hover": {
+                        transform: "translateY(-5px)",
+                        boxShadow: "0 10px 25px rgba(0, 0, 0, 0.07)",
                         borderColor: colors.primary.main,
                       },
                     }}
@@ -343,7 +354,7 @@ const Introduction = () => {
                     <TrendingUp
                       size={32}
                       color={colors.primary.main}
-                      style={{ marginBottom: '8px' }}
+                      style={{ marginBottom: "8px" }}
                     />
                     <Typography variant="h6" sx={{ fontWeight: 600 }}>
                       {aboutInfo.successRate}
@@ -351,21 +362,20 @@ const Introduction = () => {
                     <Typography variant="body2">Success Rate</Typography>
                   </Paper>
                 </Grid>
-                
-                <Grid item size={{xs:6, md:3}}>
+
+                <Grid item size={{ xs: 6, md: 3 }}>
                   <Paper
                     elevation={0}
                     sx={{
                       p: 2,
                       textAlign: 'center',
-                        height:"128px",
                       backgroundColor: 'transparent',
                       border: `1px solid ${colors.primary.light}`,
                       borderRadius: 2,
-                      transition: 'all 0.3s ease',
-                      '&:hover': {
-                        transform: 'translateY(-5px)',
-                        boxShadow: '0 10px 25px rgba(0, 0, 0, 0.07)',
+                      transition: "all 0.3s ease",
+                      "&:hover": {
+                        transform: "translateY(-5px)",
+                        boxShadow: "0 10px 25px rgba(0, 0, 0, 0.07)",
                         borderColor: colors.primary.main,
                       },
                     }}
@@ -373,9 +383,12 @@ const Introduction = () => {
                     <GraduationCap
                       size={32}
                       color={colors.primary.main}
-                      style={{ marginBottom: '8px' }}
+                      style={{ marginBottom: "8px" }}
                     />
-                    <Typography variant="h6" sx={{ fontWeight: 600, fontSize: '1rem' }}>
+                    <Typography
+                      variant="h6"
+                      sx={{ fontWeight: 600, fontSize: "1rem" }}
+                    >
                       {aboutInfo.certifications}
                     </Typography>
                     <Typography variant="body2">Certifications</Typography>
