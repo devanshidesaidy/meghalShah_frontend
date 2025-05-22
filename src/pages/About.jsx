@@ -11,7 +11,7 @@ import Approach from "../containers/aboutContainer/Approach";
 export default function About() {
   return (
     <Grid>
-      <AboutBanner />
+      {/* <AboutBanner /> */}
       <Introduction />
       <Mission />
       <CoreValues />
