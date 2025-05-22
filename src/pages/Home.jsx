@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <Grid>
       <Banner />
-      <Introduction/>
+      <Introduction />
       {/* <Introduction /> */}
       <Service />
       <Client />

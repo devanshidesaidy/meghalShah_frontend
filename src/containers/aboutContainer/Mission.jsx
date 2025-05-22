@@ -3,13 +3,14 @@ import React from "react";
 import { color } from "../../constant";
 import mission from "../../assets/svg/mission.png";
 import vission from "../../assets/svg/vision.png";
+import { colors } from "../../components/Theme";
 export default function Mission() {
   return (
-    <Grid sx={{ backgroundColor: color.bgblack }}>
+    <Grid sx={{ backgroundColor: colors.background.dark }}>
       <Grid
         sx={{
           fontSize: { xs: "2.5rem", md: "3.5rem" },
-          color: color.greenFont,
+          color: colors.secondary.main,
           pt: "5%",
           px: 3,
           textAlign: "center",
@@ -36,7 +37,7 @@ export default function Mission() {
             <Typography
               sx={{
                 fontSize: { xs: "2.5rem", md: "3rem" },
-                color: color.greenFont,
+                color: colors.secondary.main,
                 pt: "2%",
                 px: 3,
                 textAlign: "center",
@@ -82,7 +83,7 @@ export default function Mission() {
             <Grid sx={{ display: "flex", justifyContent: "center" }}>
               <img
                 style={{
-                 filter: "brightness(0) invert(1)"
+                  filter: "brightness(0) invert(1)",
                 }}
                 src={vission}
               />
@@ -90,7 +91,7 @@ export default function Mission() {
             <Typography
               sx={{
                 fontSize: { xs: "2.5rem", md: "3rem" },
-                color: color.greenFont,
+                color: colors.secondary.main,
                 pt: "5%",
                 px: 3,
                 textAlign: "center",
