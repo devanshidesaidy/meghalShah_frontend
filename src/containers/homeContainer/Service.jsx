@@ -46,7 +46,6 @@
 //           </Typography>
 //           <Grid size={{ xs: 12, md: 5.5 }}>
 
-
 //             <Grid
 //               sx={{
 //                 display: "flex",
@@ -125,11 +124,7 @@
 //               </Grid>
 //             </Grid>
 
-
 //           </Grid>
-
-
-
 
 //           <Grid size={{ xs: 12, md: 5.5 }}>
 
@@ -217,10 +212,7 @@
 //                 </Grid>
 //               </Grid>
 
-
 //           </Grid>
-
-
 
 //         </Grid>
 
@@ -231,30 +223,28 @@
 //   );
 // }
 
-
-
-import { useState } from 'react';
-import { 
-  Box, 
-  Container, 
-  Typography, 
-  Grid, 
-  Card, 
-  CardContent, 
+import { useState } from "react";
+import {
+  Box,
+  Container,
+  Typography,
+  Grid,
+  Card,
+  CardContent,
   CardActionArea,
   Divider,
   useTheme,
   useMediaQuery,
-} from '@mui/material';
-import { 
-  LineChart, 
-  Building, 
-  Rocket, 
+} from "@mui/material";
+import {
+  LineChart,
+  Building,
+  Rocket,
   FileText,
   ChevronRight,
-} from 'lucide-react';
-import { colors } from '../../components/Theme';
-import { services } from '../../constant';
+} from "lucide-react";
+import { colors } from "../../components/Theme";
+import { services } from "../../constant";
 
 const ServicesIcons = {
   LineChart: LineChart,
@@ -265,7 +255,7 @@ const ServicesIcons = {
 
 const Services = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [activeService, setActiveService] = useState(1);
 
   const handleServiceHover = (id) => {
@@ -283,7 +273,7 @@ const Services = () => {
       className="section-padding"
     >
       <Container maxWidth="lg">
-        <Box sx={{ textAlign: 'center', mb: 8 }} className="fade-in">
+        <Box sx={{ textAlign: "center", mb: 8 }} className="fade-in">
           <Typography
             variant="h6"
             sx={{
@@ -294,97 +284,106 @@ const Services = () => {
           >
             WHAT I OFFER
           </Typography>
-          
+
           <Typography
             variant="h2"
             sx={{
               color: colors.text.light,
               fontWeight: 700,
               mb: 3,
-              fontSize: { xs: '2.2rem', md: '3rem' },
+              fontSize: { xs: "2.2rem", md: "3rem" },
             }}
           >
             Services I Offer
           </Typography>
-          
+
           <Divider
             sx={{
-              width: '80px',
-              margin: '0 auto',
+              width: "80px",
+              margin: "0 auto",
               borderColor: colors.secondary.main,
               borderWidth: 2,
               my: 3,
             }}
           />
-          
+
           <Typography
             variant="body1"
             sx={{
               color: colors.text.light,
-              maxWidth: '800px',
-              margin: '0 auto',
-              fontSize: '1.1rem',
+              maxWidth: "800px",
+              margin: "0 auto",
+              fontSize: "1.1rem",
               opacity: 0.9,
             }}
           >
-            Comprehensive financial solutions tailored to help businesses thrive in today's competitive landscape.
+            Comprehensive financial solutions tailored to help businesses thrive
+            in today's competitive landscape.
           </Typography>
         </Box>
-        
+
         <Grid container spacing={4}>
           {services.map((service) => {
             const IconComponent = ServicesIcons[service.icon];
 
             return (
-              <Grid item size={{xs:12, sm:6, md:3 }} key={service.id} className="scale-in">
+              <Grid
+                item
+                size={{ xs: 12, sm: 6, md: 3 }}
+                key={service.id}
+                className="scale-in"
+              >
                 <Card
                   className="service-card"
                   elevation={3}
                   sx={{
-                    height: '100%',
-                    backgroundColor: service.id === activeService 
-                      ? colors.primary.main 
-                      : colors.background.darkPaper,
+                    height: "100%",
+                    backgroundColor:
+                      service.id === activeService
+                        ? colors.primary.main
+                        : colors.background.darkPaper,
                     borderRadius: 3,
-                    transition: 'all 0.3s ease',
-                    border: `1px solid ${service.id === activeService 
-                      ? colors.primary.light 
-                      : 'rgba(255, 255, 255, 0.1)'}`,
-                    '&:hover': {
+                    transition: "all 0.3s ease",
+                    border: `1px solid ${
+                      service.id === activeService
+                        ? colors.primary.light
+                        : "rgba(255, 255, 255, 0.1)"
+                    }`,
+                    "&:hover": {
                       backgroundColor: colors.primary.main,
-                      transform: 'translateY(-10px)',
+                      transform: "translateY(-10px)",
                     },
                   }}
                   onMouseEnter={() => handleServiceHover(service.id)}
                 >
-                  <CardActionArea 
-                    sx={{ 
-                      height: '100%', 
+                  <CardActionArea
+                    sx={{
+                      height: "100%",
                       p: 3,
-                      display: 'flex',
-                      flexDirection: 'column',
-                      alignItems: 'flex-start',
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "flex-start",
                     }}
                   >
                     <Box
                       sx={{
                         backgroundColor: colors.secondary.main,
-                        borderRadius: '50%',
+                        borderRadius: "50%",
                         p: 1.5,
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
                         mb: 3,
-                        transition: 'all 0.3s ease',
-                        transform: service.id === activeService ? 'scale(1.1)' : 'scale(1)',
+                        transition: "all 0.3s ease",
+                        transform:
+                          service.id === activeService
+                            ? "scale(1.1)"
+                            : "scale(1)",
                       }}
                     >
-                      <IconComponent 
-                        size={28} 
-                        color={colors.background.dark}
-                      />
+                      <IconComponent size={28} color={colors.background.dark} />
                     </Box>
-                    
+
                     <Typography
                       variant="h5"
                       sx={{
@@ -395,30 +394,31 @@ const Services = () => {
                     >
                       {service.title}
                     </Typography>
-                    
+
                     <Typography
                       variant="body2"
                       sx={{
                         mb: 3,
                         color: colors.text.light,
                         opacity: 0.9,
-                        fontSize: '0.95rem',
+                        fontSize: "0.95rem",
                       }}
                     >
                       {service.description}
                     </Typography>
-                    
-                    <Box 
-                      sx={{ 
-                        mt: 'auto', 
-                        display: 'flex',
-                        alignItems: 'center',
+
+                    <Box
+                      sx={{
+                        mt: "auto",
+                        display: "flex",
+                        alignItems: "center",
                         color: colors.secondary.main,
-                        fontSize: '0.9rem',
+                        fontSize: "0.9rem",
                         fontWeight: 600,
                       }}
                     >
-                      Learn More <ChevronRight size={16} style={{ marginLeft: '4px' }} />
+                      Learn More{" "}
+                      <ChevronRight size={16} style={{ marginLeft: "4px" }} />
                     </Box>
                   </CardActionArea>
                 </Card>
