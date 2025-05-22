@@ -1,5 +1,5 @@
 export const color = {
-greenFont:"#08d665",
+greenFont:"#D4AF37",
 white:"#ffffff",
 black:"#000000",
 bgblack:"#0b0d0e",
@@ -66,6 +66,20 @@ export const testimonials = [
     company: 'Eco Solutions',
     quote: 'Thanks to Meghal\'s guidance, we raised the capital we needed to scale our startup rapidly. His understanding of investor expectations was crucial to our success.',
     avatar: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  },
+  {
+    id: 3,
+    name: 'Amit Patel',
+    company: 'Global Exports',
+    quote: 'The tax optimization strategies provided by CA Meghal Shah have saved our company significant amounts while ensuring full compliance. Truly exceptional service.',
+    avatar: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  },
+  {
+    id: 3,
+    name: 'Amit Patel',
+    company: 'Global Exports',
+    quote: 'The tax optimization strategies provided by CA Meghal Shah have saved our company significant amounts while ensuring full compliance. Truly exceptional service.',
+    avatar: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
   {
     id: 3,

@@ -212,6 +212,7 @@ import {
 } from '@mui/material';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
 import { colors } from '../../components/Theme';
+import { color } from '../../constant';
 
 
 const ContactForm = () => {
@@ -266,7 +267,7 @@ const ContactForm = () => {
           <Typography
             variant="h6"
             sx={{
-              color: colors.primary.main,
+              color: color.greenFont,
               fontWeight: 600,
               mb: 2,
             }}
@@ -290,7 +291,7 @@ const ContactForm = () => {
             sx={{
               width: '80px',
               height: '4px',
-              backgroundColor: colors.primary.main,
+              backgroundColor: color.greenFont,
               margin: '0 auto',
               mb: 3,
             }}
@@ -310,7 +311,7 @@ const ContactForm = () => {
         </Box>
 
         <Grid container spacing={5}>
-          <Grid item xs={12} md={5}>
+          <Grid item size={{xs:12, md:5}}>
             <Box className="slide-up">
               <Typography
                 variant="h4"
@@ -342,7 +343,7 @@ const ContactForm = () => {
                 >
                   <Box
                     sx={{
-                      backgroundColor: colors.primary.main,
+                      backgroundColor: color.greenFont,
                       p: 1.5,
                       borderRadius: '50%',
                       mr: 3,
@@ -380,7 +381,7 @@ const ContactForm = () => {
                 >
                   <Box
                     sx={{
-                      backgroundColor: colors.primary.main,
+                      backgroundColor: color.greenFont,
                       p: 1.5,
                       borderRadius: '50%',
                       mr: 3,
@@ -418,7 +419,7 @@ const ContactForm = () => {
                 >
                   <Box
                     sx={{
-                      backgroundColor: colors.primary.main,
+                      backgroundColor: color.greenFont,
                       p: 1.5,
                       borderRadius: '50%',
                       mr: 3,
@@ -476,7 +477,7 @@ const ContactForm = () => {
           </Grid>
 
           {/* Message Form */}
-          <Grid item xs={12} md={7}>
+          <Grid size={{xs:12, md:7}}>
             <Paper
               elevation={3}
               sx={{

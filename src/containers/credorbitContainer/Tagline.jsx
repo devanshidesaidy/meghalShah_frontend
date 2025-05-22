@@ -5,11 +5,11 @@ import LanguageIcon from "@mui/icons-material/Language";
 
 export default function Tagline() {
   return (
-    <Grid sx={{ backgroundColor: color.greenFont }}>
+    <Grid sx={{ backgroundColor: color.white }}>
       <Container sx={{ py: "5%" }}>
         <Typography
           sx={{
-            color: color.white,
+            color: color.black,
             fontSize: { xs: "1.4rem", md: "2.7rem" },
             // fontWeight: "bold",
             fontFamily: "MiriamLibre-Regular",

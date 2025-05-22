@@ -167,7 +167,7 @@ const Introduction = () => {
             >
               <Box
                 component="img"
-                src="https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src="\src\assets\images\serviceself.png"
                 sx={{
                   width: '100%',
                   height: '100%',
@@ -269,6 +269,7 @@ const Introduction = () => {
                       p: 2,
                       textAlign: 'center',
                       backgroundColor: 'transparent',
+                      height:"128px",
                       border:` 1px solid ${colors.primary.light}`,
                       borderRadius: 2,
                       transition: 'all 0.3s ease',
@@ -296,6 +297,7 @@ const Introduction = () => {
                     elevation={0}
                     sx={{
                       p: 2,
+                        height:"128px",
                       textAlign: 'center',
                       backgroundColor: 'transparent',
                       border:` 1px solid ${colors.primary.light}`,
@@ -326,6 +328,7 @@ const Introduction = () => {
                     sx={{
                       p: 2,
                       textAlign: 'center',
+                        height:"128px",
                       backgroundColor: 'transparent',
                       border:` 1px solid ${colors.primary.light}`,
                       borderRadius: 2,
@@ -355,6 +358,7 @@ const Introduction = () => {
                     sx={{
                       p: 2,
                       textAlign: 'center',
+                        height:"128px",
                       backgroundColor: 'transparent',
                       border: `1px solid ${colors.primary.light}`,
                       borderRadius: 2,
