@@ -5,7 +5,7 @@ import ContactForm from "../containers/contactContainer/ContactForm";
 export default function Contact() {
   return (
     <div>
-      <ContactBanner />
+      {/* <ContactBanner /> */}
       <ContactForm />
     </div>
   );
