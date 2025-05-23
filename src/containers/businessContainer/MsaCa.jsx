@@ -1,257 +1,98 @@
-// import { Container, Divider, Grid, Stack, Typography } from "@mui/material";
-// import React from "react";
-// import { color } from "../../constant";
-// import img from "../../assets/images/bannerSelf.png";
-// export default function MsaCa() {
-//   return (
-//     <Grid
-//       sx={{
-//         pt: 10,
-//         backgroundColor: color.pureblack,
-//       }}
-//     >
-//       <Container>
-//         <Grid container justifyContent={"space-between"}>
-//           <Grid
-//             size={{ xs: 12, md: 5.8}}
-//             container
-//             // sx={{ alignItems: "center" }}
-//           >
-//             <Grid mt={"5rem"}>
-//               <Grid
-//                 sx={{
-//                   display: "flex",
-//                   flexDirection: { xs: "column", md: "row" },
-//                 }}
-//               >
-//                 <Grid
-//                   sx={{
-//                     fontSize: { xs: "1.6rem", md: "1.5rem", lg: "1.7rem" },
-//                     fontWeight: "bold",
-//                     my: { xs: 3, md: 0 },
-//                     textAlign: { xs: "center", md: "left" },
-//                     color: color.greenFont,
-//                     fontFamily:"JosefinSans",
-//                     letterSpacing:"0.1rem",
-//                     mr:0.5  
-//                   }}
-//                 >
-//                   MSACA Bizzsolve LLP
-//                 </Grid>
-//                 <Divider
-//                   sx={{
-//                     bgcolor: color.greenFont,
-//                     borderWidth: "2px",
-//                     borderRadius: "10px",
-//                   }}
-//                 />
-//                 <Grid
-//                   sx={{
-//                     fontSize: { xs: "1rem", md: "1.2rem" },
-//                     my: { xs: 3, md: 0 },
-//                     textAlign: "center",
-//                     color: color.white,
-//                    fontFamily:"MiriamLibre-Regular"
+import { Grid, Typography, Box, useTheme } from "@mui/material";
+import React from "react";
+import { color } from "../../constant";
+import { colors } from "../../components/Theme";
 
-//                   }}
-//                 >
-//                   Driving {""}
-//                   <Stack
-//                     sx={{
-//                       color: color.greenFont,
-//                       fontWeight: "bold",
-//                       display: "inline",
-//                     }}
-//                   >
-//                     Financial Growth
-//                   </Stack>{" "}
-//                   with Strategic Solutions
-//                 </Grid>
-//               </Grid>
-//               <Typography
-//                 sx={{
-//                   fontSize: "1.2rem",
-//                   mt: 5,
-//                   color: color.white,
-//                  textAlign: {xs:"left",md:"justify"},
-//                   textTransform: "capitalize",
-//                   fontFamily:"Palanquin"
-//                 }}
-//               >
-//                 At MSACA Bizzsolve LLP, we are committed to empowering
-//                 businesses with strategic financial solutions that drive growth,
-//                 stability, and long-term success.
-//               </Typography>
-//               <Typography
-//                 sx={{
-//                   fontSize: "1.2rem",
-//                   mt: 5,
-//                   color: color.white,
-//                  textAlign: {xs:"left",md:"justify"},
-//                   textTransform: "capitalize",
-//                   fontFamily:"Palanquin"
-//                 }}
-//               >
-//                 Based in Ahmedabad, we specialize in helping companies secure
-//                 funding, obtain business loans, manage debt restructuring, and
-//                 optimize financial performance with a sharp, results-driven
-//                 approach. Whether you are a startup, an SME, or a large
-//                 enterprise, we craft tailor-made financial strategies to help
-//                 you navigate challenges and capitalize on opportunities.
-//               </Typography>
-//             </Grid>
-//           </Grid>
-
-//           <Grid
-//             size={{
-//               xs: 12,
-//               md: 5.3,
-//             }}
-//             sx={{
-//               boxShadow: "rgb(255, 255, 255) 0px 7px 29px 0px",
-//               borderRadius: "20px",
-//               my: { xs: 5, md: 0 },
-//             }}
-//           >
-//             <img src={img} />
-//           </Grid>
-//         </Grid>
-//       </Container>
-//     </Grid>
-//   );
-// }
-import React from 'react';
-import { Box, Container, Typography, Grid, Paper, useTheme } from '@mui/material';
-import TrendingUpIcon from '@mui/icons-material/TrendingUp';
-import SecurityIcon from '@mui/icons-material/Security';
-import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
-
-const MsaCa = () => {
+export default function MsaCa() {
   const theme = useTheme();
 
   return (
-    <Box
-      component="section"
-      id="about"
+    <Grid
+      container
       sx={{
-        py: { xs: 8, md: 10 },
-        background: `linear-gradient(to bottom, ${theme.palette.grey[900]}, ${theme.palette.grey[800]})`,
+        background: `
+          linear-gradient(135deg, ${color.bgblack}100 0%, #ffff 100%)
+          no-repeat center / cover`,
+        backgroundBlendMode: "multiply",
+        height: { xs: "60vh", md: "85vh" },
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        position: "relative",
+        overflow: "hidden",
+        borderBottom: `1px solid ${color.greenFont}`,
+        boxShadow: `0 10px 30px -10px ${color.greenFont}20`,
       }}
     >
-      <Container>
-        <Grid container spacing={6} alignItems="center">
-          {/* Left Column - Image and Card */}
-          <Grid item  size={{xs:12,md:5, lg:6}} sx={{ position: 'relative' }}>
-            <Paper
-              elevation={6}
-              sx={{
-                overflow: 'hidden',
-                borderRadius: 3,
-                border: '1px solid',
-                borderColor: 'primary.dark',
-                transform: { md: 'rotate(2deg)' },
-                transition: 'transform 0.5s',
-                '&:hover': {
-                  transform: 'rotate(0deg)',
-                },
-              }}
-            >
-              <Box
-                sx={{
-                  position: 'relative',
-                  aspectRatio: '4 / 3',
-                  background: `linear-gradient(to bottom right, ${theme.palette.primary.dark}, ${theme.palette.grey[700]})`,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                <TrendingUpIcon sx={{ fontSize: 96, color: 'primary.light', opacity: 0.5 }} />
-              </Box>
-            </Paper>
+      {/* Subtle grid overlay for tech aesthetic */}
+      <Box
+        sx={{
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          backgroundImage: `linear-gradient(rgba(66, 77, 71, 0.1) 1px, transparent 1px),
+                         linear-gradient(90deg, rgba(66, 77, 71, 0.1) 1px, transparent 1px)`,
+          backgroundSize: "50px 50px",
+          opacity: 0.3,
+        }}
+      />
 
-            {/* Floating Stats Card */}
-            <Box
-              sx={{
-                position: 'absolute',
-                bottom: -24,
-                right: -24,
-                backgroundColor: theme.palette.grey[800],
-                p: 2,
-                borderRadius: 2,
-                boxShadow: 10,
-                border: '1px solid',
-                borderColor: 'primary.dark',
-                maxWidth: 220,
-              }}
-            >
-              <Typography variant="h6" color="primary.light" gutterBottom>
-                Trusted Partner
-              </Typography>
-              <Typography variant="body2" color="grey.300">
-                For businesses seeking financial excellence and sustainable growth
-              </Typography>
-            </Box>
-          </Grid>
+      {/* Main content with professional typography */}
+      <Grid
+        item
+        xs={10}
+        md={8}
+        sx={{
+          position: "relative",
+          zIndex: 2,
+          textAlign: "center",
+        }}
+      >
+        <Typography
+          variant="h1"
+          sx={{
+            color: "transparent",
+            background: `linear-gradient(120deg, #D4AF37)`,
+            backgroundClip: "text",
+            WebkitBackgroundClip: "text",
+            fontSize: { xs: "2.8rem", sm: "4rem", md: "5rem", lg: "6rem" },
+            fontWeight: 800,
+            letterSpacing: { xs: "1px", md: "2px" },
+            lineHeight: 1.2,
+            mb: 2,
+            textTransform: "uppercase",
+            fontFamily: '"Helvetica Neue", sans-serif',
+          }}
+        >
+          MSACA
+        </Typography>
 
-          {/* Right Column - Text Content */}
-          <Grid item  size={{xs:12,md:7, lg:6}}>
-            <Box mb={4}>
-              <Typography variant="h4" color="common.white" gutterBottom>
-                MSACA Bizzsolve LLP
-              </Typography>
-              <Box
-                sx={{
-                  width: 96,
-                  height: 4,
-                  borderRadius: 2,
-                  backgroundColor: 'primary.main',
-                }}
-              />
-            </Box>
+        <Box
+          sx={{
+            height: "4px",
+            width: "100px",
+            background: `linear-gradient(90deg, ${color.greenFont}, transparent)`,
+            mx: "auto",
+            mb: 4,
+          }}
+        />
+      </Grid>
 
-            <Typography variant="body1" color="grey.300" paragraph sx={{ lineHeight: 1.7 }}>
-              At MSACA Bizzsolve LLP, we are committed to empowering businesses with strategic financial solutions that drive growth, stability, and long-term success.
-            </Typography>
-
-            <Typography variant="body1" color="grey.300" paragraph sx={{ lineHeight: 1.7 }}>
-              Based in Ahmedabad, we specialize in helping companies secure funding, obtain business loans, manage debt restructuring, and optimize financial performance with a sharp, results-driven approach.
-            </Typography>
-
-            <Grid container spacing={4} mt={2}>
-              <Grid item  size={{xs:12,sm:6}}>
-                <Box display="flex" alignItems="flex-start">
-                  <SecurityIcon sx={{ fontSize: 48, color: 'primary.main', mr: 2 }} />
-                  <Box>
-                    <Typography variant="h6" color="common.white" gutterBottom>
-                      Secure Strategies
-                    </Typography>
-                    <Typography variant="body2" color="grey.400">
-                      Financial plans that protect and grow your business assets
-                    </Typography>
-                  </Box>
-                </Box>
-              </Grid>
-
-              <Grid item size={{xs:12,sm:6}}>
-                <Box display="flex" alignItems="flex-start">
-                  <EmojiEventsIcon sx={{ fontSize: 48, color: 'primary.main', mr: 2 }} />
-                  <Box>
-                    <Typography variant="h6" color="common.white" gutterBottom>
-                      Expert Guidance
-                    </Typography>
-                    <Typography variant="body2" color="grey.400">
-                      Industry professionals with deep financial experience
-                    </Typography>
-                  </Box>
-                </Box>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Container>
-    </Box>
+      {/* Scrolling tech elements (optional) */}
+      <Box
+        sx={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          width: "100%",
+          py: 2,
+          background: `linear-gradient(90deg, ${color.greenFont}20, ${color.greenFont}40, ${color.greenFont}20)`,
+          display: "flex",
+          justifyContent: "center",
+          gap: { xs: 2, md: 4 },
+          overflow: "hidden",
+        }}
+      ></Box>
+    </Grid>
   );
-};
-
-export default MsaCa;
+}
