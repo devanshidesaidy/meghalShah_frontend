@@ -20,7 +20,7 @@ export default function Offer() {
       >
         What I Offer
       </Typography>
-      
+
       <Container>
         <Grid container spacing={3} sx={{ justifyContent: "center" }}>
           {/* Card 1 */}
