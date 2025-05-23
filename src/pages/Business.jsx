@@ -9,9 +9,9 @@ import Tagline from '../containers/businessContainer/Tagline'
 export default function Business() {
   return (
    <Grid>
-    <BusinessBanner/>
     <MsaCa/>
     <CoreService/>
+    <BusinessBanner/>
     <WhyChoose/>
     <Tagline/>
    </Grid>

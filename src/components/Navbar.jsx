@@ -55,7 +55,7 @@ function Navbar() {
       position="fixed"
       sx={{
         px: 3,
-        background: scrolled ? "black" : "transparent",
+        background:   "black",
         transition: "background 0.6s ease-in-out",
         boxShadow: "none",
         zIndex: 1300,
@@ -214,11 +214,12 @@ function Navbar() {
               location.pathname === path.home ? "active" : ""
             }`}
             to={path.home}
+            color="white"
             style={{
               color:
                 scrolled || location.pathname !== path.home
                   ? color.white
-                  : color.pureblack,
+                  : color.white,
             }}
           >
             Home
@@ -228,11 +229,12 @@ function Navbar() {
               location.pathname === path.about ? "active" : ""
             }`}
             to={path.about}
+              color="white"
             style={{
               color:
                 scrolled || location.pathname !== path.home
                   ? color.white
-                  : color.pureblack,
+                  : color.white,
             }}
           >
             About Me
@@ -245,9 +247,10 @@ function Navbar() {
             <Typography
               sx={{
                 color:
-                  scrolled || location.pathname !== path.home
-                    ? color.white
-                    : color.pureblack,
+                 
+                scrolled || location.pathname !== path.home
+                  ? color.white
+                  : color.white,
                 fontSize: "18px",
                 fontFamily: "MiriamLibrebold",
               }}
@@ -320,11 +323,12 @@ function Navbar() {
               location.pathname === path.contact ? "active" : ""
             }`}
             to={path.contact}
+            color="white"
             style={{
               color:
                 scrolled || location.pathname !== path.home
                   ? color.white
-                  : color.pureblack,
+                  : color.white,
             }}
           >
             Contact Me

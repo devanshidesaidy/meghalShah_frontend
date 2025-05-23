@@ -281,9 +281,9 @@ const Introduction = () => {
                     elevation={0}
                     sx={{
                       p: 2,
-                      textAlign: "center",
-                      backgroundColor: "transparent",
-                      border: ` 1px solid ${colors.primary.light}`,
+                      textAlign: 'center',
+                      backgroundColor: 'transparent',
+                      border:` 1px solid ${colors.primary.light}`,
                       borderRadius: 2,
                       transition: "all 0.3s ease",
                       "&:hover": {
@@ -310,9 +310,9 @@ const Introduction = () => {
                     elevation={0}
                     sx={{
                       p: 2,
-                      textAlign: "center",
-                      backgroundColor: "transparent",
-                      border: ` 1px solid ${colors.primary.light}`,
+                      textAlign: 'center',
+                      backgroundColor: 'transparent',
+                      border:` 1px solid ${colors.primary.light}`,
                       borderRadius: 2,
                       transition: "all 0.3s ease",
                       "&:hover": {
@@ -339,9 +339,9 @@ const Introduction = () => {
                     elevation={0}
                     sx={{
                       p: 2,
-                      textAlign: "center",
-                      backgroundColor: "transparent",
-                      border: ` 1px solid ${colors.primary.light}`,
+                      textAlign: 'center',
+                      backgroundColor: 'transparent',
+                      border:` 1px solid ${colors.primary.light}`,
                       borderRadius: 2,
                       transition: "all 0.3s ease",
                       "&:hover": {
@@ -368,8 +368,8 @@ const Introduction = () => {
                     elevation={0}
                     sx={{
                       p: 2,
-                      textAlign: "center",
-                      backgroundColor: "transparent",
+                      textAlign: 'center',
+                      backgroundColor: 'transparent',
                       border: `1px solid ${colors.primary.light}`,
                       borderRadius: 2,
                       transition: "all 0.3s ease",
