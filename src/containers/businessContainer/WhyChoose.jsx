@@ -111,6 +111,6 @@ export default function WhyChoose() {
           ))}
         </Grid>
       </Container>
-    </Box>
+    </Grid>
   );
 }
