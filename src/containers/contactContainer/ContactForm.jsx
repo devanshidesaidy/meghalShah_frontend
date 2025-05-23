@@ -492,7 +492,9 @@ const ContactForm = () => {
 
               <form onSubmit={handleSubmit}>
                 <Grid container spacing={3}>
-                  <Grid item xs={12} sm={6}>
+
+                  <Grid size={{sm:12,md:6}} >
+                  <Grid item>
                     <TextField
                       fullWidth
                       label="Your Name"
@@ -510,7 +512,7 @@ const ContactForm = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} sm={6}>
+                  <Grid   >
                     <TextField
                       fullWidth
                       label="Email Address"
@@ -521,6 +523,7 @@ const ContactForm = () => {
                       type="email"
                       variant="outlined"
                       sx={{
+                        mt:2,
                         '& .MuiOutlinedInput-root': {
                           '&:hover fieldset': { borderColor: colors.primary.light },
                           '&.Mui-focused fieldset': { borderColor: colors.primary.main },
@@ -529,7 +532,7 @@ const ContactForm = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12}>
+                  <Grid>
                     <TextField
                       fullWidth
                       label="Phone Number"
@@ -538,6 +541,7 @@ const ContactForm = () => {
                       onChange={handleChange}
                       variant="outlined"
                       sx={{
+                        mt:2,
                         '& .MuiOutlinedInput-root': {
                           '&:hover fieldset': { borderColor: colors.primary.light },
                           '&.Mui-focused fieldset': { borderColor: colors.primary.main },
@@ -545,8 +549,9 @@ const ContactForm = () => {
                       }}
                     />
                   </Grid>
+                  </Grid>
 
-                  <Grid item xs={12}>
+                  <Grid item size={{sm:12,md:6}}>
                     <TextField
                       fullWidth
                       label="Your Message"
@@ -555,7 +560,7 @@ const ContactForm = () => {
                       onChange={handleChange}
                       required
                       multiline
-                      rows={5}
+                      rows={7.1}
                       variant="outlined"
                       sx={{
                         '& .MuiOutlinedInput-root': {
@@ -578,6 +583,7 @@ const ContactForm = () => {
                         py: 1.5,
                         fontSize: '1rem',
                         fontWeight: 600,
+                        bgcolor:color.greenFont,
                         transition: 'all 0.3s ease',
                         '&:hover': {
                           transform: 'translateY(-3px)',

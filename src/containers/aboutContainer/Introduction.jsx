@@ -282,6 +282,7 @@ const Introduction = () => {
                     sx={{
                       p: 2,
                       textAlign: 'center',
+                       height:"125px",
                       backgroundColor: 'transparent',
                       border:` 1px solid ${colors.primary.light}`,
                       borderRadius: 2,
@@ -311,6 +312,7 @@ const Introduction = () => {
                     sx={{
                       p: 2,
                       textAlign: 'center',
+                      height:"125px",
                       backgroundColor: 'transparent',
                       border:` 1px solid ${colors.primary.light}`,
                       borderRadius: 2,
@@ -340,6 +342,7 @@ const Introduction = () => {
                     sx={{
                       p: 2,
                       textAlign: 'center',
+                       height:"125px",
                       backgroundColor: 'transparent',
                       border:` 1px solid ${colors.primary.light}`,
                       borderRadius: 2,
@@ -369,6 +372,7 @@ const Introduction = () => {
                     sx={{
                       p: 2,
                       textAlign: 'center',
+                       height:"125px",
                       backgroundColor: 'transparent',
                       border: `1px solid ${colors.primary.light}`,
                       borderRadius: 2,

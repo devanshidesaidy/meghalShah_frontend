@@ -1,182 +1,108 @@
-import { useState } from 'react';
-import {
-  Box,
-  Container,
-  Typography,
-  Paper,
-  Avatar,
-  IconButton,
-  useMediaQuery,
-  useTheme,
-} from '@mui/material';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { colors } from '../../components/Theme';
+import React from 'react';
+import { Box, Typography, Avatar, Paper } from '@mui/material';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import { testimonials } from '../../constant';
 
 const Client = () => {
-  const theme = useTheme();
-  const isXs = useMediaQuery(theme.breakpoints.down('sm'));
-  const isSm = useMediaQuery(theme.breakpoints.down('md'));
-  const isMd = useMediaQuery(theme.breakpoints.down('lg'));
-
-  // Responsive items per slide
-  const itemsPerPage = isXs ? 1 : isSm ? 2 : isMd ? 3 : 4;
-
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const totalSlides = Math.ceil(testimonials.length / itemsPerPage);
-
-  const handlePrev = () => {
-    setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
-  };
-
-  const handleNext = () => {
-    setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   return (
-    <Box sx={{ py: 10, backgroundColor: colors.background.paper }}>
-      <Container maxWidth="lg">
-        <Typography
-          variant="h4"
-          sx={{
-            textAlign: 'center',
-            mb: 6,
-            fontWeight: 'bold',
-            color: colors.primary.main,
-          }}
-        >
-          Client Testimonials
-        </Typography>
-
-        {/* Slider Wrapper */}
-        <Box sx={{ position: 'relative', overflow: 'hidden' }}>
-          {/* Navigation */}
-          <IconButton
-            onClick={handlePrev}
-            sx={{
-              position: 'absolute',
-              top: '50%',
-              left: 0,
-              transform: 'translateY(-50%)',
-              zIndex: 2,
-              backgroundColor: colors.background.default,
-              '&:hover': {
-                backgroundColor: colors.primary.main,
-                color: '#fff',
-              },
-            }}
-          >
-            <ChevronLeft />
-          </IconButton>
-
-          <IconButton
-            onClick={handleNext}
-            sx={{
-              position: 'absolute',
-              top: '50%',
-              right: 0,
-              transform: 'translateY(-50%)',
-              zIndex: 2,
-              backgroundColor: colors.background.default,
-              '&:hover': {
-                backgroundColor: colors.primary.main,
-                color: '#fff',
-              },
-            }}
-          >
-            <ChevronRight />
-          </IconButton>
-
-          {/* Sliding Content */}
-          <Box
-            sx={{
-              display: 'flex',
-              width: `${100 * totalSlides}%`,
-              transform: `translateX(-${(100 / totalSlides) * currentSlide}%)`,
-              transition: 'transform 0.5s ease-in-out',
-            }}
-          >
-            {Array.from({ length: totalSlides }).map((_, slideIndex) => (
-              <Box
-                key={slideIndex}
-                sx={{
-                  display: 'flex',
-                  flex: `0 0 ${100 / totalSlides}%`,
-                  gap: 2,
-                  px: 1,
-                }}
-              >
-                {testimonials
-                  .slice(
-                    slideIndex * itemsPerPage,
-                    slideIndex * itemsPerPage + itemsPerPage
-                  )
-                  .map((testimonial, idx) => (
-                    <Paper
-                      key={idx}
-                      elevation={3}
-                      sx={{
-                        flex: 1,
-                        p: 3,
-                        borderRadius: 3,
-                        textAlign: 'center',
-                        minWidth: 0,
-                      }}
-                    >
-                      <Avatar
-                        src={testimonial.avatar}
-                        alt={testimonial.name}
-                        sx={{
-                          width: 70,
-                          height: 70,
-                          mx: 'auto',
-                          mb: 2,
-                          border: `2px solid ${colors.primary.main}`,
-                        }}
-                      />
-                      <Typography variant="h6" fontWeight={600}>
-                        {testimonial.name}
-                      </Typography>
-                      <Typography
-                        variant="body2"
-                        sx={{ mb: 1, color: colors.text.secondary }}
-                      >
-                        {testimonial.company}
-                      </Typography>
-                      <Typography
-                        variant="body2"
-                        sx={{ fontStyle: 'italic', color: colors.text.primary }}
-                      >
-                        “{testimonial.quote}”
-                      </Typography>
-                    </Paper>
-                  ))}
-              </Box>
-            ))}
-          </Box>
-        </Box>
-
-        {/* Dots */}
-        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4, gap: 1 }}>
-          {Array.from({ length: totalSlides }).map((_, index) => (
-            <Box
-              key={index}
-              onClick={() => setCurrentSlide(index)}
+    <Box sx={{ 
+      py: 5,
+      px: 2.5,
+      backgroundColor: 'background.default',
+      borderRadius: 2,
+      my: 2.5
+    }}>
+      <Typography 
+        variant="h4" 
+        align="center" 
+        sx={{ 
+          mb: 5,
+          color: 'text.primary',
+          fontWeight: 'bold'
+        }}
+      >
+        Trusted By Industry Leaders
+      </Typography>
+      
+      <Slider {...settings}>
+        {testimonials.map((client) => (
+          <Box key={client.id} sx={{ px: 1 }}>
+            <Paper
+              elevation={3}
               sx={{
-                width: 10,
-                height: 10,
-                borderRadius: '50%',
-                backgroundColor:
-                  index === currentSlide
-                    ? colors.primary.main
-                    : colors.primary.light,
-                opacity: index === currentSlide ? 1 : 0.5,
-                cursor: 'pointer',
+                p: 2.5,
+                height: 200,
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                textAlign: 'center',
+                transition: 'transform 0.3s, box-shadow 0.3s',
+                '&:hover': {
+                  transform: 'translateY(-5px)',
+                  boxShadow: 6
+                }
               }}
-            />
-          ))}
-        </Box>
-      </Container>
+            >
+              <Avatar
+                src={client.avatar}
+                alt={client.name}
+                sx={{ 
+                  width: 56, 
+                  height: 56,
+                  mb: 2.5
+                }}
+              />
+              <Typography variant="subtitle1" sx={{ color: 'text.secondary', fontStyle: 'italic' }}>
+                {client.name}
+              </Typography>
+              <Typography variant="body2" sx={{ 
+                color: 'text.secondary', 
+                fontStyle: 'italic',
+                mt: 1
+              }}>
+                "{client.quote}"
+              </Typography>
+            </Paper>
+          </Box>
+        ))}
+      </Slider>
     </Box>
   );
 };

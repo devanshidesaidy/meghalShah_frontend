@@ -95,6 +95,7 @@
 import { Box, Container, Typography, Button, Grid } from '@mui/material';
 import { PhoneCall } from 'lucide-react';
 import { colors } from '../../components/Theme';
+import { color } from '../../constant';
 
 
 const CallSection = () => {
@@ -159,7 +160,7 @@ const CallSection = () => {
           <Grid item size={{xs:12, md:5 }} sx={{ textAlign: { xs: 'center', md: 'right' } }}>
             <Button
               variant="contained"
-              color="secondary"
+            
               size="large"
               href="#contact"
               startIcon={<PhoneCall size={20} />}
@@ -167,6 +168,8 @@ const CallSection = () => {
                 px: 4,
                 py: 1.5,
                 borderRadius: 2,
+                color:color.white,
+                bgcolor:color.greenFont,
                 fontSize: '1rem',
                 fontWeight: 600,
                 transition: 'all 0.3s ease',

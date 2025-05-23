@@ -1,130 +1,155 @@
-import { Container, Divider, Grid, Typography } from "@mui/material";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import { color } from "../constant";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-import XIcon from "@mui/icons-material/X";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-export default function Footer() {
+import React from 'react';
+import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from 'lucide-react';
+import {
+  Box,
+  Container,
+  Grid,
+  Typography,
+  IconButton,
+  Link,
+  Divider,
+  Button,
+  useTheme,
+} from '@mui/material';
+
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  const theme = useTheme();
+
   return (
-    <Grid sx={{ backgroundColor: color.mateblack, color: color.white, pb: 3 }}>
-      <Grid
-        sx={{
-          color: color.white,
-          height: "150px",
-          display: "flex",
-          justifyContent: "center",
-          pt: { xs: 3, md: 8 },
-        }}
-      >
-        <Grid sx={{ width: { xs: "100%", lg: "87%" }, px: 5 }}>
-          <Grid
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              flexDirection: { xs: "column", md: "row" },
-              gap: { xs: "1rem", md: "none" },
-            }}
-          >
-            <Grid
-              sx={{
-                fontFamily: "MiriamLibre-Regular",
-                letterSpacing: "0.1rem",
-                display: "flex",
-                alignItems: { xs: "flex-start", md: "center" },
-                justifyContent: "center",
-                textAlign: "center",
-                width: { xs: "100%", md: "30%" },
+    <Box component="footer" sx={{ 
+      bgcolor: 'black', 
+      color: 'white', 
+      pt: 8, 
+      pb: 4,
+      borderTop: `1px solid ${theme.palette.grey[800]}`
+    }}>
+      <Container>
+        <Grid container spacing={4}>
+          <Grid item xs={12} md={3}>
+            <Typography 
+              variant="h5" 
+              fontWeight="bold" 
+              gutterBottom 
+              sx={{ 
+                color: 'white', 
+                fontFamily: 'Playfair Display',
+                '& span': {
+                  color: 'white'
+                }
               }}
             >
-              <LocationOnIcon sx={{ mr: { xs: 0, md: 1 } }} />
-              A-5 Fifth Floor, Safal Profitire, Prahladnagar
-            </Grid>
-            <Grid
-              sx={{
-                fontFamily: "MiriamLibre-Regular",
-                letterSpacing: "0.1rem",
-              }}
-            >
-              +91 1234567890
-            </Grid>
-            <Grid
-              sx={{
-                fontFamily: "MiriamLibre-Regular",
-                letterSpacing: "0.1rem",
-              }}
-            >
-              meghlshah@gmail.com
-            </Grid>
-            <Grid container spacing={2}>
-              <Grid item>
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+              <Box component="span" sx={{ color: 'white' }}>CA</Box> Meghal Shah
+            </Typography>
+            <Typography variant="body2" gutterBottom sx={{ color: 'grey.300' }}>
+              Providing expert financial advisory services to help businesses achieve sustainable growth and success.
+            </Typography>
+            <Box mt={2} display="flex" gap={1}>
+              {[Facebook, Twitter, Linkedin, Instagram].map((Icon, index) => (
+                <IconButton 
+                  key={index} 
+                  sx={{ 
+                    color: 'grey.400', 
+                    '&:hover': { 
+                      color: 'white',
+                      backgroundColor: 'rgba(255,255,255,0.1)'
+                    } 
+                  }}
                 >
-                  <FacebookIcon sx={{ fontSize: 28, color: "white" }} />
-                </a>
-              </Grid>
-              <Grid item>
-                <a
-                  href="https://www.instagram.com/meghalshahofficial?igsh=MTd1MXI5ZWVlYmYw"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <InstagramIcon sx={{ fontSize: 28, color: "white" }} />
-                </a>
-              </Grid>
-              <Grid item>
-                <a
-                  href="https://youtube.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <YouTubeIcon sx={{ fontSize: 28, color: "white" }} />
-                </a>
-              </Grid>
-              <Grid item>
-                <a
-                  href="https://x.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <XIcon sx={{ fontSize: 28, color: "white" }} />
-                </a>
-              </Grid>
-              <Grid item>
-                <a
-                  href="https://www.linkedin.com/in/ca-meghal-shah-finance-expert/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <LinkedInIcon sx={{ fontSize: 28, color: "white" }} />
-                </a>
-              </Grid>
-            </Grid>
+                  <Icon size={20} />
+                </IconButton>
+              ))}
+            </Box>
           </Grid>
-          <Divider
-            sx={{
-              bgcolor: color.white,
-              mt: 3,
-              display: { xs: "none", md: "block" },
-            }}
-          />
+
+          <Grid item xs={12} md={3}>
+            <Typography variant="subtitle1" fontWeight="bold" sx={{ color: 'white' }} gutterBottom>
+              Quick Links
+            </Typography>
+            {['Home', 'Services', 'About', 'Testimonials', 'Contact'].map((text, index) => (
+              <Box key={index} mb={1}>
+                <Link 
+                  href={`#${text.toLowerCase()}`} 
+                  underline="hover" 
+                  color="grey.300"
+                  sx={{ 
+                    '&:hover': { 
+                      color: 'white',
+                      textDecoration: 'none'
+                    } 
+                  }}
+                >
+                  {text}
+                </Link>
+              </Box>
+            ))}
+          </Grid>
+
+          <Grid item xs={12} md={3}>
+            <Typography variant="subtitle1" fontWeight="bold" sx={{ color: 'white' }} gutterBottom>
+              Services
+            </Typography>
+            {['Tax Planning', 'Financial Reporting', 'Business Advisory', 'Investment Planning', 'Audit & Assurance'].map((text, index) => (
+              <Box key={index} mb={1}>
+                <Link 
+                  href="#services" 
+                  underline="hover" 
+                  color="grey.300"
+                  sx={{ 
+                    '&:hover': { 
+                      color: 'white',
+                      textDecoration: 'none'
+                    } 
+                  }}
+                >
+                  {text}
+                </Link>
+              </Box>
+            ))}
+          </Grid>
+
+          <Grid item xs={12} md={3}>
+            <Typography variant="subtitle1" fontWeight="bold" sx={{ color: 'white' }} gutterBottom>
+              Contact Us
+            </Typography>
+            <Box display="flex" alignItems="flex-start" mb={2}>
+              <Phone size={16} style={{ marginRight: 8, color: 'white' }} />
+              <Typography variant="body2" sx={{ color: 'grey.300' }}>+91 98765 43210</Typography>
+            </Box>
+            <Box display="flex" alignItems="flex-start" mb={2}>
+              <Mail size={16} style={{ marginRight: 8, color: 'white' }} />
+              <Typography variant="body2" sx={{ color: 'grey.300' }}>info@meghalshah.com</Typography>
+            </Box>
+            <Button
+              href="#contact"
+              variant="contained"
+              sx={{ 
+                backgroundColor: 'white',
+                color: 'black',
+                mt: 1, 
+                fontWeight: 600,
+                '&:hover': {
+                  backgroundColor: 'grey.200'
+                }
+              }}
+            >
+              Contact Now
+            </Button>
+          </Grid>
         </Grid>
-      </Grid>
-      <Typography
-        sx={{
-          textAlign: "center",
-          fontFamily: "MiriamLibre-Regular",
-          letterSpacing: "0.1rem",
-          pt: { xs: 8, md: 3 },
-        }}
-      >
-        &#169; 2025 Meghal Shah.
-      </Typography>
-    </Grid>
+
+        <Divider sx={{ 
+          my: 6, 
+          borderColor: 'grey.800',
+          borderWidth: '1px'
+        }} />
+
+        <Typography variant="body2" align="center" sx={{ color: 'grey.400' }}>
+          &copy; {currentYear} CA Meghal Shah. All rights reserved.
+        </Typography>
+      </Container>
+    </Box>
   );
-}
+};
+
+export default Footer;

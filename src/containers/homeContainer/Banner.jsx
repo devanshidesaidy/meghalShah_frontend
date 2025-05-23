@@ -145,6 +145,7 @@ import {
 import { ArrowRight, PhoneCall } from 'lucide-react';
 import { colors } from '../../components/Theme';
 import backgroundphoto from "../../assets/images/servicebg.png"
+import { color } from '../../constant';
 
 const Banner = () => {
   const theme = useTheme();
@@ -248,13 +249,14 @@ const Banner = () => {
               >
                 <Button
                   variant="contained"
-                  color="primary"
+               
                   size="large"
                   href="#services"
                   endIcon={<ArrowRight size={20} />}
                   sx={{
                     fontSize: '1rem',
                     fontWeight: 600,
+                    bgcolor:color.greenFont,
                     transition: 'all 0.3s ease',
                     '&:hover': {
                       transform: 'translateY(-3px)',
