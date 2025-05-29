@@ -1,7 +1,7 @@
 export const color = {
-  greenFont: "#e2bf02",
+  greenFont: "#fcea4e",
   white: "#ffffff",
-  black: "#000000",
+  black: "#28282b",
   bgblack: "#0b0d0e",
   pureblack: "#000205",
   mateblack: "#333",

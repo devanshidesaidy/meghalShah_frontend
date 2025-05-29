@@ -1,10 +1,25 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
-import React from "react";
+import { color } from "../../constant";
 
 export default function Mission() {
   return (
-    <Container maxWidth="lg" sx={{ color: "black" }}>
-      <Grid size={{ xs: 12, ms: 12 }}>
+    <Box sx={{backgroundColor:color.black, p:5}}>
+
+    <Container maxWidth="lg"   sx={{ color: "black", }} >
+  <Typography
+             variant="h2"
+             fontWeight="bold"
+             sx={{
+               fontFamily: "'Playfair Display', serif",
+               mb: 2,
+               fontSize: { xs: "2rem", md: "2.75rem" },
+               color: "#FFD700",
+               textAlign:"center"
+             }}
+           >
+            Mission & Vision 
+           </Typography>
+      <Grid size={{ xs: 12, ms: 12 }} sx={{bgcolor:color.black}}>
         <Grid
           bgcolor={"gray"}
           sx={{
@@ -18,8 +33,8 @@ export default function Mission() {
           gap={10}
           p={7}
             mt={2}
-          borderRadius={7}
-        >
+            borderRadius={7}
+            >
           <Typography
             fontSize={25}
             sx={{
@@ -27,7 +42,7 @@ export default function Mission() {
               alignItems: "center",
               color: "white",
             }}
-          >
+            >
             Mission
           </Typography>
 
@@ -41,7 +56,7 @@ export default function Mission() {
         </Grid>
         <Grid
           bgcolor={"gray"}
-           sx={{
+          sx={{
             display: {
               md: "flex",
               sm: "block",
@@ -54,7 +69,7 @@ export default function Mission() {
           borderRadius={7}
           mt={2}
           mb={2}
-        >
+          >
           <Typography
             fontSize={25}
             sx={{
@@ -62,7 +77,7 @@ export default function Mission() {
               alignItems: "center",
               color: "white",
             }}
-          >
+            >
             Vision
           </Typography>
 
@@ -76,5 +91,6 @@ export default function Mission() {
         </Grid>
       </Grid>
     </Container>
+            </Box>
   );
 }

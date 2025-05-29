@@ -5,6 +5,7 @@ import { Box, Container, Typography, IconButton } from "@mui/material";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
 import "swiper/css";
 import "swiper/css/pagination";
+import { color } from "../../constant";
 
 // Generate random dummy images
 const generateRandomImages = (count) =>
@@ -28,7 +29,7 @@ export default function Awards() {
   return (
     <Box
       sx={{
-        backgroundColor: black,
+        backgroundColor: color.black,
         py: { xs: 6, md: 10 },
         position: "relative",
       }}
@@ -89,10 +90,10 @@ export default function Awards() {
             loop={true}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             breakpoints={{
-              0: { slidesPerView: 1.2 },
-              600: { slidesPerView: 2.2 },
-              960: { slidesPerView: 3.2 },
-              1280: { slidesPerView: 4.2 },
+              0: { slidesPerView: 1},
+              600: { slidesPerView: 2 },
+              960: { slidesPerView: 3 },
+              1280: { slidesPerView: 4 },
             }}
             spaceBetween={24}
             grabCursor
@@ -107,6 +108,7 @@ export default function Awards() {
                     borderRadius: 2,
                     overflow: "hidden",
                     boxShadow: 3,
+                    bgcolor:"#808080"
                   }}
                 >
                   <img

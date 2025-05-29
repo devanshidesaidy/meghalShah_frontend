@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Shield, Award, Users, Clock, Lightbulb } from "lucide-react";
 import { colors } from "../../components/Theme";
 import { Box, Typography, Container, Grid, Paper } from "@mui/material";
+import { color } from "../../constant";
 
 const MotionGridItem = motion(Paper);
 
@@ -38,27 +39,32 @@ const CoreValues = () => {
   const values = [
     {
       name: "Integrity",
-      description: "I prioritize honesty, transparency, and ethical practices in all my dealings, ensuring that clients can trust me to always act in their best interest.",
+      description:
+        "I prioritize honesty, transparency, and ethical practices in all my dealings, ensuring that clients can trust me to always act in their best interest.",
       icon: <Shield size={40} color="#FFD700" />,
     },
     {
       name: "Excellence",
-      description: "I believe in delivering the highest standard of financial advice, ensuring that each client receives expert guidance that produces the best possible outcomes.",
+      description:
+        "I believe in delivering the highest standard of financial advice, ensuring that each client receives expert guidance that produces the best possible outcomes.",
       icon: <Award size={40} color="#FFD700" />,
     },
     {
       name: "Personalization",
-      description: "Each business is unique, and my solutions are tailored to address individual needs, challenges, and opportunities for growth.",
+      description:
+        "Each business is unique, and my solutions are tailored to address individual needs, challenges, and opportunities for growth.",
       icon: <Users size={40} color="#FFD700" />,
     },
     {
       name: "Commitment",
-      description: "I am dedicated to providing ongoing support to my clients, ensuring they continue to thrive and meet their financial goals..",
+      description:
+        "I am dedicated to providing ongoing support to my clients, ensuring they continue to thrive and meet their financial goals..",
       icon: <Clock size={40} color="#FFD700" />,
     },
     {
       name: "Innovation",
-      description: "I continually seek innovative approaches to solving complex financial problems, ensuring my clients stay ahead of the competition.",
+      description:
+        "I continually seek innovative approaches to solving complex financial problems, ensuring my clients stay ahead of the competition.",
       icon: <Lightbulb size={40} color="#FFD700" />,
     },
   ];
@@ -68,7 +74,7 @@ const CoreValues = () => {
       component="section"
       sx={{
         py: { xs: 8, md: 10 },
-        backgroundColor: colors.background.dark,
+        backgroundColor: color.gray,
       }}
     >
       <Container maxWidth="xl">
@@ -103,24 +109,24 @@ const CoreValues = () => {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
         >
-          <Grid 
-            container 
-           // Increas
-          
+          <Grid
+            container
+            // Increas
+
             justifyContent="center"
             sx={{ px: { xs: 2, md: 4 } }} // Add padding to sides
           >
             {values.map((value, index) => (
               <Grid
                 item
-               size={{xs:12,sm:6,md:2}}
-              
+                size={{ xs: 12, sm: 6, md: 2 }}
                 key={index}
                 sx={{
                   display: "flex",
                   justifyContent: "center",
                   minWidth: { md: "280px" },
-                 // Increased minimum width
+
+                  // Increased minimum width
                 }}
               >
                 <MotionGridItem
@@ -131,7 +137,7 @@ const CoreValues = () => {
                     border: "1px solid rgba(255, 215, 0, 0.2)",
                     borderRadius: 3,
                     p: { xs: 3, md: 4 },
-
+                    bgcolor: color.black,
                     maxWidth: "180px", // Increased maximum width
                     minHeight: "320px", // Increased height
                     display: "flex",
@@ -157,7 +163,6 @@ const CoreValues = () => {
                     {value.icon}
                   </Box>
                   <Typography
-                  
                     fontWeight="bold"
                     color="#FFD700"
                     gutterBottom
@@ -170,10 +175,8 @@ const CoreValues = () => {
                     variant="body1"
                     color="rgba(255, 255, 255, 0.8)"
                     textAlign="center"
-                    
                     sx={{
-                      fontSize: { xs: "0.95rem", md: "1rem",  },
-                  
+                      fontSize: { xs: "0.95rem", md: "1rem" },
                     }}
                   >
                     {value.description}

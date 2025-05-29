@@ -338,7 +338,7 @@ const Introduction = () => {
                   >
                     <GraduationCap
                       size={32}
-                      color={colors.secondary.light}
+                      color={color.greenFont}
                       style={{ marginBottom: "8px" }}
                     />
                     <Typography

@@ -12,6 +12,7 @@ import {
   Divider,
 } from "@mui/material";
 import { colors } from "../../components/Theme";
+import { color } from "../../constant";
 const MotionCard = motion(Card);
 
 const Approach = () => {
@@ -31,7 +32,7 @@ const Approach = () => {
       id="approach"
       sx={{
         py: 10,
-
+        bgcolor: color.gray,
         position: "relative",
         overflow: "hidden",
       }}
@@ -71,11 +72,12 @@ const Approach = () => {
           />
           <Typography
             variant="subtitle1"
-            color="rgba(255, 255, 255, 0.8)"
+            color={color.black}
             maxWidth="md"
             mx="auto"
             sx={{
               fontSize: { xs: "1rem", md: "1.1rem" },
+              
             }}
           >
             The methodology and principles that guide my financial advisory
@@ -85,18 +87,19 @@ const Approach = () => {
 
         <Grid container spacing={4}>
           {/* Approach Card */}
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} >
             <MotionCard
               ref={approachRef}
-              initial={{ opacity: 0, y: 50 }}
-              animate={approachInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6 }}
+             initial={{ opacity: 0, y: 50 }}
+              animate={philosophyInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.2 }}
               sx={{
-                borderRadius: 2,
-                backgroundColor: colors.background.dark,
+                borderRadius: 7,
+               backgroundColor: color.black,
                 backdropFilter: "blur(8px)",
                 border: "1px solid rgba(255, 215, 0, 0.2)",
                 transition: "all 0.3s ease",
+
                 "&:hover": {
                   borderColor: "#FFD700",
                   transform: "translateY(-5px)",
@@ -106,7 +109,7 @@ const Approach = () => {
             >
               <Box
                 sx={{
-                  backgroundColor: colors.background.dark,
+                  backgroundColor: color.black,
                   px: 3,
                   py: 2.5,
                   display: "flex",
@@ -116,7 +119,7 @@ const Approach = () => {
               >
                 <Box
                   sx={{
-                    backgroundColor: colors.background.dark,
+                    backgroundColor: color.black,
                     p: 1.5,
                     borderRadius: "50%",
                     display: "inline-flex",
@@ -167,11 +170,12 @@ const Approach = () => {
               animate={philosophyInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
               sx={{
-                borderRadius: 2,
-                backgroundColor: colors.background.dark,
+                borderRadius: 7,
+               backgroundColor: color.black,
                 backdropFilter: "blur(8px)",
                 border: "1px solid rgba(255, 215, 0, 0.2)",
                 transition: "all 0.3s ease",
+
                 "&:hover": {
                   borderColor: "#FFD700",
                   transform: "translateY(-5px)",
@@ -181,7 +185,7 @@ const Approach = () => {
             >
               <Box
                 sx={{
-                  backgroundColor: colors.background.dark,
+                  backgroundColor: color.black,
                   px: 3,
                   py: 2.5,
                   display: "flex",
