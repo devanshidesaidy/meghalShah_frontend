@@ -181,14 +181,15 @@ const Banner = () => {
               }}
             >
               <Typography
-                variant="h1"
-                component="h1"
+               
+               
                 sx={{
                   color: colors.text.light,
                   fontSize: { xs: '2.5rem', sm: '3.5rem', md: '4.5rem' },
                   fontWeight: 700,
                   mb: 2,
                   lineHeight: 1.2,
+                  fontFamily:"unset"
                 }}
               >
                 Meghal Shah

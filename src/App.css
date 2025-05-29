@@ -188,3 +188,65 @@ a {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+
+
+@font-face {
+  font-family: "JosefinSansbold";
+  src: url("../public/fonts/JosefinSans-Bold.ttf") format("opentype");
+  font-weight: Bold;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "JosefinSanslight";
+  src: url("../public/fonts/JosefinSans-Light.ttf") format("opentype");
+  font-weight: Light;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JosefinSansmedium";
+  src: url("../public/fonts/JosefinSans-Medium.ttf") format("opentype");
+  font-weight: Medium;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MiriamLibreregular";
+  src: url("../public/fonts/MiriamLibre-Regular.ttf") format("opentype");
+  font-weight: "Regular";
+  font-style: normal;
+}
+@font-face {
+  font-family: "MiriamLibrebold";
+  src: url("../public/fonts/MiriamLibre-Bold.ttf") format("opentype");
+  font-weight: Bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MiriamLibremedium";
+  src: url("../public/fonts/MiriamLibre-Medium.ttf") format("opentype");
+  font-weight: Medium;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Palanquinreglar";
+  src: url("../public/fonts/Palanquin-Regular.ttf") format("opentype");
+  font-weight: "Regular";
+  font-style: normal;
+}
+@font-face {
+  font-family: "Palanquinbold";
+  src: url("../public/fonts/Palanquin-Bold.ttf") format("opentype");
+  font-weight: Bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Palanquinmedium";
+  src: url("../public/fonts/Palanquin-Medium.ttf") format("opentype");
+  font-weight: Medium;
+  font-style: normal;
+}
+
+
+
