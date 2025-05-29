@@ -11,7 +11,7 @@ import Client from "../containers/homeContainer/Client";
 export default function About() {
   return (
     <Grid>
-      {/* <AboutBanner /> */}
+      <AboutBanner />
       <Introduction />
       <Mission />
       <CoreValues />
