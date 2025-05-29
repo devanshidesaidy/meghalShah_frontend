@@ -5,6 +5,7 @@ export const color = {
   bgblack: "#0b0d0e",
   pureblack: "#000205",
   mateblack: "#333",
+  gray:"#eeeeee"
 };
 
 export const path = {

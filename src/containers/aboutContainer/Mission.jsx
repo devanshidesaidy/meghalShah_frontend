@@ -1,125 +1,80 @@
-import { Container, Divider, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import { color } from "../../constant";
-import mission from "../../assets/svg/mission.png";
-import vission from "../../assets/svg/vision.png";
-import { colors } from "../../components/Theme";
+
 export default function Mission() {
   return (
-    <Grid sx={{ backgroundColor: colors.background.dark }}>
-      <Grid
-        sx={{
-          fontSize: { xs: "2.5rem", md: "3.5rem" },
-          color: colors.secondary.main,
-          pt: "5%",
-          px: 3,
-          textAlign: "center",
-          fontWeight: "bold",
-          fontFamily: "JosefinSans",
-        }}
-      >
-        Mission, Vision & Core Values
-      </Grid>
-      <Container sx={{ py: "5%" }}>
-        <Grid container sx={{ backgroundColor: color.mateblack, py: "2%" }}>
-          <Grid
-            size={{ xs: 12, md: 5.5 }}
-            // sx={{ backgroundColor: color.mateblack }}
-          >
-            <Grid sx={{ display: "flex", justifyContent: "center" }}>
-              <img
-                style={{
-                  filter: "brightness(0) invert(1)",
-                }}
-                src={mission}
-              />
-            </Grid>
-            <Typography
-              sx={{
-                fontSize: { xs: "2.5rem", md: "3rem" },
-                color: colors.secondary.main,
-                pt: "2%",
-                px: 3,
-                textAlign: "center",
-                fontWeight: "bold",
-                fontFamily: "MiriamLibre-Regular",
-              }}
-            >
-              Mission
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: { xs: "1rem", md: "1.2rem" },
-                color: color.white,
-                pt: "2%",
-                px: 3,
-                textAlign: "center",
-                fontFamily: "Palanquin",
-              }}
-            >
-              My mission is to empower businesses with strategic financial
-              advice that maximizes growth, optimizes performance, and builds
-              lasting financial stability. I strive to provide solutions that
-              are not only effective but sustainable, ensuring that businesses
-              can thrive in an ever-evolving financial landscape.
-            </Typography>
-          </Grid>
-          <Divider
-            variant="middle"
+    <Container maxWidth="lg" sx={{ color: "black" }}>
+      <Grid size={{ xs: 12, ms: 12 }}>
+        <Grid
+          bgcolor={"gray"}
+          sx={{
+            display: {
+              md: "flex",
+              sm: "block",
+              xs:"black"
+            },
+            
+          }}
+          gap={10}
+          p={7}
+            mt={2}
+          borderRadius={7}
+        >
+          <Typography
+            fontSize={25}
             sx={{
-              bgcolor: color.white,
-              borderWidth: "0.1px",
-              borderRadius: "10px",
-              mx: "2%",
-              my: "3%",
-              height: "18rem",
-              display: { xs: "none", md: "block" },
+              display: "flex",
+              alignItems: "center",
+              color: "white",
             }}
-          />
-          <Grid
-            size={{ xs: 12, md: 5.5 }}
-            // sx={{ backgroundColor: color.mateblack }}
           >
-            <Grid sx={{ display: "flex", justifyContent: "center" }}>
-              <img
-                style={{
-                  filter: "brightness(0) invert(1)",
-                }}
-                src={vission}
-              />
-            </Grid>
-            <Typography
-              sx={{
-                fontSize: { xs: "2.5rem", md: "3rem" },
-                color: colors.secondary.main,
-                pt: "5%",
-                px: 3,
-                textAlign: "center",
-                fontWeight: "bold",
-                fontFamily: "MiriamLibre-Regular",
-              }}
-            >
-              Vision
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: { xs: "1rem", md: "1.2rem" },
-                color: color.white,
-                pt: "2%",
-                px: 3,
-                textAlign: "center",
-                fontFamily: "Palanquin",
-              }}
-            >
-              To be a trusted advisor and financial partner for businesses
-              across industries, helping them unlock their full potential and
-              achieve financial independence and success. I aim to deliver
-              high-quality, tailor-made financial solutions that exceed
-              expectations and drive measurable results.
-            </Typography>
-          </Grid>
+            Mission
+          </Typography>
+
+          <Typography fontSize={25} color="white" sx={{ textAlign: "justify" }}>
+            My mission is to empower businesses with strategic financial advice
+            that drives sustainable growth, enhances performance, and ensures
+            long-term financial stability. I am committed to delivering
+            effective, personalized solutions that adapt to evolving financial
+            landscapes and support lasting success.
+          </Typography>
         </Grid>
-      </Container>
-    </Grid>
+        <Grid
+          bgcolor={"gray"}
+           sx={{
+            display: {
+              md: "flex",
+              sm: "block",
+              xs:"black"
+            },
+            
+          }}
+          gap={10}
+          p={7}
+          borderRadius={7}
+          mt={2}
+          mb={2}
+        >
+          <Typography
+            fontSize={25}
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              color: "white",
+            }}
+          >
+            Vision
+          </Typography>
+
+          <Typography fontSize={25} color="white" sx={{ textAlign: "justify" }}>
+            To be a trusted financial partner for businesses across industries,
+            empowering them to achieve financial independence, unlock their full
+            potential, and reach lasting success. I aim to deliver high-quality,
+            customized financial solutions that exceed expectations and drive
+            real, measurable results.
+          </Typography>
+        </Grid>
+      </Grid>
+    </Container>
   );
 }

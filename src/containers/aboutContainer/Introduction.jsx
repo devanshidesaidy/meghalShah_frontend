@@ -141,6 +141,7 @@ import {
 } from "@mui/material";
 import { Award, Users, TrendingUp, GraduationCap } from "lucide-react";
 import { colors } from "../../components/Theme";
+import { color } from "../../constant";
 
 const Introduction = () => {
   const theme = useTheme();
@@ -156,7 +157,7 @@ const Introduction = () => {
       id="about"
       sx={{
         py: { xs: 8, md: 12 },
-        backgroundColor: colors.background.default,
+        backgroundColor: color.gray,
       }}
       className="section-padding"
     >
@@ -166,71 +167,31 @@ const Introduction = () => {
             <Box
               sx={{
                 position: "relative",
-                height: { xs: "300px", md: "500px" },
+                height: { xs: "300px", md: "580px" },
                 mb: { xs: 4, md: 0 },
+                border:"30px solid  gray",
+                borderRadius:"10px"
               }}
               className="fade-in"
             >
               <Box
                 component="img"
-                src="\src\assets\images\bannerSelf.png"
+                src="\src\assets\images\04.png"
                 sx={{
                   width: "100%",
                   height: "100%",
                   objectFit: "cover",
-                  borderRadius: 3,
+                  borderRadius: "10px",
                   boxShadow: "0 16px 40px rgba(0, 0, 0, 0.12)",
+                  
+                  
                 }}
               />
-              <Box
-                sx={{
-                  position: "absolute",
-                  bottom: -30,
-                  right: isMobile ? "auto" : -30,
-                  left: isMobile ? "50%" : "auto",
-                  transform: isMobile ? "translateX(-50%)" : "none",
-                  backgroundColor: colors.primary.main,
-                  borderRadius: 2,
-                  p: 3,
-                  width: { xs: "90%", md: "220px" },
-                  boxShadow: "0 8px 24px rgba(0, 0, 0, 0.15)",
-                }}
-              >
-                <Typography
-                  variant="h5"
-                  sx={{
-                    color: colors.text.light,
-                    mb: 1,
-                    fontWeight: 600,
-                  }}
-                >
-                  {aboutInfo.experience}
-                </Typography>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    color: colors.text.light,
-                  }}
-                >
-                  Years of Excellence in Financial Advisory
-                </Typography>
-              </Box>
             </Box>
           </Grid>
 
           <Grid size={{ xs: 12, md: 6 }}>
             <Box className="slide-up">
-              <Typography
-                variant="h6"
-                sx={{
-                  color: colors.primary.main,
-                  fontWeight: 600,
-                  mb: 1,
-                }}
-              >
-                ABOUT ME
-              </Typography>
-
               <Typography
                 variant="h2"
                 sx={{
@@ -250,41 +211,26 @@ const Introduction = () => {
                   mb: 4,
                   fontSize: "1.1rem",
                   lineHeight: 1.7,
+                  textAlign: "justify",
                 }}
               >
-                With over two decades of experience, I specialize in creating
-                tailored financial strategies that drive business growth and
-                sustainability. My expertise spans across corporate finance, tax
-                advisory, and investment planning, helping businesses navigate
-                complex financial landscapes with confidence.
-              </Typography>
-
-              <Typography
-                variant="body1"
-                sx={{
-                  color: colors.text.secondary,
-                  mb: 4,
-                  fontSize: "1.1rem",
-                  lineHeight: 1.7,
-                }}
-              >
-                My approach combines technical expertise with a deep
-                understanding of business challenges across various sectors.
-                Whether you're a startup seeking funding or an established
-                business looking to optimize financial performance, I provide
-                actionable solutions that deliver measurable results.
+                With 20+ years of experience, I craft tailored financial
+                strategies that drive growth and sustainability. My expertise in
+                corporate finance, tax, and investment helps businesses from
+                startups to established firms navigate challenges and achieve
+                measurable results.
               </Typography>
 
               <Grid container spacing={3} sx={{ mt: 2 }}>
-                <Grid size={{ xs: 6, md: 3 }}>
+                <Grid size={{ xs: 6, md: 6 }}>
                   <Paper
                     elevation={0}
                     sx={{
                       p: 2,
-                      textAlign: 'center',
-                       height:"125px",
-                      backgroundColor: 'transparent',
-                      border:` 1px solid ${colors.primary.light}`,
+                      textAlign: "center",
+                      height: "125px",
+                      backgroundColor: "transparent",
+                      border: ` 4px solid ${color.greenFont}`,
                       borderRadius: 2,
                       transition: "all 0.3s ease",
                       "&:hover": {
@@ -296,25 +242,27 @@ const Introduction = () => {
                   >
                     <Award
                       size={32}
-                      color={colors.primary.main}
+                      color={color.greenFont}
                       style={{ marginBottom: "8px" }}
                     />
                     <Typography variant="h6" sx={{ fontWeight: 600 }}>
                       {aboutInfo.experience}
                     </Typography>
-                    <Typography variant="body2">Experience</Typography>
+                    <Typography variant="body2" color={colors.text.secondary}>
+                      Experience
+                    </Typography>
                   </Paper>
                 </Grid>
 
-                <Grid item size={{ xs: 6, md: 3 }}>
+                <Grid item size={{ xs: 6, md: 6 }}>
                   <Paper
                     elevation={0}
                     sx={{
                       p: 2,
-                      textAlign: 'center',
-                      height:"125px",
-                      backgroundColor: 'transparent',
-                      border:` 1px solid ${colors.primary.light}`,
+                      textAlign: "center",
+                      height: "125px",
+                      backgroundColor: "transparent",
+                      border: ` 4px solid ${color.greenFont}`,
                       borderRadius: 2,
                       transition: "all 0.3s ease",
                       "&:hover": {
@@ -326,25 +274,27 @@ const Introduction = () => {
                   >
                     <Users
                       size={32}
-                      color={colors.primary.main}
+                      color={color.greenFont}
                       style={{ marginBottom: "8px" }}
                     />
                     <Typography variant="h6" sx={{ fontWeight: 600 }}>
                       {aboutInfo.clientsServed}
                     </Typography>
-                    <Typography variant="body2">Clients</Typography>
+                    <Typography variant="body2" color={colors.text.secondary}>
+                      Clients
+                    </Typography>
                   </Paper>
                 </Grid>
 
-                <Grid item size={{ xs: 6, md: 3 }}>
+                <Grid item size={{ xs: 6, md: 6 }}>
                   <Paper
                     elevation={0}
                     sx={{
                       p: 2,
-                      textAlign: 'center',
-                       height:"125px",
-                      backgroundColor: 'transparent',
-                      border:` 1px solid ${colors.primary.light}`,
+                      textAlign: "center",
+                      height: "125px",
+                      backgroundColor: "transparent",
+                      border: ` 4px solid ${color.greenFont}`,
                       borderRadius: 2,
                       transition: "all 0.3s ease",
                       "&:hover": {
@@ -356,25 +306,27 @@ const Introduction = () => {
                   >
                     <TrendingUp
                       size={32}
-                      color={colors.primary.main}
+                      color={color.greenFont}
                       style={{ marginBottom: "8px" }}
                     />
                     <Typography variant="h6" sx={{ fontWeight: 600 }}>
                       {aboutInfo.successRate}
                     </Typography>
-                    <Typography variant="body2">Success Rate</Typography>
+                    <Typography variant="body2" color={colors.text.secondary}>
+                      Success Rate
+                    </Typography>
                   </Paper>
                 </Grid>
 
-                <Grid item size={{ xs: 6, md: 3 }}>
+                <Grid item size={{ xs: 6, md: 6 }}>
                   <Paper
                     elevation={0}
                     sx={{
                       p: 2,
-                      textAlign: 'center',
-                       height:"125px",
-                      backgroundColor: 'transparent',
-                      border: `1px solid ${colors.primary.light}`,
+                      textAlign: "center",
+                      height: "125px",
+                      backgroundColor: "transparent",
+                      border: `4px solid ${color.greenFont}`,
                       borderRadius: 2,
                       transition: "all 0.3s ease",
                       "&:hover": {
@@ -386,7 +338,7 @@ const Introduction = () => {
                   >
                     <GraduationCap
                       size={32}
-                      color={colors.primary.main}
+                      color={colors.secondary.light}
                       style={{ marginBottom: "8px" }}
                     />
                     <Typography
@@ -395,7 +347,9 @@ const Introduction = () => {
                     >
                       {aboutInfo.certifications}
                     </Typography>
-                    <Typography variant="body2">Certifications</Typography>
+                    <Typography variant="body2" color={colors.text.secondary}>
+                      Certifications
+                    </Typography>
                   </Paper>
                 </Grid>
               </Grid>

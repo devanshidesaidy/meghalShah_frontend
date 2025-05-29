@@ -11,7 +11,7 @@ const generateRandomImages = (count) =>
   Array.from(
     { length: count },
     (_, i) =>
-      `https://cdn-imgix.headout.com/media/images/c9db3cea62133b6a6bb70597326b4a34-388-dubai-img-worlds-of-adventure-tickets-01.jpg?auto=format&fit=crop&w=1220&h=680&q=90&sig=${i}`
+      `https://pngimg.com/d/golden_cup_PNG94586.png`
   );
 
 // Colors
