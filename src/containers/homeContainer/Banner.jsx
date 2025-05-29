@@ -31,43 +31,48 @@ const Banner = () => {
   };
 
   return (
-    <Box>
-      {/* Black Section - 90vh */}
-      <Box
-        sx={{
-          backgroundColor: color.black,
-          minHeight: "89vh",
-          display: "flex",
-          alignItems: "center",
-          pt: { xs: 10, md: 0 },
-        }}
-      >
-        <Container>
-          <Grid container spacing={4} alignItems="center">
-            {/* Left Text Section */}
-            <Grid item size={{ xs: 12, md: 6 }}>
-              <Box
+    <Box
+      id="home"
+      sx={{
+        position: 'relative',
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+       background: `linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.5)),url(${backgroundphoto})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        pt: { xs: 10, md: 0 },
+      }}
+      className="hero-background"
+    >
+      <Container maxWidth="xl" className="hero-content">
+        <Grid container spacing={4} alignItems="center">
+          <Grid item size={{xs:12, md:7 }} className="slide-up">
+            <Box
+              sx={{
+                p: { xs: 3, md: 5 },
+                borderRadius: 2,
+                background: 'rgba(0, 0, 0, 0.5)',
+                backdropFilter: 'blur(8px)',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+                animation: 'fadeIn 1s ease-in',
+              }}
+            >
+              <Typography
+               
+               
                 sx={{
-                  p: { xs: 3, md: 5 },
-                  borderRadius: 2,
-
-                  animation: "fadeIn 1s ease-in",
+                  color: colors.text.light,
+                  fontSize: { xs: '2.5rem', sm: '3.5rem', md: '4.5rem' },
+                  fontWeight: 700,
+                  mb: 2,
+                  lineHeight: 1.2,
+                  fontFamily:"unset"
                 }}
               >
-                <Typography
-                  variant="h1"
-                  component="h1"
-                  sx={{
-                    color: colors.text.light,
-                    fontSize: { xs: "2.5rem", sm: "3.5rem", md: "4.5rem" },
-                    fontWeight: 700,
-                    mb: 2,
-                    lineHeight: 1.2,
-                    fontFamily: "JosefinSans",
-                  }}
-                >
-                  Meghal Shah
-                </Typography>
+                Meghal Shah
+              </Typography>
 
                 <Typography
                   variant="h4"

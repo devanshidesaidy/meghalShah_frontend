@@ -114,7 +114,7 @@ const CoreService = () => {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
         >
-          <Grid container spacing={4} justifyContent="center">
+          <Grid container spacing={2} justifyContent="center">
             {services.map((service, index) => (
               <MotionGridItem
                 item
@@ -124,6 +124,7 @@ const CoreService = () => {
                 sx={{
                   display: "flex",
                   justifyContent: "center",
+                  wiu
                 }}
               >
                 <Box
