@@ -2,39 +2,40 @@ import { createTheme } from "@mui/material";
 
 const colors = {
   primary: {
-    main: '#1E5631', // Deep green
-    light: '#2A7D45',
-    dark: '#0F3A1C',
-    contrastText: '#FFFFFF',
+    main: "#1E5631", // Deep green
+    light: "#2A7D45",
+    dark: "#0F3A1C",
+    contrastText: "#FFFFFF",
   },
   secondary: {
-    main: '#D4AF37', // Gold
-    light: '#E6C65C',
-    dark: '#B39020',
-    contrastText: '#000000',
+    main: "#fcea4e", // Gold
+    light: "#E6C65C",
+    dark: "#B39020",
+    contrastText: "#000000",
   },
   background: {
-    default: '#FFFFFF',
-    paper: '#F9F9F9',
-    dark: '#121212',
-    darkPaper: '#1E1E1E',
+    light: "#f9f9f9",
+    default: "#FFFFFF",
+    paper: "#F9F9F9",
+    dark: "#121212",
+    darkPaper: "#1E1E1E",
   },
   text: {
-    primary: '#333333',
-    secondary: '#666666',
-    light: '#FFFFFF',
+    primary: "#333333",
+    secondary: "#666666",
+    light: "#FFFFFF",
   },
   success: {
-    main: '#2E7D32',
+    main: "#2E7D32",
   },
   error: {
-    main: '#D32F2F',
+    main: "#D32F2F",
   },
   warning: {
-    main: '#ED6C02',
+    main: "#ED6C02",
   },
   info: {
-    main: '#0288D1',
+    main: "#0288D1",
   },
 };
 
@@ -89,7 +90,7 @@ const theme = createTheme({
     },
     button: {
       fontWeight: 600,
-      textTransform: 'none',
+      textTransform: "none",
     },
   },
   components: {
@@ -97,19 +98,19 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: 8,
-          padding: '10px 24px',
+          padding: "10px 24px",
           fontWeight: 600,
         },
         containedPrimary: {
-          boxShadow: '0px 4px 12px rgba(30, 86, 49, 0.2)',
-          '&:hover': {
-            boxShadow: '0px 6px 16px rgba(30, 86, 49, 0.3)',
+          boxShadow: "0px 4px 12px rgba(30, 86, 49, 0.2)",
+          "&:hover": {
+            boxShadow: "0px 6px 16px rgba(30, 86, 49, 0.3)",
           },
         },
         containedSecondary: {
-          boxShadow: '0px 4px 12px rgba(212, 175, 55, 0.2)',
-          '&:hover': {
-            boxShadow: '0px 6px 16px rgba(212, 175, 55, 0.3)',
+          boxShadow: "0px 4px 12px rgba(212, 175, 55, 0.2)",
+          "&:hover": {
+            boxShadow: "0px 6px 16px rgba(212, 175, 55, 0.3)",
           },
         },
       },
@@ -118,7 +119,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: 12,
-          boxShadow: '0px 8px 24px rgba(0, 0, 0, 0.08)',
+          boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.08)",
         },
       },
     },

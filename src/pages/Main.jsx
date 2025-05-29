@@ -7,9 +7,9 @@ import Footer from "../components/Footer";
 export default function Main({ screen }) {
   return (
     <Grid>
-      <Navbar />                                                                                                      
+      <Navbar />
       <Grid>{screen ? screen : <Home />}</Grid>
-      <Footer/>
+      {/* <Footer/> */}
     </Grid>
   );
 }
