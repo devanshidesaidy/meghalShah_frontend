@@ -3,6 +3,8 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { Container, Grid, Typography, Box, Divider } from "@mui/material";
 import { Handshake, LineChart, PieChart, FileText } from "lucide-react";
+import { color } from "../../constant";
+import { colors } from "../../components/Theme";
 
 const MotionGridItem = motion(Grid);
 
@@ -66,7 +68,7 @@ const CoreService = () => {
       id="core-services"
       sx={{
         py: 10,
-        bgcolor: "#121212",
+        backgroundColor: color.black,
         position: "relative",
         overflow: "hidden",
       }}
@@ -86,10 +88,10 @@ const CoreService = () => {
             variant="h3"
             component="h2"
             fontWeight="bold"
-            color="#FFD700"
             sx={{
               fontFamily: "Playfair Display",
               fontSize: { xs: "2.5rem", md: "3rem" },
+              color: colors.secondary.main,
             }}
           >
             My Core Services
@@ -160,10 +162,9 @@ const CoreService = () => {
                   <Typography
                     variant="h5"
                     fontWeight="bold"
-                    color="#FFD700"
                     gutterBottom
                     textAlign="center"
-                    sx={{ mb: 2 }}
+                    sx={{ mb: 2, color: colors.secondary.main }}
                   >
                     {service.title}
                   </Typography>

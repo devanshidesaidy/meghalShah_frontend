@@ -15,6 +15,13 @@
 }
 
 @font-face {
+  font-family: "Palanquin-Regular";
+  src: url("./fonts/Miriam_Libre_Sub Title/Palanquin-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: "Palanquin";
   src: url("./fonts/Palanquin_Body/Palanquin-Regular.ttf") format("truetype");
   font-weight: Bold;

@@ -1,108 +1,217 @@
-import React from 'react';
-import { Box, Typography, Avatar, Paper } from '@mui/material';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import { testimonials } from '../../constant';
+// import React from 'react';
+// import { Box, Typography, Avatar, Paper } from '@mui/material';
+// import Slider from 'react-slick';
+// import 'slick-carousel/slick/slick.css';
+// import 'slick-carousel/slick/slick-theme.css';
+// import { testimonials } from '../../constant';
+
+// const Client = () => {
+//   const settings = {
+//     dots: true,
+//     infinite: true,
+//     speed: 500,
+//     slidesToShow: 4,
+//     slidesToScroll: 1,
+//     autoplay: true,
+//     autoplaySpeed: 3000,
+//     responsive: [
+//       {
+//         breakpoint: 1024,
+//         settings: {
+//           slidesToShow: 3,
+//           slidesToScroll: 1,
+//           dots: true
+//         }
+//       },
+//       {
+//         breakpoint: 768,
+//         settings: {
+//           slidesToShow: 2,
+//           slidesToScroll: 1
+//         }
+//       },
+//       {
+//         breakpoint: 480,
+//         settings: {
+//           slidesToShow: 1,
+//           slidesToScroll: 1
+//         }
+//       }
+//     ]
+//   };
+
+//   return (
+//     <Box sx={{
+//       py: 5,
+//       px: 2.5,
+//       backgroundColor: 'background.default',
+//       borderRadius: 2,
+//       my: 2.5
+//     }}>
+//       <Typography
+//         variant="h4"
+//         align="center"
+//         sx={{
+//           mb: 5,
+//           color: 'text.primary',
+//           fontWeight: 'bold'
+//         }}
+//       >
+//         Trusted By Industry Leaders
+//       </Typography>
+
+//       <Slider {...settings}>
+//         {testimonials.map((client) => (
+//           <Box key={client.id} sx={{ px: 1 }}>
+//             <Paper
+//               elevation={3}
+//               sx={{
+//                 p: 2.5,
+//                 height: 200,
+//                 display: 'flex',
+//                 flexDirection: 'column',
+//                 justifyContent: 'center',
+//                 alignItems: 'center',
+//                 textAlign: 'center',
+//                 transition: 'transform 0.3s, box-shadow 0.3s',
+//                 '&:hover': {
+//                   transform: 'translateY(-5px)',
+//                   boxShadow: 6
+//                 }
+//               }}
+//             >
+//               <Avatar
+//                 src={client.avatar}
+//                 alt={client.name}
+//                 sx={{
+//                   width: 56,
+//                   height: 56,
+//                   mb: 2.5
+//                 }}
+//               />
+//               <Typography variant="subtitle1" sx={{ color: 'text.secondary', fontStyle: 'italic' }}>
+//                 {client.name}
+//               </Typography>
+//               <Typography variant="body2" sx={{
+//                 color: 'text.secondary',
+//                 fontStyle: 'italic',
+//                 mt: 1
+//               }}>
+//                 "{client.quote}"
+//               </Typography>
+//             </Paper>
+//           </Box>
+//         ))}
+//       </Slider>
+//     </Box>
+//   );
+// };
+
+// export default Client;
+import React from "react";
+import { Box, Typography, Avatar, Container } from "@mui/material";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { color, testimonials } from "../../constant";
+import { colors } from "../../components/Theme";
 
 const Client = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 4,
+    speed: 600,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
+    arrows: true,
     responsive: [
       {
         breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          dots: true
-        }
+        settings: { slidesToShow: 2 },
       },
       {
         breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
+        settings: { slidesToShow: 1 },
       },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+    ],
   };
 
   return (
-    <Box sx={{ 
-      py: 5,
-      px: 2.5,
-      backgroundColor: 'background.default',
-      borderRadius: 2,
-      my: 2.5
-    }}>
-      <Typography 
-        variant="h4" 
-        align="center" 
-        sx={{ 
-          mb: 5,
-          color: 'text.primary',
-          fontWeight: 'bold'
-        }}
-      >
-        Trusted By Industry Leaders
-      </Typography>
-      
-      <Slider {...settings}>
-        {testimonials.map((client) => (
-          <Box key={client.id} sx={{ px: 1 }}>
-            <Paper
-              elevation={3}
+    <Box sx={{ py: 8, height: "50vh" }}>
+      <Container>
+        <Typography
+          variant="h4"
+          align="center"
+          sx={{
+            mb: 5,
+
+            color: color.black,
+            fontWeight: 700,
+            fontFamily: "JosefinSans",
+          }}
+        >
+          A Legacy of Recognition
+        </Typography>
+
+        <Slider {...settings}>
+          {testimonials.map((client) => (
+            <Box
+              key={client.id}
               sx={{
-                p: 2.5,
-                height: 200,
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                textAlign: 'center',
-                transition: 'transform 0.3s, box-shadow 0.3s',
-                '&:hover': {
-                  transform: 'translateY(-5px)',
-                  boxShadow: 6
-                }
+                px: 2,
+                display: "flex",
+                justifyContent: "center",
               }}
             >
-              <Avatar
-                src={client.avatar}
-                alt={client.name}
-                sx={{ 
-                  width: 56, 
-                  height: 56,
-                  mb: 2.5
+              <Box
+                sx={{
+                  width: 300,
+                  height: 300,
+                  backgroundColor: color.black,
+                  borderRadius: 4,
+                  p: 4,
+                  textAlign: "center",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
-              />
-              <Typography variant="subtitle1" sx={{ color: 'text.secondary', fontStyle: 'italic' }}>
-                {client.name}
-              </Typography>
-              <Typography variant="body2" sx={{ 
-                color: 'text.secondary', 
-                fontStyle: 'italic',
-                mt: 1
-              }}>
-                "{client.quote}"
-              </Typography>
-            </Paper>
-          </Box>
-        ))}
-      </Slider>
+              >
+                <Avatar
+                  src={client.avatar}
+                  alt={client.name}
+                  sx={{
+                    width: 80,
+                    height: 80,
+                    mb: 2,
+                    fontFamily: "JosefinSans",
+                  }}
+                />
+                <Typography
+                  variant="h6"
+                  sx={{ color: "#fff", fontWeight: 600 }}
+                >
+                  {client.name}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  sx={{
+                    color: "rgba(255,255,255,0.7)",
+                    mt: 1,
+
+                    fontFamily: "Palanquin-Regular",
+                    px: 1,
+                  }}
+                >
+                  "{client.quote}"
+                </Typography>
+              </Box>
+            </Box>
+          ))}
+        </Slider>
+      </Container>
     </Box>
   );
 };

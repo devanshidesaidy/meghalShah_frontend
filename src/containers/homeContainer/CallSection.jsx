@@ -90,20 +90,17 @@
 //   );
 // }
 
-
-
-import { Box, Container, Typography, Button, Grid } from '@mui/material';
-import { PhoneCall } from 'lucide-react';
-import { colors } from '../../components/Theme';
-import { color } from '../../constant';
-
+import { Box, Container, Typography, Button, Grid } from "@mui/material";
+import { PhoneCall } from "lucide-react";
+import { colors } from "../../components/Theme";
+import { color } from "../../constant";
 
 const CallSection = () => {
   return (
     <Box
       sx={{
         py: { xs: 8, md: 10 },
-        backgroundColor: colors.background.dark,
+        backgroundColor: color.black,
         position: "relative",
         overflow: "hidden",
       }}
@@ -117,8 +114,7 @@ const CallSection = () => {
           right: 0,
           bottom: 0,
           opacity: 0.05,
-          backgroundImage: `radial-gradient(${colors.secondary.main} 2px, transparent 2px)`,
-          backgroundSize: "30px 30px",
+
           zIndex: 0,
         }}
       />
@@ -171,7 +167,6 @@ const CallSection = () => {
           >
             <Button
               variant="contained"
-            
               size="large"
               href="#contact"
               startIcon={<PhoneCall size={20} />}
@@ -180,12 +175,12 @@ const CallSection = () => {
                 px: 4,
                 py: 1.5,
                 borderRadius: 2,
-                color:color.white,
-                bgcolor:color.greenFont,
-                fontSize: '1rem',
+                color: color.white,
+                bgcolor: color.greenFont,
+                fontSize: "1rem",
                 fontWeight: 600,
                 transition: "all 0.3s ease",
-                boxShadow: "0 8px 20px rgba(212, 175, 55, 0.3)",
+
                 "&:hover": {
                   transform: "translateY(-5px)",
                   boxShadow: "0 12px 28px rgba(212, 175, 55, 0.4)",

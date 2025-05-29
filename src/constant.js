@@ -1,7 +1,7 @@
 export const color = {
   greenFont: "#e2bf02",
   white: "#ffffff",
-  black: "#000000",
+  black: "#28282B",
   bgblack: "#0b0d0e",
   pureblack: "#000205",
   mateblack: "#333",
@@ -87,17 +87,21 @@ export const testimonials = [
   },
   {
     id: 3,
-    name: 'Amit Patel',
-    company: 'Global Exports',
-    quote: 'The tax optimization strategies provided by CA Meghal Shah have saved our company significant amounts while ensuring full compliance. Truly exceptional service.',
-    avatar: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    name: "Amit Patel",
+    company: "Global Exports",
+    quote:
+      "The tax optimization strategies provided by CA Meghal Shah have saved our company significant amounts while ensuring full compliance. Truly exceptional service.",
+    avatar:
+      "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     id: 3,
-    name: 'Amit Patel',
-    company: 'Global Exports',
-    quote: 'The tax optimization strategies provided by CA Meghal Shah have saved our company significant amounts while ensuring full compliance. Truly exceptional service.',
-    avatar: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    name: "Amit Patel",
+    company: "Global Exports",
+    quote:
+      "The tax optimization strategies provided by CA Meghal Shah have saved our company significant amounts while ensuring full compliance. Truly exceptional service.",
+    avatar:
+      "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
 ];
 

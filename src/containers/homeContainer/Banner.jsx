@@ -1,138 +1,3 @@
-// import { Grid } from "@mui/material";
-// import React from "react";
-// import { color } from "../../constant";
-// import banner from "../../assets/images/servicebg.png";
-// import img from "../../assets/images/04.png";
-// export default function Banner() {
-//   return (
-//     <Grid
-//       container
-//       // className="bannerImg"
-//       sx={{
-//         alignItems: "center",
-//         justifyContent: { xs: "center", lg: "normal" },
-//         height: { xs: "auto", lg: "100vh" },
-//         background: {
-//           xs: color.bgblack,
-//           md: `linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(${banner})`,
-//         },
-//         backgroundRepeat: {
-//           xs: "initial", // or "no-repeat" if you still want that behavior
-//           md: "no-repeat",
-//         },
-//         backgroundSize: {
-//           xs: "initial",
-//           md: "cover",
-//         },
-//         backgroundPosition: {
-//           xs: "initial",
-//           md: "center",
-//         },
-//         zIndex: -1,
-//       }}
-//     >
-//       <Grid
-//         size={{ xs: 11, md: 6 }}
-//         sx={{
-//           display: "flex",
-//           justifyContent: "center",
-//           mt: { xs: 8, md: "none" },
-//         }}
-//       >
-//         <Grid
-//           sx={{
-//             ml: { xs: "none", md: "5rem", lg: "12rem" },
-//             background:
-//               "linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7))",
-//             p: 5,
-//             borderRadius: "20px",
-//           }}
-//         >
-//           <Grid
-//             className="font"
-//             sx={{
-//               fontSize: { xs: "3.5rem", md: "3rem", lg: "6rem" },
-//               fontWeight: "bold",
-//               textAlign: { xs: "center", md: "left" },
-//               fontFamily: "JosefinSans",
-//             }}
-//           >
-//             Meghal Shah
-//           </Grid>
-//           <Grid
-//             sx={{
-//               color: color.white,
-//               fontSize: "1.2rem",
-//               textAlign: { xs: "center", md: "left" },
-//               mt: 4,
-//               fontFamily: "MiriamLibre-Regular",
-//               letterSpacing: "0.1rem",
-//             }}
-//           >
-//             Strategic Financial Solutions
-//           </Grid>
-//           <Grid
-//             sx={{
-//               color: color.white,
-//               fontSize: "1.2rem",
-//               textAlign: { xs: "center", md: "left" },
-//               mt: 1,
-//               fontFamily: "MiriamLibre-Regular",
-//               letterSpacing: "0.1rem",
-//             }}
-//           >
-//             Sustainable Business
-//           </Grid>
-//           <Grid
-//             sx={{
-//               color: color.white,
-//               fontSize: "1.2rem",
-//               textAlign: { xs: "center", md: "left" },
-//               mt: 1,
-//               fontFamily: "MiriamLibre-Regular",
-//               letterSpacing: "0.1rem",
-//             }}
-//           >
-//             Business Growth
-//           </Grid>
-//           {/* <Grid
-//             sx={{
-//               color: color.white,
-//               mt: 3,
-//               lineHeight: "1.5rem",
-//               fontSize: "1.2rem",
-//             }}
-//           >
-//             CA Meghal Shah offers comprehensive financial consulting to
-//             businesses across sectors, specializing in Corporate Finance, MSME
-//             Loans, Debt Restructuring, and Angel Investments. We create
-//             tailor-made financial solutions that enhance growth and
-//             sustainability.
-//           </Grid> */}
-//         </Grid>
-//       </Grid>
-//       <Grid
-//         size={{ xs: 12, md: 6 }}
-//         sx={{
-//           height: { xs: "auto", sm: "auto", md: "35rem", lg: "55rem" },
-          
-//           // backgroundColor: { xs: "black", md: "transparent" },
-//           // mt: 5,
-//         }}
-//       >
-//         <Grid sx={{display: { xs: "block", md: "none" },}}>
-
-//         <img
-//           src={img}
-//           style={{ height: "100%", width: "100%", objectFit: "contain" }}
-//         />
-//         </Grid>
-//       </Grid>
-//     </Grid>
-//   );
-// }
-
-
 import {
   Box,
   Container,
@@ -141,15 +6,29 @@ import {
   Grid,
   useMediaQuery,
   useTheme,
-} from '@mui/material';
-import { ArrowRight, PhoneCall } from 'lucide-react';
-import { colors } from '../../components/Theme';
-import backgroundphoto from "../../assets/images/servicebg.png"
-import { color } from '../../constant';
-
+  Paper,
+} from "@mui/material";
+import {
+  ArrowRight,
+  Award,
+  GraduationCap,
+  PhoneCall,
+  TrendingUp,
+  Users,
+} from "lucide-react";
+import { colors } from "../../components/Theme";
+import backgroundphoto from "../../assets/images/servicebg.png";
+import { color } from "../../constant";
+import img from "../../assets/images/04.png";
 const Banner = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const aboutInfo = {
+    experience: "20+ years",
+    clientsServed: "250+",
+    successRate: "98%",
+    certifications: "CA, CFA, MBA Finance",
+  };
 
   return (
     <Box
@@ -195,110 +74,191 @@ const Banner = () => {
                 Meghal Shah
               </Typography>
 
-              <Typography
-                variant="h4"
-                sx={{
-                  color: colors.secondary.main,
-                  fontWeight: 600,
-                  mb: 3,
-                  lineHeight: 1.4,
-                }}
-              >
-                Expert Financial Strategist
-              </Typography>
-
-              <Box sx={{ mb: 4 }}>
-                {[
-                  'Strategic Financial Solutions',
-                  'Sustainable Business Growth',
-                  'Tax Advisory & Financial Planning',
-                ].map((text, index) => (
-                  <Typography
-                    key={index}
-                    variant="body1"
-                    sx={{
-                      color: colors.text.light,
-                      fontSize: { xs: '1rem', md: '1.1rem' },
-                      mb: 1,
-                      display: 'flex',
-                      alignItems: 'center',
-                    }}
-                  >
-                    <Box
-                      component="span"
-                      sx={{
-                        display: 'inline-block',
-                        width: '10px',
-                        height: '10px',
-                        borderRadius: '50%',
-                        backgroundColor: colors.secondary.main,
-                        mr: 2,
-                      }}
-                    />
-                    {text}
-                  </Typography>
-                ))}
-              </Box>
-
-              <Box
-                sx={{
-                  display: 'flex',
-                  flexDirection: { xs: 'column', sm: 'row' },
-                  gap: 2,
-                  mt: 4,
-                }}
-              >
-                <Button
-                  variant="contained"
-               
-                  size="large"
-                  href="#services"
-                  endIcon={<ArrowRight size={20} />}
+                <Typography
+                  variant="h4"
                   sx={{
-                    fontSize: '1rem',
-                    fontWeight: 600,
-                    bgcolor:color.greenFont,
-                    transition: 'all 0.3s ease',
-                    '&:hover': {
-                      transform: 'translateY(-3px)',
-                    },
-                  }}
-                >
-                  Explore Services
-                </Button>
-
-                <Button
-                  variant="outlined"
-                  size="large"
-                  href="#contact"
-                  sx={{
-                    borderColor: colors.secondary.main,
                     color: colors.secondary.main,
-                    fontSize: '1rem',
                     fontWeight: 600,
-                    transition: 'all 0.3s ease',
-                    '&:hover': {
-                      borderColor: colors.secondary.light,
-                      color: colors.secondary.light,
-                      transform: 'translateY(-3px)',
-                      backgroundColor: 'rgba(212, 175, 55, 0.05)',
-                    },
+                    mb: 3,
+                    lineHeight: 1.4,
+                    fontFamily: "MiriamLibre-Regular",
                   }}
-                  startIcon={<PhoneCall size={20} />}
                 >
-                  Book Consultation
-                </Button>
-              </Box>
-            </Box>
-          </Grid>
+                  Expert Financial Strategist
+                </Typography>
 
-          {!isMobile && (
-            <Grid item size={{xs:12, md:5 }}>
-              {/* Empty intentionally - background image covers visual */}
+                <Box sx={{ mb: 4 }}>
+                  {[
+                    "Strategic Financial Solutions",
+                    "Sustainable Business Growth",
+                    "Tax Advisory & Financial Planning",
+                  ].map((text, index) => (
+                    <Typography
+                      key={index}
+                      variant="body1"
+                      sx={{
+                        color: colors.text.light,
+                        fontSize: { xs: "1rem", md: "1.1rem" },
+                        mb: 1,
+                        display: "flex",
+                        alignItems: "center",
+                      }}
+                    >
+                      <Box
+                        component="span"
+                        sx={{
+                          display: "inline-block",
+                          width: "10px",
+                          height: "10px",
+                          borderRadius: "50%",
+                          backgroundColor: colors.secondary.main,
+                          mr: 2,
+                        }}
+                      />
+                      {text}
+                    </Typography>
+                  ))}
+                </Box>
+
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: { xs: "column", sm: "row" },
+                    gap: 2,
+                    mt: 4,
+                  }}
+                >
+                  <Button
+                    variant="outlined"
+                    size="large"
+                    href="#contact"
+                    sx={{
+                      borderColor: colors.secondary.main,
+                      color: colors.secondary.main,
+                      fontSize: "1rem",
+                      fontWeight: 600,
+                      fontFamily: "Palanquin-Regular",
+                      transition: "all 0.3s ease",
+                      "&:hover": {
+                        borderColor: colors.secondary.light,
+                        color: colors.secondary.light,
+                        transform: "translateY(-3px)",
+                        backgroundColor: "rgba(212, 175, 55, 0.05)",
+                      },
+                    }}
+                    startIcon={<PhoneCall size={20} />}
+                  >
+                    Book Consultation
+                  </Button>
+                </Box>
+              </Box>
             </Grid>
-          )}
-        </Grid>
-      </Container>
+
+            {/* Right Image Section */}
+            <Grid item size={{ xs: 12, md: 6 }}>
+              <img
+                src={img}
+                alt=""
+                style={{
+                  width: "100%",
+                  height: "70%",
+                  borderBottom: "2px solid white",
+                  // borderRight: "1px solid white",
+                }}
+              />
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
+
+      {/* White Section - 30vh */}
+      <Box sx={{ backgroundColor: "#fff", minHeight: "30vh" }}>
+        <Container>
+          <Grid container justifyContent="center" sx={{ pt: 5 }}>
+            <Grid
+              item
+              size={{ xs: 12 }}
+              sx={{
+                backgroundColor: color.greenFont,
+
+                p: 2,
+                borderRadius: 3,
+                marginTop: "-150px",
+              }}
+            >
+              <Grid container spacing={2} sx={{ mt: 2 }}>
+                {[
+                  {
+                    icon: <Award size={32} color={colors.black} />,
+                    label: "Experience",
+                    value: aboutInfo.experience,
+                  },
+                  {
+                    icon: <Users size={32} color={colors.black} />,
+                    label: "Clients",
+                    value: aboutInfo.clientsServed,
+                  },
+                  {
+                    icon: <TrendingUp size={32} color={colors.black} />,
+                    label: "Success Rate",
+                    value: aboutInfo.successRate,
+                  },
+                  {
+                    icon: <GraduationCap size={32} color={colors.black} />,
+                    label: "Certifications",
+                    value: aboutInfo.certifications,
+                  },
+                ].map((item, index) => (
+                  <Grid
+                    item
+                    size={{ xs: 6, md: 3 }}
+                    sx={{
+                      border: "1px solid black",
+                      borderRadius: 5,
+                    }}
+                    key={index}
+                  >
+                    <Paper
+                      elevation={0}
+                      sx={{
+                        p: 2,
+                        textAlign: "center",
+                        height: "125px",
+                        backgroundColor: "transparent",
+                        border: `1px solid ${colors.dark}`,
+                        borderRadius: 2,
+                        transition: "all 0.3s ease",
+                        "&:hover": {
+                          transform: "translateY(-5px)",
+                          boxShadow: "0 10px 25px rgba(0, 0, 0, 0.07)",
+                          borderColor: colors.black,
+                        },
+                      }}
+                    >
+                      {item.icon}
+                      <Typography
+                        variant="h6"
+                        sx={{
+                          fontWeight: 600,
+                          fontFamily: "Palanquin-Regular",
+                        }}
+                      >
+                        {item.value}
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        sx={{ fontFamily: "Palanquin-Regular" }}
+                      >
+                        {item.label}
+                      </Typography>
+                    </Paper>
+                  </Grid>
+                ))}
+              </Grid>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
     </Box>
   );
 };
